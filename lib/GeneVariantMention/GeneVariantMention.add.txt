@@ -1,0 +1,11 @@
+ProteinMutation	p|SUB|A|146|T;CorrespondingGene:3845;RS#:121913527	K-RASA146T
+ProteinMutation	p|SUB|G|12|D;CorrespondingGene:3845;RS#:121913529	K-RASG12D
+ProteinMutation	p|SUB|F|737|L;CorrespondingGene:2908;RS#:121909727	hGRalphaF737L
+ProteinMutation	p|SUB|D|401|H;CorrespondingGene:2908	hGRalphaD401H
+ProteinMutation	p|SUB|D|401|H;CorrespondingGene:2908	GRalphaD401H
+ProteinMutation	p|SUB|V|61|F;CorrespondingGene:3717	JAK2V617F
+ProteinMutation	p|SUB|T|232|K;CorrespondingGene:4935;RS#:137852297	OA1T232K
+ProteinMutation	p|SUB|K|289|E;CorrespondingGene:5728;RS#:562015640	PTENK289E
+ProteinMutation	p|SUB|W|515|L,K;CorrespondingGene:4352;RS#:121913615;121913616	MPLW515L/K
+ProteinMutation	p|SUB|E|693|G;CorrespondingGene:351;RS#:63751039	APPE693G
+ProteinMutation	p|SUB|E|17|K;CorrespondingGene:207;RS#:121434592	AKT1E17K

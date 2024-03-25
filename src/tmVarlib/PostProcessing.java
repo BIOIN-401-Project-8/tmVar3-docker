@@ -46,14 +46,14 @@ public class PostProcessing
 			{
 				if(line.contains("|")) //Title|Abstract
 	        	{
-					String Pmid="";
+					String pmid="";
 					String ParagraphType="";
 					String ParagraphContent="";
 					Pattern pat = Pattern.compile("^([^\\|\\t]+)\\|([^\\|\\t]+)\\|(.*)$");
 					Matcher mat = pat.matcher(line);
 					if(mat.find()) //Title|Abstract
 		        	{
-						Pmid = mat.group(1);
+						pmid = mat.group(1);
 						ParagraphType=mat.group(2);
 						ParagraphContent=mat.group(3);
 						//if(ParagraphContent.equals(""))
@@ -61,26 +61,26 @@ public class PostProcessing
 						//	ParagraphContent="- No text -";
 						//}
 					}
-					sentence_hash.put(Pmid+"\t"+ParagraphType+"\t"+ParagraphType_count,ParagraphContent);
-					if(article_hash.get(Pmid) != null)
+					sentence_hash.put(pmid+"\t"+ParagraphType+"\t"+ParagraphType_count,ParagraphContent);
+					if(article_hash.get(pmid) != null)
 					{
-						article_hash.put(Pmid,article_hash.get(Pmid)+" "+ParagraphContent);
+						article_hash.put(pmid,article_hash.get(pmid)+" "+ParagraphContent);
 					}
 					else
 					{
-						article_hash.put(Pmid,ParagraphContent);
+						article_hash.put(pmid,ParagraphContent);
 					}
-					if(TypeOrder_hash.get(Pmid) != null)
+					if(TypeOrder_hash.get(pmid) != null)
 					{
-						TypeOrder_hash.put(Pmid,TypeOrder_hash.get(Pmid)+"\t"+ParagraphType+"|"+ParagraphType_count);
+						TypeOrder_hash.put(pmid,TypeOrder_hash.get(pmid)+"\t"+ParagraphType+"|"+ParagraphType_count);
 					}
 					else
 					{
-						TypeOrder_hash.put(Pmid,ParagraphType+"|"+ParagraphType_count);
+						TypeOrder_hash.put(pmid,ParagraphType+"|"+ParagraphType_count);
 					}
-					if(!pmidARR.contains(Pmid))
+					if(!pmidARR.contains(pmid))
 					{
-						pmidARR.add(Pmid);
+						pmidARR.add(pmid);
 					}
 					ParagraphType_count++;
 	        	}
@@ -160,25 +160,28 @@ public class PostProcessing
 					{
 						String state=mat.group(1);	
 						String locationWhile[]=locationArr.get(i).split("\\t");
-						String tkn=locationWhile[1];
-						pmid=locationWhile[0];
-						int start_tmp=Integer.parseInt(locationWhile[2]);
-						int last_tmp=Integer.parseInt(locationWhile[3]);
-						mention = mention + tkn;
-						if(!component_hash.get(state).equals("") && !state.equals(prestate))
+						if(locationWhile.length>1)
 						{
-							component_hash.put(state, component_hash.get(state)+","+tkn);
+							String tkn=locationWhile[1];
+							pmid=locationWhile[0];
+							int start_tmp=Integer.parseInt(locationWhile[2]);
+							int last_tmp=Integer.parseInt(locationWhile[3]);
+							mention = mention + tkn;
+							if(!component_hash.get(state).equals("") && !state.equals(prestate))
+							{
+								component_hash.put(state, component_hash.get(state)+","+tkn);
+							}
+							else
+							{
+								component_hash.put(state, component_hash.get(state)+tkn);
+							}
+							if(start_tmp<start){start=start_tmp;}
+							if(last_tmp>last){last=last_tmp;}
+							prestate=state;
+							i++;
+							outputs=outputArr.get(i).split("\\t");
+							mat = pat.matcher(outputs[outputs.length-1]);
 						}
-						else
-						{
-							component_hash.put(state, component_hash.get(state)+tkn);
-						}
-						if(start_tmp<start){start=start_tmp;}
-						if(last_tmp>last){last=last_tmp;}
-						prestate=state;
-						i++;
-						outputs=outputArr.get(i).split("\\t");
-						mat = pat.matcher(outputs[outputs.length-1]);
 					}
 					
 					if(mention.length()>200)
@@ -374,7 +377,7 @@ public class PostProcessing
 			BufferedReader inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(FilenameME), "UTF-8"));
 			ArrayList<String> Annotation = new ArrayList<String>();
 			String article="";
-			String Pmid="";
+			String pmid="";
 			String line="";
 			while ((line = inputfile.readLine()) != null)  
 			{
@@ -382,16 +385,16 @@ public class PostProcessing
 				Matcher mat = pat.matcher(line);
 				if(mat.find()) //Title|Abstract
 	        	{
-					Pmid = mat.group(1);
+					pmid = mat.group(1);
 					String ParagraphContent=mat.group(3);
 					article=article+ParagraphContent+"\t";
 					FilePostME.write(line+"\n");
-					Temporary_Pattern_Allele.put(Pmid,new HashMap<String,String>());
+					Temporary_Pattern_Allele.put(pmid,new HashMap<String,String>());
 				}
 				else if (line.contains("\t")) //Annotation
 		    	{
 					String anno[]=line.split("\t");
-					Pmid=anno[0];
+					pmid=anno[0];
 					String mention=anno[3];
 					String type=anno[4];
 					Annotation.add(line);
@@ -407,19 +410,19 @@ public class PostProcessing
 					{
 						String anno[]=Annotation.get(i).split("\t");
 						
-						Pmid=anno[0];
+						pmid=anno[0];
 						int start = Integer.parseInt(anno[1]);
 	        			int last = Integer.parseInt(anno[2]);
 	        			String mention = anno[3];
 	        			String type = anno[4];
 	        			
-	        			if(!tmVar.variant_mention_to_filter_overlap_gene.containsKey(Pmid))
+	        			if(!tmVar.variant_mention_to_filter_overlap_gene.containsKey(pmid))
 	        			{
-	        				tmVar.variant_mention_to_filter_overlap_gene.put(Pmid, new HashMap<Integer,String>());
+	        				tmVar.variant_mention_to_filter_overlap_gene.put(pmid, new HashMap<Integer,String>());
 	        			}
 	        			for(int s=start;s<=last;s++)
 	        			{
-	        				tmVar.variant_mention_to_filter_overlap_gene.get(Pmid).put(s,"");
+	        				tmVar.variant_mention_to_filter_overlap_gene.get(pmid).put(s,"");
 	        			}
 	        			/**
 	        			 The common combine tokens: 
@@ -439,8 +442,8 @@ public class PostProcessing
 	        				int start2=last-sub_mention2.length();
 	        				int last2=last;
 	        				RemoveAnno.add(i);
-	        				Annotation.add(Pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tSNP\t"+sub_mention1);
-	        				Annotation.add(Pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tSNP\t"+sub_mention2);
+	        				Annotation.add(pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tSNP\t"+sub_mention1);
+	        				Annotation.add(pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tSNP\t"+sub_mention2);
 	        			}
 	        			else if(m2.find())
 	        			{
@@ -451,8 +454,8 @@ public class PostProcessing
 	        				int start2=last-sub_mention2.length();
 	        				int last2=last;
 	        				RemoveAnno.add(i);
-	        				Annotation.add(Pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tDNAMutation\t"+sub_mention1);
-	        				Annotation.add(Pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tSNP\t"+sub_mention2);
+	        				Annotation.add(pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tDNAMutation\t"+sub_mention1);
+	        				Annotation.add(pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tSNP\t"+sub_mention2);
 	        			}
 	        			else if(m3.find())
 	        			{
@@ -463,8 +466,8 @@ public class PostProcessing
 	        				int start2=last-sub_mention2.length();
 	        				int last2=last;
 	        				RemoveAnno.add(i);
-	        				Annotation.add(Pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tSNP\t"+sub_mention1);
-	        				Annotation.add(Pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tDNAMutation\t"+sub_mention2);
+	        				Annotation.add(pmid+"\t"+start1+"\t"+last1+"\t"+sub_mention1+"\tSNP\t"+sub_mention1);
+	        				Annotation.add(pmid+"\t"+start2+"\t"+last2+"\t"+sub_mention2+"\tDNAMutation\t"+sub_mention2);
 	        			}
 	        		}
 					for(int i=RemoveAnno.size()-1;i>=0;i--)
@@ -501,17 +504,17 @@ public class PostProcessing
 		        					position=position.replaceAll("[\\(\\)\\[\\]\\{\\}]","");
 			        				W=W.replaceAll("[\\W\\-\\_]","");
 			        				M=M.replaceAll("[\\W\\-\\_]","");
-		        					Temporary_Pattern_Allele.get(Pmid).put("([cg]\\.|)([ATCGU]+|[Gg]uanine|[Aa]denine|[Aa]denosine|[Tt]hymine|[Tt]hymidine|[Cc]ytosine|[Cc]ytidine|[Uu]racil|[Uu]ridine)[\\+ ]*"+position,"DNAAllele");
-		        					Temporary_Pattern_Allele.get(Pmid).put("([cg]\\.|)"+position+"[ ]*([ATCGU]+|[Gg]uanine|[Aa]denine|[Aa]denosine|[Tt]hymine|[Tt]hymidine|[Cc]ytosine|[Cc]ytidine|[Uu]racil|[Uu]ridine)","DNAAllele");
-		        					Temporary_Pattern_Allele.get(Pmid).put("([cg]\\.|)"+W+"[\\- ]*"+position+"[\\- ]*"+W,"DNAAllele");
-	        						Temporary_Pattern_Allele.get(Pmid).put("([cg]\\.|)"+M+"[\\- ]*"+position+"[\\- ]*"+M,"DNAAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("([cg]\\.|)([ATCGU]+|[Gg]uanine|[Aa]denine|[Aa]denosine|[Tt]hymine|[Tt]hymidine|[Cc]ytosine|[Cc]ytidine|[Uu]racil|[Uu]ridine)[\\+ ]*"+position,"DNAAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("([cg]\\.|)"+position+"[ ]*([ATCGU]+|[Gg]uanine|[Aa]denine|[Aa]denosine|[Tt]hymine|[Tt]hymidine|[Cc]ytosine|[Cc]ytidine|[Uu]racil|[Uu]ridine)","DNAAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("([cg]\\.|)"+W+"[\\- ]*"+position+"[\\- ]*"+W,"DNAAllele");
+	        						Temporary_Pattern_Allele.get(pmid).put("([cg]\\.|)"+M+"[\\- ]*"+position+"[\\- ]*"+M,"DNAAllele");
 	        					}
 	        					if(W.length()>0 && W.length()==M.length() && !W.toLowerCase().matches("(del|ins|dup|indel).*") )
 	        					{
 	        						if((W.matches("[A-Za-z]+")) && (M.matches("[A-Za-z]+")))
 	        						{
-	        							Temporary_Pattern_Allele.get(Pmid).put(W+"[\\- \\/]+"+M,"DNAAcidChange");
-	        							Temporary_Pattern_Allele.get(Pmid).put(M+"[\\- \\/]+"+W,"DNAAcidChange");
+	        							Temporary_Pattern_Allele.get(pmid).put(W+"[\\- \\/]+"+M,"DNAAcidChange");
+	        							Temporary_Pattern_Allele.get(pmid).put(M+"[\\- \\/]+"+W,"DNAAcidChange");
 	        						}
 	        					}
 	        				}
@@ -527,17 +530,17 @@ public class PostProcessing
 	        						position=position.replaceAll("[\\(\\)\\[\\]\\{\\}]","");
 			        				W=W.replaceAll("[\\W\\-\\_]","");
 			        				M=M.replaceAll("[\\W\\-\\_]","");
-		        					Temporary_Pattern_Allele.get(Pmid).put("(p\\.|)([ATCGU][ATCGU][ATCGU]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr|CYS|ILE|SER|GLN|MET|ASN|PRO|LYS|ASP|THR|PHE|ALA|GLY|HIS|LEU|ARG|TRP|VAL|GLU|TYR|CYs|ILe|SEr|GLn|MEt|ASn|PRo|LYs|ASp|THr|PHe|ALa|GLy|HIs|LEu|ARg|TRp|VAl|GLu|TYr|[gG]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine|[Ss]top|[Tt]erm|[Ss]top codon|[Tt]ermination codon|[Tt]ermination|[CISQMNPKDTFAGHLRWVEYXU])[\\+ ]*"+position,"ProteinAllele");
-		        					Temporary_Pattern_Allele.get(Pmid).put("(p\\.|)"+position+"[ ]*([ATCGU][ATCGU][ATCGU]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr|CYS|ILE|SER|GLN|MET|ASN|PRO|LYS|ASP|THR|PHE|ALA|GLY|HIS|LEU|ARG|TRP|VAL|GLU|TYR|CYs|ILe|SEr|GLn|MEt|ASn|PRo|LYs|ASp|THr|PHe|ALa|GLy|HIs|LEu|ARg|TRp|VAl|GLu|TYr|[gG]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine|[Ss]top|[Tt]erm|[Ss]top codon|[Tt]ermination codon|[Tt]ermination|[CISQMNPKDTFAGHLRWVEYXU])","ProteinAllele");
-		        					Temporary_Pattern_Allele.get(Pmid).put("(p\\.|)"+W+"[\\- ]*"+position+"[\\- ]*"+W,"ProteinAllele");
-	        						Temporary_Pattern_Allele.get(Pmid).put("(p\\.|)"+M+"[\\- ]*"+position+"[\\- ]*"+M,"ProteinAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("(p\\.|)([ATCGU][ATCGU][ATCGU]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr|CYS|ILE|SER|GLN|MET|ASN|PRO|LYS|ASP|THR|PHE|ALA|GLY|HIS|LEU|ARG|TRP|VAL|GLU|TYR|CYs|ILe|SEr|GLn|MEt|ASn|PRo|LYs|ASp|THr|PHe|ALa|GLy|HIs|LEu|ARg|TRp|VAl|GLu|TYr|[gG]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine|[Ss]top|[Tt]erm|[Ss]top codon|[Tt]ermination codon|[Tt]ermination|[CISQMNPKDTFAGHLRWVEYXU])[\\+ ]*"+position,"ProteinAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("(p\\.|)"+position+"[ ]*([ATCGU][ATCGU][ATCGU]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr|CYS|ILE|SER|GLN|MET|ASN|PRO|LYS|ASP|THR|PHE|ALA|GLY|HIS|LEU|ARG|TRP|VAL|GLU|TYR|CYs|ILe|SEr|GLn|MEt|ASn|PRo|LYs|ASp|THr|PHe|ALa|GLy|HIs|LEu|ARg|TRp|VAl|GLu|TYr|[gG]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine|[Ss]top|[Tt]erm|[Ss]top codon|[Tt]ermination codon|[Tt]ermination|[CISQMNPKDTFAGHLRWVEYXU])","ProteinAllele");
+		        					Temporary_Pattern_Allele.get(pmid).put("(p\\.|)"+W+"[\\- ]*"+position+"[\\- ]*"+W,"ProteinAllele");
+	        						Temporary_Pattern_Allele.get(pmid).put("(p\\.|)"+M+"[\\- ]*"+position+"[\\- ]*"+M,"ProteinAllele");
 	        					}
 	        					if(W.length()>0 && W.length()==M.length() && !W.toLowerCase().matches("(del|ins|dup|indel).*") )
 	        					{
 	        						if((W.matches("[A-Za-z]+")) && (M.matches("[A-Za-z]+")))
 	        						{
-	        							Temporary_Pattern_Allele.get(Pmid).put(W+"[\\- \\/]+"+M,"ProteinAcidChange");
-	        							Temporary_Pattern_Allele.get(Pmid).put(M+"[\\- \\/]+"+W,"ProteinAcidChange");
+	        							Temporary_Pattern_Allele.get(pmid).put(W+"[\\- \\/]+"+M,"ProteinAcidChange");
+	        							Temporary_Pattern_Allele.get(pmid).put(M+"[\\- \\/]+"+W,"ProteinAcidChange");
 	        						}
 	        					}
 	        				}
@@ -621,39 +624,10 @@ public class PostProcessing
 	        			if(check == 1)
 	        			{	
 	        				Annotation.remove(i);
-	        				Annotation.add(i,Pmid+"\t"+start+"\t"+last+"\t"+mention+"\t"+type+"\t"+identifier); //problem not solve!!!
+	        				Annotation.add(i,pmid+"\t"+start+"\t"+last+"\t"+mention+"\t"+type+"\t"+identifier); //problem not solve!!!
 	        			}
 					}
 					
-	    			/*
-	    			 *  Mention Recognition by Pattern
-	    			 */
-					
-					/*
-					 * Self-pattern: should close in Full text
-					 */
-					/*
-        			HashMap<String,String> SelfPattern2type_hash = new HashMap<String,String>();
-					for(int i=0;i<Annotation.size();i++)
-					{
-						String anno[]=Annotation.get(i).split("\t");
-						
-			    		String mention = anno[3];
-	        			String type = anno[4];
-	        			if(!type.equals("SNP"))
-	        			{
-	        				mention = mention.replaceAll("([^A-Za-z0-9])","\\$1");
-	        				mention = mention.replaceAll("[0-9]+","[0-9]+");
-	        				mention = mention.replaceAll("(IVS|EX)","@@@@");
-	        				mention = mention.replaceAll("(rs|ss)","@@@");
-	        				mention = mention.replaceAll("[A-Z]","[A-Z]");
-	        				mention = mention.replaceAll("@@@@","(IVS|EX)");
-	        				mention = mention.replaceAll("@@@","(rs|ss)");
-	        				SelfPattern2type_hash.put(mention, type);
-	        			}
-					}
-	    			*/
-	    			
 					/*
 	    			 * Pattern match
 	    			 */
@@ -728,14 +702,14 @@ public class PostProcessing
 											ExistLarger = true;
 										}
 									}
-									if(ExistLarger == false && !AddList.containsKey(Pmid+"\t"+start+"\t"+last+"\t"+mention))
+									if(ExistLarger == false && !AddList.containsKey(pmid+"\t"+start+"\t"+last+"\t"+mention))
 									{
 
 										if(mention.matches("[A-Z]+[ ]+(for|to)[ ]+[0-9]+")){/*System.out.println(mention);*/} //C for 6 - remove
 										else if(mention.matches("[0-9]+[ ]+(for|to)[ ]+[A-Z]+")){/*System.out.println(mention);*/} //6 to C - remove
 										else
 										{
-											AddList.put(Pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
+											AddList.put(pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
 										}
 									}
 								}
@@ -746,80 +720,83 @@ public class PostProcessing
 							}
 						}
 					}
-					for(String pattern_RegEx:Temporary_Pattern_Allele.get(Pmid).keySet())
+					if(Temporary_Pattern_Allele.containsKey(pmid))
 					{
-						String pattern_Type = Temporary_Pattern_Allele.get(Pmid).get(pattern_RegEx);
-						
-						Pattern PATT_RegEx;
-						if(pattern_Type.matches(".*(Allele|AcidChange)"))
+						for(String pattern_RegEx:Temporary_Pattern_Allele.get(pmid).keySet())
 						{
-							PATT_RegEx = Pattern.compile("^(.*?[ \\(;,\\/\\-])("+pattern_RegEx+")[ \\);,\\/\\.]");
-						}
-						else
-						{
-							PATT_RegEx = Pattern.compile("^(.*?[^A-Za-z0-9])("+pattern_RegEx+")[^A-Za-z0-9]");
-						}
-						Matcher mp = PATT_RegEx.matcher(article_tmp);
-						while (mp.find()) 
-						{
-							String pre = mp.group(1);
-							String mention = mp.group(2);
+							String pattern_Type = Temporary_Pattern_Allele.get(pmid).get(pattern_RegEx);
 							
-							if(mention.matches("[0-9]+[\\W\\-\\_]*[a-z]ins")){/*System.out.println(mention);*/}
+							Pattern PATT_RegEx;
+							if(pattern_Type.matches(".*(Allele|AcidChange)"))
+							{
+								PATT_RegEx = Pattern.compile("^(.*?[ \\(;,\\/\\-])("+pattern_RegEx+")[ \\);,\\/\\.]");
+							}
 							else
 							{
-								boolean ExistLarger = false;
-								int start=pre.length();
-								int last=start+mention.length();
-								//Check if overlap with previous annotation
-								for(int a=0;a<Annotation.size();a++)
+								PATT_RegEx = Pattern.compile("^(.*?[^A-Za-z0-9])("+pattern_RegEx+")[^A-Za-z0-9]");
+							}
+							Matcher mp = PATT_RegEx.matcher(article_tmp);
+							while (mp.find()) 
+							{
+								String pre = mp.group(1);
+								String mention = mp.group(2);
+								
+								if(mention.matches("[0-9]+[\\W\\-\\_]*[a-z]ins")){/*System.out.println(mention);*/}
+								else
 								{
-									String Exist[] = Annotation.get(a).split("\t");
-									int Exist_start = Integer.parseInt(Exist[1]);
-									int Exist_last = Integer.parseInt(Exist[2]);
-									if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
-									{
-										removeList.add(Annotation.get(a));
-									}
-									else if (((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start))) //overlap, but not subset
-									{
-										removeList.add(Annotation.get(a));
-									}
-									else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
-									{
-										ExistLarger = true;
-									}
-								}
-								if(ExistLarger == false)
-								{	
+									boolean ExistLarger = false;
+									int start=pre.length();
+									int last=start+mention.length();
 									//Check if overlap with previous annotation
-									for(String added : AddList.keySet())
+									for(int a=0;a<Annotation.size();a++)
 									{
-										String Exist[] = added.split("\t");
+										String Exist[] = Annotation.get(a).split("\t");
 										int Exist_start = Integer.parseInt(Exist[1]);
 										int Exist_last = Integer.parseInt(Exist[2]);
 										if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
 										{
-											AddList.put(added,"remove");
+											removeList.add(Annotation.get(a));
 										}
-										else if ( ((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start)) ) //overlap, but not subset
+										else if (((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start))) //overlap, but not subset
 										{
-											AddList.put(added,"remove");
+											removeList.add(Annotation.get(a));
 										}
 										else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
 										{
 											ExistLarger = true;
 										}
 									}
-									if(ExistLarger == false && !AddList.containsKey(Pmid+"\t"+start+"\t"+last+"\t"+mention))
-									{
-										AddList.put(Pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
+									if(ExistLarger == false)
+									{	
+										//Check if overlap with previous annotation
+										for(String added : AddList.keySet())
+										{
+											String Exist[] = added.split("\t");
+											int Exist_start = Integer.parseInt(Exist[1]);
+											int Exist_last = Integer.parseInt(Exist[2]);
+											if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
+											{
+												AddList.put(added,"remove");
+											}
+											else if ( ((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start)) ) //overlap, but not subset
+											{
+												AddList.put(added,"remove");
+											}
+											else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
+											{
+												ExistLarger = true;
+											}
+										}
+										if(ExistLarger == false && !AddList.containsKey(pmid+"\t"+start+"\t"+last+"\t"+mention))
+										{
+											AddList.put(pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
+										}
 									}
+									String tmp="";
+			        				for(int j=0;j<mention.length();j++){tmp=tmp+"@";}
+			        				article_tmp=article_tmp.substring(0,start)+tmp+article_tmp.substring(last);
+									mp = PATT_RegEx.matcher(article_tmp);
 								}
-								String tmp="";
-		        				for(int j=0;j<mention.length();j++){tmp=tmp+"@";}
-		        				article_tmp=article_tmp.substring(0,start)+tmp+article_tmp.substring(last);
-								mp = PATT_RegEx.matcher(article_tmp);
 							}
 						}
 					}
@@ -847,31 +824,7 @@ public class PostProcessing
 						}
 					}
     				
-    				/*
-	    			 * Pattern match : Self pattern
-	    			 */
-    				/*
-    				for(String pattern_RegEx : SelfPattern2type_hash.keySet())
-					{
-    					String pattern_Type = SelfPattern2type_hash.get(pattern_RegEx);
-				   		Pattern PATTERN_RegEx = Pattern.compile("^(.*[^A-Za-z0-9])("+pattern_RegEx+")[^A-Za-z0-9]");
-						Matcher mp = PATTERN_RegEx.matcher(article);
-						while (mp.find()) 
-						{
-							String pre = mp.group(1);
-							String mention = mp.group(2);
-							int start=pre.length();
-							int last=start+mention.length();
-							Annotation.add(Pmid+"\t"+start+"\t"+last+"\t"+mention+"\t"+pattern_Type);
-							String tmp="";
-	        				for(int j=0;j<mention.length();j++){tmp=tmp+"@";}
-							article=article.substring(0,start)+tmp+article.substring(last);
-							System.out.println(mention);
-						}
-					}
-					*/
-	    			
-					for(int i=0;i<Annotation.size();i++)
+    				for(int i=0;i<Annotation.size();i++)
 					{
 						FilePostME.write(Annotation.get(i)+"\n");
 					}
@@ -2001,6 +1954,7 @@ public class PostProcessing
 			
 			while ((line = PostMEfile.readLine()) != null)  
 			{
+				//System.out.println(line);
 				String outputs[]=line.split("\\t",-1);
 					
 				/*
@@ -2243,9 +2197,12 @@ public class PostProcessing
 					Matcher mat = pat.matcher(component_hash.get("P"));
 					if(mat.find()) //Title|Abstract
 		        	{
-						if(Integer.parseInt(mat.group(1))<Integer.parseInt(mat.group(2)))
+						if(mat.group(1).length()<=8 && mat.group(2).length()<=8)
 						{
-							component_hash.put("P",mat.group(1)+"_"+mat.group(2));
+							if(Integer.parseInt(mat.group(1))<Integer.parseInt(mat.group(2)))
+							{
+								component_hash.put("P",mat.group(1)+"_"+mat.group(2));
+							}
 						}
 		        	}
 					component_hash.put("P",component_hash.get("P").replaceAll("[-\\[]+$", ""));
@@ -2264,18 +2221,6 @@ public class PostProcessing
 							{
 								component_hash.put("P","CODON"+component_hash.get("P"));
 							}
-							
-							//if(component_hash.get("W").matches("[ATCGUatcgu]") && component_hash.get("M").matches("[ATCGUatcgu]"))
-							//{
-							//	//codon position * 3
-							//	//codon position * 3 - 1
-							//	//codon position * 3 - 2
-							//	String position_wo_codon=component_hash.get("P").replaceAll("^CODON", "");
-							//	int position1=Integer.parseInt(position_wo_codon)*3;
-							//	int position2=position1-1;
-							//	int position3=position1-2;
-							//	component_hash.put("P",position1+","+position2+","+position3);
-							//}
 						}
 					}
 					
@@ -2324,8 +2269,6 @@ public class PostProcessing
 						component_hash.put("M",tmVar.Number_word2digit.get(component_hash.get("M")));
 					}
 
-					//System.out.println(component_hash.get("T")+"\t"+component_hash.get("W")+"\t"+component_hash.get("P")+"\t"+component_hash.get("M"));
-					
 					String type="";
 					if(exchange_nu==true)
 					{
@@ -2381,23 +2324,6 @@ public class PostProcessing
 						identifier=component_hash.get("A")+"|SUB|"+component_hash.get("W")+"|"+component_hash.get("P")+"|"+component_hash.get("M");
 					}
 					
-					// filteringNum_hash
-					//if(component_hash.get("M").equals(component_hash.get("W")) && (!component_hash.get("W").equals("")) && type.equals("DNAMutation")) // remove genotype
-					//{
-					//	filteringNum_hash.put(count, "");
-					//}
-					//else if(NotAaminoacid==false && type.equals("ProteinMutation")) //E 243 ASPARTATE
-					//{
-					//	filteringNum_hash.put(count, "");
-					//}
-					//else if(component_hash.get("W").matches(",") && component_hash.get("M").matches(",") && component_hash.get("P").matches("")) //T,C/T,C
-					//{
-					//	filteringNum_hash.put(count, "");
-					//}
-					//if(component_hash.get("W").equals("") && component_hash.get("M").equals("") && component_hash.get("T").equals("") && !type.equals("SNP")) //exons 5
-					//{
-					//	filteringNum_hash.put(count, "");
-					//}
 					if(mentionlist.get(count).matches("^I[RSrs][Ss]") && type.equals("SNP")) //exons 5
 					{
 						filteringNum_hash.put(count, "");
@@ -2474,18 +2400,6 @@ public class PostProcessing
 					{
 						type="DNAAcidChange";
 					}
-					//else if(type.equals("ProteinMutation") && component_hash.get("T").equals("")  && component_hash.get("A").equals("") && (!component_hash.get("W").equals("")) && component_hash.get("W").equals(component_hash.get("M")))
-					//{
-					//	type="ProteinAllele";
-					//	identifier=component_hash.get("A")+"|Allele|"+component_hash.get("M")+"|"+component_hash.get("P");
-					//}
-					//else if(type.equals("DNAMutation") && component_hash.get("T").equals("") && (!component_hash.get("W").equals("")) && component_hash.get("W").equals(component_hash.get("M")))
-					//{
-					//	type="DNAAllele";
-					//	identifier=component_hash.get("A")+"|Allele|"+component_hash.get("M")+"|"+component_hash.get("P");
-					//}
-					
-					//System.out.println(identifier+"\t"+component_hash.get("T")+"\t"+component_hash.get("W")+"\t"+component_hash.get("P")+"\t"+component_hash.get("M"));
 					
 					boolean show_removed_cases=false;
 					// filtering and Print out
@@ -2498,7 +2412,6 @@ public class PostProcessing
 					{if(show_removed_cases==true){System.out.println("filtering 1:"+mentionlist.get(count));}identifierlist.add("_Remove_");}
 					else if((component_hash.get("M").matches("[ISQMNPKDFHLRWVEYX]") || component_hash.get("W").matches("[ISQMNPKDFHLRWVEYX]")) && component_hash.get("P").matches("[6-9][0-9][0-9][0-9]+")){if(show_removed_cases==true){System.out.println("filtering 2 length:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //M300000X
 					else if(component_hash.get("T").equals("DUP") && component_hash.get("M").matches("") && component_hash.get("P").equals("") && !type.equals("SNP")){if(show_removed_cases==true){System.out.println("filtering 3:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //|DUP|||4]q33-->qter	del[4] q33-->qter	del4q33qter
-					//else if(component_hash.get("T").equals("") && component_hash.get("M").matches("[ATCGUatcgu]") && (component_hash.get("M").equals(component_hash.get("W")))){if(show_removed_cases==true){System.out.println("filtering 4:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //T --> T
 					else if(component_hash.get("P").matches("[\\-\\<\\)\\]][0-9]+") && type.equals("ProteinMutation")){if(show_removed_cases==true){System.out.println("filtering 5:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //negative protein mutation
 					else if(component_hash.get("P").matches(".*>.*")){if(show_removed_cases==true){System.out.println("filtering 6:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //negative protein mutation
 					else if(component_hash.get("W").matches("^[BJOUZ]") || component_hash.get("M").matches("^[BJOUZ]")){if(show_removed_cases==true){System.out.println("filtering 7:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //not a mutation
@@ -2511,12 +2424,13 @@ public class PostProcessing
 					else if(type.equals("SNP") && identifier.matches("[Rr][Ss][0-9]{11,}")){if(show_removed_cases==true){System.out.println("filtering 2-4:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //too long rs number; allows 10 numbers or less
 					else if(type.equals("SNP") && identifier.matches("[Rr][Ss][5-9][0-9]{9,}")){if(show_removed_cases==true){System.out.println("filtering 2-5:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //too long rs number; allows 10 numbers or less
 					else if(type.equals("SNP") && identifier.matches("[0-9][0-9]{0,1}[\\W\\-\\_]*delta")){if(show_removed_cases==true){System.out.println("filtering 2-6:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //0 delta
-					//else if(tmVar.PAM_lowerScorePair.contains(component_hash.get("M")+"\t"+component_hash.get("W"))){if(show_removed_cases==true){System.out.println("filtering 7-1:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //unlikely to occur
-					//else if(component_hash.get("P").equals("") && component_hash.get("T").equals("") && (!type.equals("SNP"))){if(show_removed_cases==true){System.out.println("filtering 8-2:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //position is empty
 					else if(component_hash.get("W").equals("") && component_hash.get("M").equals("") && component_hash.get("T").equals("") && (!type.equals("SNP")) && (!component_hash.get("P").contains("?"))){if(show_removed_cases==true){System.out.println("filtering 8-3:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //p.1234
 					else if(component_hash.get("P").matches("[21][0-9][0-9][0-9]") && (component_hash.get("W").matches("(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)") || component_hash.get("M").matches("(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"))){if(show_removed_cases==true){System.out.println("filtering 8-4:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //May 2018The
 					else if(type.equals("AcidChange") && component_hash.get("W").equals(component_hash.get("M"))){if(show_removed_cases==true){System.out.println("filtering 8-5:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //Met/Met Genotype
 					else if(type.matches("DNAMutation|ProteinMutation") && component_hash.get("T").equals("") && (component_hash.get("W").length() != component_hash.get("M").length()) && component_hash.get("W").length()>0 && component_hash.get("M").length()>0 && (!component_hash.get("P").matches(".*\\?.*")) && (!component_hash.get("W").matches(".*,.*")) && (!component_hash.get("M").matches(".*,.*"))){if(show_removed_cases==true){System.out.println("filtering 8-6:"+mentionlist.get(count)+"\t"+component_hash.get("W")+"\t"+component_hash.get("M"));}identifierlist.add("_Remove_");} //GUCA1A
+					//else if(component_hash.get("T").equals("") && component_hash.get("M").matches("[ATCGUatcgu]") && (component_hash.get("M").equals(component_hash.get("W")))){if(show_removed_cases==true){System.out.println("filtering 4:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //T --> T
+					//else if(tmVar.PAM_lowerScorePair.contains(component_hash.get("M")+"\t"+component_hash.get("W"))){if(show_removed_cases==true){System.out.println("filtering 7-1:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //unlikely to occur
+					//else if(component_hash.get("P").equals("") && component_hash.get("T").equals("") && (!type.equals("SNP"))){if(show_removed_cases==true){System.out.println("filtering 8-2:"+mentionlist.get(count));}identifierlist.add("_Remove_");} //position is empty
 					else
 					{
 						identifierlist.add(identifier);
@@ -2899,38 +2813,37 @@ public class PostProcessing
 				Matcher mat = pat.matcher(line);
 				if(mat.find()) //Title|Abstract
 				{
-					String Pmid=mat.group(1);
-					SingleGene.put(Pmid,new HashMap<String,Integer>());
+					String pmid=mat.group(1);
+					SingleGene.put(pmid,new HashMap<String,Integer>());
 				}
 	        	else if (line.contains("\t")) //Gene mentions
 	        	{
 	        		String anno[]=line.split("\t");
-	        		String Pmid=anno[0];
+	        		String pmid=anno[0];
 	        		//System.out.println(line);
-					if(anno.length>=6)
+					if(anno.length>=6 && anno[1].matches("^\\d+$"))
 	        		{
 						int start=Integer.parseInt(anno[1]);
 						String gene_mention=anno[3];
 	        			String mentiontype=anno[4];
+	        			anno[5]=anno[5].replaceAll("\\(Homoid:[0-9]+\\)","");
 	        			if(gene_mention.toLowerCase().equals("raf"))
 	        			{
 	        				anno[5]=anno[5]+";673";
 	        			}
 	        			boolean variant_gene_overlap=false;
-	        			if(tmVar.variant_mention_to_filter_overlap_gene.containsKey(Pmid))
+	        			if(tmVar.variant_mention_to_filter_overlap_gene.containsKey(pmid))
 	        			{
-	        				if(tmVar.variant_mention_to_filter_overlap_gene.get(Pmid).containsKey(start))
+	        				if(tmVar.variant_mention_to_filter_overlap_gene.get(pmid).containsKey(start))
 	        				{
-	        					
+	        					for(int var_mention_start : tmVar.variant_mention_to_filter_overlap_gene.get(pmid).keySet())
+			        			{
+			        				if(var_mention_start == start) // the gene mention is the same to one of the variant mention
+			        				{
+			        					variant_gene_overlap=true;
+			        				}
+			        			}
 	        				}
-	        				
-	        				for(int var_mention_start : tmVar.variant_mention_to_filter_overlap_gene.get(Pmid).keySet())
-		        			{
-		        				if(var_mention_start == start) // the gene mention is the same to one of the variant mention
-		        				{
-		        					variant_gene_overlap=true;
-		        				}
-		        			}
 	        			}
 	        					
 	        			if(mentiontype.equals("Gene") && variant_gene_overlap==false)
@@ -2974,7 +2887,7 @@ public class PostProcessing
 										String rsNumbers[]=rsNumber.split("\\|");
 										for(int i=0;i<rsNumbers.length;i++)
 										{
-											rs2gene.put(Pmid+"\t"+rsNumbers[i],geneids[gi]);
+											rs2gene.put(pmid+"\t"+rsNumbers[i],geneids[gi]);
 										}
 		        				    }
 	        					}
@@ -2988,6 +2901,7 @@ public class PostProcessing
 			/**
 			 * Chromosome & RefSeq Mention Extraction
 			 */
+			//System.out.println("Chromosome & RefSeq Mention Extraction");
 			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
 			HashMap<String,String> annotations_CNV = new HashMap<String,String>();
 			HashMap<String,String> annotations_chromosome = new HashMap<String,String>();
@@ -3021,18 +2935,19 @@ public class PostProcessing
 			/**
 			 * RS_DNA_Protein Pattern Extraction
 			 */
+			//System.out.println("RS_DNA_Protein Pattern Extraction");
 			String article="";
-			String Pmid="";
+			String pmid="";
 			HashMap<String,Integer> Flag_Protein_WPM=new HashMap<String,Integer>();
 			HashMap<String,Integer> Flag_DNA_gt_Format=new HashMap<String,Integer>();
 			HashMap<String,String> RSnumberList = new HashMap<String,String>();
 			HashMap<Integer,String> start2id = new HashMap<Integer,String>(); //tmp
 			HashMap<String,String> MentionPatternMap2rs = new HashMap<String,String>(); //Assign RS# to the DNA/Protein mutations in the same pattern range
 			HashMap<String,String> MentionPatternMap = new HashMap<String,String>();  // group DNA/Protein mutations (will assign the same RS# if possible)
-			HashMap<String,String> MentionPatternMap2rs_extend = new HashMap<String,String>(); //by pattern [PMID:24073655] c.169G>C (p.Gly57Arg) -- map to rs764352037
+			HashMap<String,String> MentionPatternMap2rs_extend = new HashMap<String,String>(); //by pattern [pmid:24073655] c.169G>C (p.Gly57Arg) -- map to rs764352037
 			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
 			
-			HashMap<String,ArrayList<Integer>> PMID2SentenceOffsets = new HashMap<String,ArrayList<Integer>>();
+			HashMap<String,ArrayList<Integer>> pmid2SentenceOffsets = new HashMap<String,ArrayList<Integer>>();
 			
 			while ((line = inputfile.readLine()) != null)  
 			{
@@ -3040,7 +2955,7 @@ public class PostProcessing
 				Matcher mat = pat.matcher(line);
 				if(mat.find()) //Title|Abstract
 	        	{
-					Pmid = mat.group(1);
+					pmid = mat.group(1);
 					String ParagraphContent=mat.group(3);
 					article=article+ParagraphContent+"\t";
 					
@@ -3052,38 +2967,38 @@ public class PostProcessing
 					{
 						Sentence_offsets.add(Sent_start);
 					}
-					PMID2SentenceOffsets.put(Pmid, Sentence_offsets);
+					pmid2SentenceOffsets.put(pmid, Sentence_offsets);
 				}
 				else if (line.contains("\t")) //Annotation
 		    	{
 					String anno[]=line.split("\t");
 	        		if(anno.length>=6)
 	        		{
-	        			Pmid = anno[0];
+	        			pmid = anno[0];
 	        			int start = Integer.parseInt(anno[1]);
     	        		int last = Integer.parseInt(anno[2]);
     	        		String mention=anno[3];
     	        		String mentiontype=anno[4];
-    	        		if(mention.matches("^c\\.[0-9]+[ ]*[ATCG][ ]*>[ ]*[ATCG]$")) // if exists 12345A>G, or A1556E or E1356A, the A154T should be protein mutation 
+    	        		if(mention.matches(".*[0-9]+[ ]*[ATCG][ ]*>[ ]*[ATCG]$")) // if exists 12345A>G, or A1556E or E1356A, the A154T should be protein mutation 
     	        		{
-    	        			if(Flag_DNA_gt_Format.containsKey(Pmid))
+    	        			if(Flag_DNA_gt_Format.containsKey(pmid))
     	        			{
-    	        				Flag_DNA_gt_Format.put(Pmid,Flag_DNA_gt_Format.get(Pmid)+1);
+    	        				Flag_DNA_gt_Format.put(pmid,Flag_DNA_gt_Format.get(pmid)+1);
     	        			}
     	        			else
     	        			{
-    	        				Flag_DNA_gt_Format.put(Pmid,1);
+    	        				Flag_DNA_gt_Format.put(pmid,1);
     	        			}
     	        		}
     	        		else if(mention.matches("^[ATCGISQMNPKDFHLRWVEYX][0-9]+[ISQMNPKDFHLRWVEYX]$") || mention.matches("^[ATCGISQMNPKDFHLRWVEYX][0-9]+[ISQMNPKDFHLRWVEYX]$"))
     					{
-    	        			if(Flag_Protein_WPM.containsKey(Pmid))
+    	        			if(Flag_Protein_WPM.containsKey(pmid))
     	        			{
-    							Flag_Protein_WPM.put(Pmid,Flag_Protein_WPM.get(Pmid)+1);
+    							Flag_Protein_WPM.put(pmid,Flag_Protein_WPM.get(pmid)+1);
     	        			}
     	        			else
     	        			{
-    	        				Flag_Protein_WPM.put(Pmid,1);
+    	        				Flag_Protein_WPM.put(pmid,1);
     	        			}
     					}
     	        		
@@ -3174,7 +3089,7 @@ public class PostProcessing
 								{
 									for(int dp=0;dp<DP.size();dp++)
 									{
-										MentionPatternMap2rs.put(Pmid+"\t"+DP.get(dp),S); // assign the RS# to the DNA/Protein Mutations
+										MentionPatternMap2rs.put(pmid+"\t"+DP.get(dp),S); // assign the RS# to the DNA/Protein Mutations
 									}
 								}
 								else 
@@ -3182,8 +3097,8 @@ public class PostProcessing
 									if(DP.size()>1)
 									{
 										//group the DNA/Protein mutations together
-										MentionPatternMap.put(Pmid+"\t"+DP.get(0),DP.get(1)); 
-										MentionPatternMap.put(Pmid+"\t"+DP.get(1),DP.get(0));
+										MentionPatternMap.put(pmid+"\t"+DP.get(0),DP.get(1)); 
+										MentionPatternMap.put(pmid+"\t"+DP.get(1),DP.get(0));
 									}
 								}
 							}	
@@ -3205,6 +3120,7 @@ public class PostProcessing
 			/**
 			 * DNAMutation|ProteinMutation normalization
 			 */
+			//System.out.println("DNAMutation|ProteinMutation normalization");
 			BufferedWriter outputfile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(finalPubTator), "UTF-8")); // .location
 			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
 			HashMap<String,String> normalized_mutation = new HashMap<String,String>();
@@ -3216,7 +3132,7 @@ public class PostProcessing
 			HashMap<String,HashMap<String,String>> WM2variant = new HashMap<String,HashMap<String,String>>();
 			String outputSTR="";
 			String tiabs="";
-			String pmid="";
+			pmid="";
 			String articleid="";
 			while ((line = inputfile.readLine()) != null)  
 			{
@@ -3231,9 +3147,11 @@ public class PostProcessing
 				else if (line.contains("\t")) //Annotation
 	        	{
 					String anno[]=line.split("\t");
+					pmid=anno[0];
 					String mentiontype=anno[4];
 					String mention=anno[3];
 					String Flag_Seq="";
+					//System.out.println(Flag_Protein_WPM.get(pmid)+"\t"+Flag_DNA_gt_Format.get(pmid));
 					if(mention.matches("^[mgcrn]\\..*"))
 					{
 						Flag_Seq="c";
@@ -3255,7 +3173,7 @@ public class PostProcessing
 						anno[5]=anno[5].replaceAll("[mgcrnc]\\|","p|");
 						mentiontype=mentiontype.replaceAll("DNA","Protein");
 					}
-					else if(mention.matches("^[ATCG][0-9]+[ATCG]$") && ((Flag_Protein_WPM.containsKey(Pmid) && Flag_DNA_gt_Format.containsKey(Pmid)) || (Flag_Protein_WPM.containsKey(Pmid) && Flag_Protein_WPM.get(Pmid)>50))) //5236G>C and G1738R --> G1706A (ProteinMutation)
+					else if(mention.matches("^[ATCG][0-9]+[ATCG]$") && ((Flag_Protein_WPM.containsKey(pmid) && Flag_DNA_gt_Format.containsKey(pmid)) || (Flag_Protein_WPM.containsKey(pmid) && Flag_Protein_WPM.get(pmid)>50))) //5236G>C and G1738R --> G1706A (ProteinMutation)
 					{
 						Flag_Seq="p";
 						anno[5]=anno[5].replaceAll("c\\|","p|");
@@ -3531,9 +3449,13 @@ public class PostProcessing
 			        							tmp = tmp + tmVar.one2three.get(component[3].substring(len, len+1));
 			        						}
 			        						component[3]=tmp;
+			        						NormalizedForm=component[0]+"."+component[3]+component[2]+"del";
 			        					}
-			        					NormalizedForm=component[0]+"."+component[2]+"del"+component[3];
-		        					}
+		        						else
+		        						{
+		        							NormalizedForm=component[0]+"."+component[2]+"del"+component[3];
+				        				}
+			        				}
 		        					NormalizedForm=NormalizedForm+"|"+component[0]+"."+component[2]+"del";
 		        				}
 		        				else if(component[1].equals("INS"))
@@ -3559,8 +3481,12 @@ public class PostProcessing
 			        							tmp = tmp + tmVar.one2three.get(component[3].substring(len, len+1));
 			        						}
 			        						component[3]=tmp;
+			        						NormalizedForm=component[0]+"."+component[3]+component[2]+"ins";
 			        					}
-			        					NormalizedForm=component[0]+"."+component[2]+"ins"+component[3];
+		        						else
+		        						{
+		        							NormalizedForm=component[0]+"."+component[2]+"ins"+component[3];
+		        						}
 		        					}
 		        					NormalizedForm=NormalizedForm+"|"+component[0]+"."+component[2]+"ins";
 		        				}
@@ -3589,9 +3515,14 @@ public class PostProcessing
 			        							tmp = tmp + tmVar.one2three.get(component[3].substring(len, len+1));
 			        						}
 			        						component[3]=tmp;
+			        						NormalizedForm=component[0]+"."+component[3]+component[2]+"delins";
 			        					}
-			        					NormalizedForm=component[0]+"."+component[2]+"delins"+component[3];
+		        						else
+		        						{
+		        							NormalizedForm=component[0]+"."+component[2]+"delins"+component[3];
+		        						}
 		        					}
+		        					NormalizedForm=NormalizedForm+"|"+component[0]+"."+component[2]+"delins";
 		        				}
 		        				else if(component[1].equals("DUP"))
 		        				{
@@ -3616,8 +3547,12 @@ public class PostProcessing
 			        							tmp = tmp + tmVar.one2three.get(component[3].substring(len, len+1));
 			        						}
 			        						component[3]=tmp;
+			        						NormalizedForm=component[0]+"."+component[3]+component[2]+"dup";
 			        					}
-			        					NormalizedForm=component[0]+"."+component[2]+"dup"+component[3];
+		        						else
+		        						{
+		        							NormalizedForm=component[0]+"."+component[2]+"dup"+component[3];
+		        						}
 		        					}
 		        					NormalizedForm=NormalizedForm+"|"+component[0]+"."+component[2]+"dup";
 		        				}
@@ -3789,7 +3724,6 @@ public class PostProcessing
 	        							if(tmVar.Mutation_RS_Geneid_hash.containsKey(tmVarid_tmp+"\t"+geneid)) //in history
 			        					{
 		        							String RSNum=tmVar.Mutation_RS_Geneid_hash.get(tmVarid_tmp+"\t"+geneid);
-		        							
 		        							//Expired
 	    		        					ResultSet rs = stmt_expired.executeQuery("SELECT rs FROM Expired WHERE rs='"+RSNum+"' limit 1;");
 	    		        					if ( rs.next() ) 
@@ -3822,8 +3756,7 @@ public class PostProcessing
 	        					{
 	        						HashMap<String,String> rs2var = new HashMap<String,String>();
 	        						
-	        						
-			        				//Search database for normalization
+	        						//Search database for normalization
 			        				if(normalized_mutation.containsKey(anno[5])) // The variant has been normalized
 			        				{
 			        					mutation2rs_indatabase.put(anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+anno[5],normalized_mutation.get(anno[5]));
@@ -4177,7 +4110,147 @@ public class PostProcessing
 			        				}
 		        					
 		        					/*
-		        					 * 4. compare with gene2rs
+		        					 * 4. Variant2MostCorrespondingGene_hash
+		        					 */
+		        					if(found == false) // can't find relevant RS# in text 
+			        				{
+		        						if(tmVar.Variant2MostCorrespondingGene_hash.containsKey(anno[5]))
+		        						{
+		        							String nt[]=tmVar.Variant2MostCorrespondingGene_hash.get(anno[5]).split("\t",-1); //4524	1801133	MTHFR C677T
+		        							String geneid=nt[0];
+		        							String rsid=nt[1];
+		        							String genenames=nt[2];
+		        							
+		        							if(genenames.equals("")) // v600e has the highest priority
+		        							{
+		        								outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+		        								found=true;
+		        							}
+		        							else
+		        							{
+		        								String gn[]=genenames.split("\\|"); //43740568	0	D614G	p|SUB|D|614|G	S|Spike	SARS|Covid
+		        								if(nt.length>3) // exists Species token in var2gene.txt
+			        							{
+		        									String speciesnames=nt[3];
+		        									String sn[]=speciesnames.split("\\|"); //43740568	0	D614G	p|SUB|D|614|G	S|Spike	SARS|Covid
+			        								boolean sn_found=false;
+			        								boolean gn_found=false;
+			        								for(String g:gn)
+			        								{
+			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
+				        									{
+				        										gn_found=true;
+				        										break;
+				        									}
+			        									}
+			        								}
+			        								for(String s:sn)
+			        								{
+			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+			        										if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
+				        									{
+				        										sn_found=true;
+				        										break;
+				        									}
+			        									}
+			        								}
+			        								
+			        								if(gn_found==true && sn_found==true)
+			        								{
+			        									outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+			        									found=true;
+			        								}
+			        							}
+			        							else
+			        							{
+			        								for(String g:gn)
+			        								{
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+				        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
+				        									{
+				        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+				        										found=true;
+				        										break;
+				        									}
+			        									}
+			        								}	
+			        							}
+		        							}
+        								}
+		        						else if(tmVar.Variant2MostCorrespondingGene_hash.containsKey(anno[3].toLowerCase()))
+        								{
+		        							String nt[]=tmVar.Variant2MostCorrespondingGene_hash.get(anno[3].toLowerCase()).split("\t",-1); //4524	1801133	MTHFR C677T
+		        							String geneid=nt[0];
+		        							String rsid=nt[1];
+		        							String genenames=nt[2];
+		        							if(genenames.equals(""))
+		        							{
+		        								outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+		        								found=true;
+		        							}
+		        							else
+		        							{
+		        								String gn[]=genenames.split("\\|"); //43740568	0	D614G	p|SUB|D|614|G	S|Spike	SARS|Covid
+		        								if(nt.length>3) // exists Species token in var2gene.txt
+			        							{
+			        								String speciesnames=nt[3];
+			        								String sn[]=speciesnames.split("\\|"); //43740568	0	D614G	p|SUB|D|614|G	S|Spike	SARS|Covid
+			        								boolean sn_found=false;
+			        								boolean gn_found=false;
+			        								for(String g:gn)
+			        								{
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
+				        									{
+				        										gn_found=true;
+				        										break;
+				        									}
+			        									}
+			        								}
+			        								for(String s:sn)
+			        								{
+			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+			        										if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
+				        									{
+				        										sn_found=true;
+				        										break;
+				        									}
+			        										
+			        									}
+			        								}
+			        								if(gn_found==true && sn_found==true)
+			        								{
+			        									outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+			        									found=true;
+			        								}
+			        							}
+			        							else
+			        							{
+			        								for(String g:gn)
+			        								{
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									{
+			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
+				        									{
+				        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+				        										found=true;
+				        										break;
+				        									}
+			        									}
+			        								}	
+			        							}
+		        							}
+        								}
+			        				}
+		        					
+		        					/*
+		        					 * 5. compare with gene2rs
 		        					 */
 		        					if(found == false) // can't find relevant RS# in text 
 			        				{
@@ -4192,7 +4265,7 @@ public class PostProcessing
 		        							String gene_anno[] = gene.split("\t"); //pmid,start,last,mention,geneid
 				        					if(anno[0].equals(gene_anno[0]) && gene_anno.length>=5)
 				        					{
-				        						ArrayList<Integer> SentenceOffsets = PMID2SentenceOffsets.get(anno[0]);
+				        						ArrayList<Integer> SentenceOffsets = pmid2SentenceOffsets.get(anno[0]);
 				        						for(int si=0;si<SentenceOffsets.size();si++) // find sentence location for gene mention
 				        						{
 				        							if(Integer.parseInt(gene_anno[1])<SentenceOffsets.get(si)) //gene_anno[1] = start
@@ -4385,33 +4458,20 @@ public class PostProcessing
 					        				}
 				        				}
 			        				}
-/*
-		        					 * 5. Extended
+		        						
+		        					/*
+		        					 * 6. Extended
 		        					 */
 		        					if(found == false)
 			        				{
-			        					if(MentionPatternMap2rs_extend.containsKey(anno[0]+"\t"+anno[5])) //by pattern [PMID:24073655] c.169G>C (p.Gly57Arg) -- map to rs764352037
+			        					if(MentionPatternMap2rs_extend.containsKey(anno[0]+"\t"+anno[5])) //by pattern [pmid:24073655] c.169G>C (p.Gly57Arg) -- map to rs764352037
 				        				{
 			        						String RSNum=MentionPatternMap2rs_extend.get(anno[0]+"\t"+anno[5]);
 			        						outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+rs2gene.get(pmid+"\t"+RSNum)+";Extended-RS#:"+RSNum+"\n";
 				        					found=true;
 				        				}
 			        				}
-		        					/*
-		        					 * 6. Variant2MostCorrespondingGene_hash
-		        					 */
-		        					if(found == false) // can't find relevant RS# in text 
-			        				{
-		        						if(tmVar.Variant2MostCorrespondingGene_hash.containsKey(anno[3].toLowerCase()))
-        								{
-		        							String nt[]=tmVar.Variant2MostCorrespondingGene_hash.get(anno[3].toLowerCase()).split("\t"); //4524	1801133	MTHFR C677T
-		        							String geneid=nt[0];
-		        							String rsid=nt[1];
-		        							outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
-				        					found=true;
-        								}
-			        				}
-		        					
+		        				
 		        					/*
 		        					 * Others
 		        					 */
@@ -4419,8 +4479,9 @@ public class PostProcessing
 			        				{
 			        					outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+"\n";
 			        				}
-	        					}
+		        				}
 	        				}
+	        				
 	        				if(MentionPatternMap2rs_extend.containsKey(anno[0]+"\t"+anno[5]))
 	        				{
 	        					if(MentionPatternMap.containsKey(anno[0]+"\t"+anno[5]))
@@ -4481,6 +4542,8 @@ public class PostProcessing
 	        	}
 				else if (line.equals(""))
 				{
+					//System.out.println("OnlyOneRSnumbers");
+	        		
 					HashMap <String,String> OnlyOneRSnumbers=new HashMap<String,String>();
 					/*
     				 *  1)	Consistency: C.1799C>A and V600E should be normalized to the same RS#.
@@ -4706,6 +4769,7 @@ public class PostProcessing
 	        		/**
 	        		 * corresponding gene and grouping variants
 	        		 */
+	        		//System.out.println("corresponding gene and grouping variants");
 	        		for(String x:MentionPatternMap.keySet())
 	    			{
 	        			if(x.matches(pmid+"\t.*"))
@@ -4779,94 +4843,99 @@ public class PostProcessing
 	    			}
 	        		*/
 	        		
+	        		//System.out.println("VariantLinking: link the protein and DNA mutations");
 	        		//VariantLinking: link the protein and DNA mutations
 	        		HashMap<String,Boolean> NoPositionVar = new HashMap<String,Boolean>(); // no position var can only group with one variant
 	        		for(String tmp1 : VarID2Mention.keySet())
 	        		{
 	        			String pmid_variantid1[]=tmp1.split("\t");
-	        			String pmid1=pmid_variantid1[0];
-	        			String variantid1=pmid_variantid1[1];
-	        			String component1[]=variantid1.split("\\|",-1);
-	        			if(component1.length>=5)
+	        			if(pmid_variantid1.length>=2)
 	        			{
-	        				String W1=component1[2];
-		        			String P1=component1[3];
-		        			String M1=component1[4];
-		        			if(P1.length()<10 && component1[0].equals("p") && component1[1].equals("SUB")) //1st is ProteinMutation
+		        			String pmid1=pmid_variantid1[0];
+		        			String variantid1=pmid_variantid1[1];
+		        			String component1[]=variantid1.split("\\|",-1);
+		        			if(component1.length>=5)
 		        			{
-		        				for(String tmp2 : VarID2Mention.keySet())
-		    	        		{
-		    	        			String pmid_variantid2[]=tmp2.split("\t");
-		    	        			String pmid2=pmid_variantid2[0];
-		    	        			String variantid2=pmid_variantid2[1];
-		    	        			String component2[]=variantid2.split("\\|",-1);
-		    	        			if(component2.length>=5)
-		    	        			{
-		    	        				String W2=component2[2];
-			    	        			String P2=component2[3];
-			    	        			String M2=component2[4];
-			    	        			if(pmid1.equals(pmid2)) // the same pmid
+		        				String W1=component1[2];
+			        			String P1=component1[3];
+			        			String M1=component1[4];
+			        			if(P1.length()<10 && component1[0].equals("p") && component1[1].equals("SUB")) //1st is ProteinMutation
+			        			{
+			        				for(String tmp2 : VarID2Mention.keySet())
+			    	        		{
+			    	        			String pmid_variantid2[]=tmp2.split("\t");
+			    	        			String pmid2=pmid_variantid2[0];
+			    	        			String variantid2=pmid_variantid2[1];
+			    	        			String component2[]=variantid2.split("\\|",-1);
+			    	        			if(component2.length>=5)
 			    	        			{
-				    	        			if(P2.length()<10 && component2[0].equals("c") && component2[1].equals("SUB"))//2nd is DNAMutation
+			    	        				String W2=component2[2];
+				    	        			String P2=component2[3];
+				    	        			String M2=component2[4];
+				    	        			if(pmid1.equals(pmid2)) // the same pmid
 				    	        			{
-				    	        				if(tmVar.nu2aa_hash.containsKey(W1+"\t"+M1+"\t"+W2+"\t"+M2)) // nu2aa_hash
-				    	        				{
-				    	        					if(P1.equals("") && (!P2.equals("")) && NoPositionVar.containsKey(tmp1))
-		    	        							{
-				    	        						if(!VariantLinking.containsKey(tmp1))
-			    	        		        			{
-				    	        							VariantLinking.put(tmp1,new HashMap<String,String>());
-			    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
-			    	        		        				if(!VariantLinking.containsKey(tmp2))
+					    	        			if(P2.length()<10 && component2[0].equals("c") && component2[1].equals("SUB"))//2nd is DNAMutation
+					    	        			{
+					    	        				if(tmVar.nu2aa_hash.containsKey(W1+"\t"+M1+"\t"+W2+"\t"+M2)) // nu2aa_hash
+					    	        				{
+					    	        					if(P1.equals("") && (!P2.equals("")) && NoPositionVar.containsKey(tmp1))
+			    	        							{
+					    	        						if(!VariantLinking.containsKey(tmp1))
 				    	        		        			{
-				    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
-				    	        		        			}
-			    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
-			    	        		        				NoPositionVar.put(P1,true);
-				    	        		        		}
-			    	        		        			
-		    	        							}
-				    	        					else if(P2.equals("") && (!P1.equals("")) && NoPositionVar.containsKey(tmp2))
-				    	        					{
-				    	        						if(!VariantLinking.containsKey(tmp2))
-			    	        		        			{
-				    	        							VariantLinking.put(tmp2,new HashMap<String,String>());
-			    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
-			    	        		        				if(!VariantLinking.containsKey(tmp1))
-				    	        		        			{
-				    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
-				    	        		        			}
-			    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
-			    	        		        				NoPositionVar.put(P1,true);
-					    	        		        	}
-				    	        					}
-				    	        					else
-				    	        					{
-				    	        						if(P1.matches("^[0-9]+$") && P2.matches("^[0-9]+$"))
-					    	        					{
-				    	        							if((Integer.parseInt(P1)-1)*3<Integer.parseInt(P2) && Integer.parseInt(P1)*3>Integer.parseInt(P2))
-					    	        						{
-					    	        							if(!VariantLinking.containsKey(tmp1))
-					    	        		        			{
-					    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
-					    	        		        			}
-					    	        		        			VariantLinking.get(tmp1).put(tmp2,"");
-					    	        		        			if(!VariantLinking.containsKey(tmp2))
+					    	        							VariantLinking.put(tmp1,new HashMap<String,String>());
+				    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
+				    	        		        				if(!VariantLinking.containsKey(tmp2))
 					    	        		        			{
 					    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
 					    	        		        			}
-					    	        		        			VariantLinking.get(tmp2).put(tmp1,"");
-					    	        						}
+				    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
+				    	        		        				NoPositionVar.put(P1,true);
+					    	        		        		}
+				    	        		        			
+			    	        							}
+					    	        					else if(P2.equals("") && (!P1.equals("")) && NoPositionVar.containsKey(tmp2))
+					    	        					{
+					    	        						if(!VariantLinking.containsKey(tmp2))
+				    	        		        			{
+					    	        							VariantLinking.put(tmp2,new HashMap<String,String>());
+				    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
+				    	        		        				if(!VariantLinking.containsKey(tmp1))
+					    	        		        			{
+					    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
+					    	        		        			}
+				    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
+				    	        		        				NoPositionVar.put(P1,true);
+						    	        		        	}
 					    	        					}
-				    	        					}
-				    	        				}
+					    	        					else
+					    	        					{
+					    	        						if(P1.matches("^[0-9]+$") && P2.matches("^[0-9]+$"))
+						    	        					{
+					    	        							if((Integer.parseInt(P1)-1)*3<Integer.parseInt(P2) && Integer.parseInt(P1)*3>Integer.parseInt(P2))
+						    	        						{
+						    	        							if(!VariantLinking.containsKey(tmp1))
+						    	        		        			{
+						    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
+						    	        		        			}
+						    	        		        			VariantLinking.get(tmp1).put(tmp2,"");
+						    	        		        			if(!VariantLinking.containsKey(tmp2))
+						    	        		        			{
+						    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
+						    	        		        			}
+						    	        		        			VariantLinking.get(tmp2).put(tmp1,"");
+						    	        						}
+						    	        					}
+					    	        					}
+					    	        				}
+					    	        			}
 				    	        			}
 			    	        			}
-		    	        			}
-		    	        		}
+			    	        		}
+			        			}
 		        			}
 	        			}
 	        		}
+	        		//System.out.println("implicit relation to direct relation");
 	        		
 	        		//implicit relation to direct relation
 	        		for(String x:VariantLinking.keySet())
@@ -4967,8 +5036,9 @@ public class PostProcessing
 	        		/*
 	        		 *  VariantGroup to GeneID
 	        		 */
+	        		//System.out.println("VariantGroup to GeneID");
 	        		HashMap<Integer,HashMap<String,String>> sentencelocation_gene2_hash= new HashMap<Integer,HashMap<String,String>>(); // sentence--> gene start --> geneid
-					ArrayList<Integer> SentenceOffsets = PMID2SentenceOffsets.get(pmid);
+					ArrayList<Integer> SentenceOffsets = pmid2SentenceOffsets.get(pmid);
 					//Gene in sentence
 	        		for(String annotation_gene:annotations_gene.keySet())
         			{
@@ -4993,6 +5063,7 @@ public class PostProcessing
     					}
         			}
 	        		
+	        		//System.out.println("group to variant ids");
 	        		HashMap<Integer,String> gid2gene_hash= new HashMap<Integer,String>();
 					for(int gid=0;gid<group_id;gid++) //group to variant ids
 	        		{
@@ -5142,6 +5213,7 @@ public class PostProcessing
 	        		 * Extending the RS# to other group members
 	        		 */
 					
+					//System.out.println("Extending the RS# to other group members");
 					outputSTR_tmp="";
 	        		outputSTR_line=outputSTR.split("\n");
 	        		for(int l=0;l<outputSTR_line.length;l++)
@@ -5195,6 +5267,11 @@ public class PostProcessing
 		        							group_id++;
 		        						}
 		    						}
+		        					else if (RSID.equals("0"))
+		        					{
+		        						CorrespondingGene=geneid;
+		        						gid2gene_hash.put(GroupID,CorrespondingGene);
+		        					}
 		        					else if(gid2gene_hash.containsKey(GroupID))
 		        					{
 		        						CorrespondingGene=gid2gene_hash.get(GroupID);
@@ -5322,6 +5399,7 @@ public class PostProcessing
 		    						}
 		    					}
 		    					
+		    					
 		    					String VariantGroupNum="";
 		    					HashMap<String,String> VariantGroupNum2geneid_hash=new HashMap<String,String>();
 		    					if(VariantGroup.containsKey(pmid+"\t"+IDcolumn))
@@ -5381,19 +5459,19 @@ public class PostProcessing
 									}
 									else if(component[1].equals("INS") && component.length>=4) //"c.104insT"	--> "c|INS|104|T"
 									{
-										ID_HGVS=component[0]+"."+component[2]+"ins"+component[3];
+										ID_HGVS=component[0]+"."+component[3]+component[2]+"ins";
 									}
-									else if(component[1].equals("DEL") && component.length>=4) //"c.104delT"	--> "c|DEL|104|T"
+									else if(component[1].equals("DEL") && component.length>=4) //"p.F508del"	--> "p|DEL|508|F"
 									{
-										ID_HGVS=component[0]+"."+component[2]+"del"+component[3];
+										ID_HGVS=component[0]+"."+component[3]+component[2]+"del";
 									}
 									else if(component[1].equals("INDEL") && component.length>=4) //"c.2153_2155delinsTCCTGGTTTA"	-->	"c|INDEL|2153_2155|TCCTGGTTTA"
 									{
-										ID_HGVS=component[0]+"."+component[2]+"delins"+component[3];
+										ID_HGVS=component[0]+"."+component[3]+component[2]+"delins";
 									}
 									else if(component[1].equals("DUP") && component.length>=4) //"c.1285-1301dup"	--> "c|DUP|1285_1301||"
 									{
-										ID_HGVS=component[0]+"."+component[2]+"dup"+component[3];
+										ID_HGVS=component[0]+"."+component[3]+component[2]+"dup";
 									}
 									else if(component[1].equals("FS") && component.length>=6) //"p.Val35AlafsX25"	-->	"p|FS|V|35|A|25"
 									{
@@ -5477,7 +5555,7 @@ public class PostProcessing
 									}
 			        			}
 								
-								if(!RSID.equals("")) // add RSID
+								if((!RSID.equals("")) && (!RSID.equals("0"))) // add RSID
 		        				{
 									if(rs2gene.containsKey(pmid+"\t"+RSID_for_gene))
 		        					{

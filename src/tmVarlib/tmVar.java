@@ -61,9 +61,11 @@ public class tmVar
 	public static HashMap<String,Integer> RS2Frequency_hash = new HashMap<String,Integer>();
 	public static HashMap<String,HashMap<Integer,String>> variant_mention_to_filter_overlap_gene = new HashMap<String,HashMap<Integer,String>>(); // gene mention: GCC
 	public static HashMap<String,String> Gene2HumanGene_hash = new HashMap<String,String>();
-	public static HashMap<String,String> Variant2MostCorrespondingGene_hash = new HashMap<String,String>();
+	public static HashMap<String,String> Variant2MostCorrespondingGene_hash = new HashMap<String,String>(); //with the corresponding tokens of gene and species
+	public static HashMap<String,HashMap<String,Boolean>> tkn_Variant2MostCorrespondingGene_hash = new HashMap<String, HashMap<String,Boolean>>(); //all tokens in var2gene.txt
+	public static HashMap<String, HashMap<String,Boolean>> Gene_tkn_Variant2MostCorrespondingGene_hash = new HashMap<String, HashMap<String,Boolean>>(); //tokens of genes in documents
+	public static HashMap<String, HashMap<String,Boolean>> Species_tkn_Variant2MostCorrespondingGene_hash = new HashMap<String, HashMap<String,Boolean>>();//tokens of species in documents
 	public static HashMap<String,String> RSandPosition2Seq_hash = new HashMap<String,String>();
-	
 	public static void main(String [] args) throws IOException, InterruptedException, XMLStreamException, SQLException 
 	{
 		/*
@@ -73,7 +75,7 @@ public class tmVar
 		String OutputFolder="output";
 		String TrainTest="Test"; //Train|Train_Mention|Test|Test_FullText
 		String DeleteTmp="True";
-		String DisplayRSnumOnly="True"; // hide the types of the  methods 
+		String DisplayRSnumOnly="True"; // hide the types of the normalization methods 
 		String DisplayChromosome="True"; // hide the chromosome mentions
 		String DisplayRefSeq="True"; // hide the RefSeq mentions
 		String DisplayGenomicRegion="True";
@@ -120,7 +122,7 @@ public class tmVar
 		 */
 		{
 			/*
-			 * POSTagging: loading model
+			 * POSTagging : loading model
 			 */
 			tagger = new MaxentTagger("lib/taggers/english-left3words-distsim.tagger");
 			
@@ -289,15 +291,17 @@ public class tmVar
 			while ((line = inputfile.readLine()) != null)  
 			{
 				//Pattern	c|SUB|C|1749|T	2071558	269
-				Pattern pat = Pattern.compile("^(Pattern|Recognized|ManuallyAdded)	([^\t]+)	([0-9]+)	([0-9,]+)$");
+				Pattern pat = Pattern.compile("^(Pattern|Recognized|ManuallyAdded|ManuallyAdded_SARSCOV2)	([^\t]+)	([0-9]+)	([0-9,]+)$");
 				Matcher mat = pat.matcher(line);
 				if (mat.find())
 	        	{
+					String tmVarForm=mat.group(2);
+					String rs=mat.group(3);
 					String geneids[]=mat.group(4).split(",");
 					for(int i=0;i<geneids.length;i++)
 					{
 						//mutation id | geneid --> rs#
-						Mutation_RS_Geneid_hash.put(mat.group(2)+"\t"+geneids[i], mat.group(3));
+						Mutation_RS_Geneid_hash.put(tmVarForm+"\t"+geneids[i], rs);
 					}
 	        	}
 			}
@@ -311,7 +315,7 @@ public class tmVar
 				String tmVarForm=nt[0];
 				String rs_gene_freq=nt[1];
 				//RS:rs121913377|Gene:673|Freq:3
-				Pattern pat = Pattern.compile("^RS:rs([0-9]+)\\|Gene:([0-9,]+)\\|Freq:([0-9]+)$");
+				Pattern pat = Pattern.compile("^RS:rs([0-9]+)\\|Gene:([0-9,]+)\\|Freq:([0-9][0-9][0-9][0-9]+)$"); // requiring the mapping should with 1000+ frequency
 				Matcher mat = pat.matcher(rs_gene_freq);
 				if (mat.find())
 	        	{
@@ -321,7 +325,7 @@ public class tmVar
 	        	}
 			}
 			tmVarForm2RSID2Freq.close();
-
+			
 			/** RS2Frequency - rs# to its frequency in PTC) */
 			BufferedReader RS2Frequency = new BufferedReader(new InputStreamReader(new FileInputStream("lib/RS2Frequency.txt"), "UTF-8"));
 			line="";
@@ -365,16 +369,48 @@ public class tmVar
 			}
 			Gene2Homoid.close();
 			
+			tkn_Variant2MostCorrespondingGene_hash.put("gene",new HashMap<String,Boolean>());
+			tkn_Variant2MostCorrespondingGene_hash.put("species",new HashMap<String,Boolean>());
+			
 			/** Variant2MostCorrespondingGene **/
 			BufferedReader Variant2MostCorrespondingGene = new BufferedReader(new InputStreamReader(new FileInputStream("Database/var2gene.txt"), "UTF-8"));
 			line="";
 			while ((line = Variant2MostCorrespondingGene.readLine()) != null)  
 			{
-				String nt[]=line.split("\t"); //4524	1801133 C677T
+				String nt[]=line.split("\t",-1); //4524	1801133 C677T
 				String geneid=nt[0];
 				String rsid=nt[1];
 				String var=nt[2].toLowerCase();
-				Variant2MostCorrespondingGene_hash.put(var,geneid+"\t"+rsid);
+				String tmVarForm=nt[3];
+				String gene_names=nt[4].toLowerCase();
+				
+				String gn[]=gene_names.split("\\|");
+				for(String g:gn)
+				{
+					if(!g.equals(""))
+					{
+						tkn_Variant2MostCorrespondingGene_hash.get("gene").put(g,true);
+					}
+				}
+				if(nt.length>5)
+				{
+					String species_names=nt[5].toLowerCase();
+					String sn[]=species_names.split("\\|");
+					for(String s:sn)
+					{
+						if(!s.equals(""))
+						{
+							tkn_Variant2MostCorrespondingGene_hash.get("species").put(s,true);
+						}
+					}
+					Variant2MostCorrespondingGene_hash.put(var,geneid+"\t"+rsid+"\t"+gene_names+"\t"+species_names);
+					Variant2MostCorrespondingGene_hash.put(tmVarForm,geneid+"\t"+rsid+"\t"+gene_names+"\t"+species_names);
+				}
+				else
+				{
+					Variant2MostCorrespondingGene_hash.put(var,geneid+"\t"+rsid+"\t"+gene_names);
+					Variant2MostCorrespondingGene_hash.put(tmVarForm,geneid+"\t"+rsid+"\t"+gene_names);
+				}
 			}
 			Variant2MostCorrespondingGene.close();
 			

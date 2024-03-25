@@ -1,0 +1,551 @@
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*NucleotideNucleotide[\-\+ ]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)-Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide 	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9][ ]*Conjunction[ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*both BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide [1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide [1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide [1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Article[ ]*normal enzyme Preposition Nucleotide Preposition Article[ ]*variant enzyme Preposition Article[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\- ]+[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide [1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*Nucleotide[ ]*Conjunction[ ]*Article[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition either Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*both SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide [1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*[ ]*and [ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition either Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide rather than Article[ ]*normal Nucleotide Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord2[ ]*SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord2[ ]*SurroundingWord1 Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide[\- ]+[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\- ]+[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition sites [1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide SurroundingWord2[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Article[ ]*Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide missense SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide \(r\) Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*[ ]*Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord2[ ]*SurroundingWord1 Preposition Article[ ]*s[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition either Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition the[ ]*Nucleotide Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition the[ ]*Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*RelativePronouns Article[ ]*Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+[-+]{0,1}[0-9]+[ ]*[0-9]+[ ]*(b|bp|N|ntb|p|BP|B)[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide Preposition Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide-Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*both BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide \([-+]{0,1}[1-9][0-9]*\)[ ]*Conjunction[ ]*[-+]{0,2}[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*rather than Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide\) SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*LatinCapital [1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*LatinCapital [1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord2[ ]*Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*SurroundingWordhard2[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Conjunction[ ]*Nucleotide\([1-9][0-9]*\)[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Nucleotide SurroundingWord2[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide[ ]*Conjunction[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide [1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Conjunction[ ]*Nucleotide\([1-9][0-9]*\)\) Preposition Nucleotide	DNAMutation
+(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)[ ]*([0-9]+(b|bp|N|ntb|p|BP|B)|[ATCG]{2,})	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*Conjunction[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide [1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*OutsideLocation[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWordhard2 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*SurroundingWord1 Nucleotide Nucleotide\) Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*its SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*OutsideLocation[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition either Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+[-+]*[0-9]+[ ]*(b|bp|N|ntb|p|BP|B)[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)LatinCapital[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide rather than Article[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide Preposition Article[ ]*SurroundingWordhard2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Article[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*\([1-9][0-9]*\)[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide-for-Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[-+]{0,2}[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide-[1-9][0-9]*[ ]*Conjunction[ ]*Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*both SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition be SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition Article[ ]*SurroundingWordhard2[1-9][0-9]*	DNAMutation
+Nucleotide Preposition the[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord2[ ]*SurroundingWord1 Preposition Nucleotide [1-9][0-9]*	DNAMutation
+Nucleotide-Nucleotide SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+[-+]*[0-9]+[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)[0-9ATCGatcgu]+	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*RelativePronouns Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Preposition Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*rather than Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord1 Preposition sites [1-9][0-9]*	DNAMutation
+Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide SurroundingWord2[ ]*Preposition Article[ ]*SurroundingWordhard2[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide-LatinCapital[1-9][0-9]*-[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide Preposition SurroundingWord2[ ]*a[1-9][0-9]*	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Article[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*\)[ ]*Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide rather than Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+[ATCG]+[ ]*[-+]*[0-9]+[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*can be SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*SurroundingWord1 Nucleotide Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 Preposition aa[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Nucleotide BeVerb[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Nucleotide as SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition Nucleotide	DNAMutation
+[-+]*[0-9]+[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)[A-Z]+	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide[ ]*Conjunction[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*\(Nucleotide Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[\- ]+[fecbhgcex]{1,2}[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide-for-Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide LatinCapital [1-9][0-9]*\(i\) [1-9][0-9]*	DNAMutation
+Nucleotide Preposition Nucleotide\) SurroundingWord2[ ]*[1-9][0-9]*	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide Preposition SurroundingWord1 Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Article[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*SurroundingWord1 Nucleotide Preposition Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Nucleotide SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide Preposition Nucleotide SurroundingWord1 \(r[1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*from Nucleotide Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Preposition Nucleotide\([1-9][0-9]*	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Preposition Article[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*Nucleotide SurroundingWord1 Preposition Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide Preposition LatinCapital[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition either Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*LatinCapital[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*BeVerb[ ]*Nucleotide rather than Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*from Nucleotide Preposition Nucleotide	DNAMutation
+Nucleotide [fecbhgcex]{1,2}[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*Preposition Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)\) Preposition Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide SurroundingWord1 Nucleotide-[1-9][0-9]*	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide[\-\+ ]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*\(LatinCapital\)[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide-[fecbhgcex]{1,2}[1-9][0-9]*-Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*[ ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide Preposition [1-9][0-9]*oh-Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide\([1-9][0-9]*	DNAMutation
+[ATCG][ ]*GreaterThanSign[ ]*[ATCG][ ]*[-+]*[0-9]+	DNAMutation
+c\.[ ]*([-+]|[0-9])[0-9]+[ATCG][ ]*GreaterThanSign[ ]*[ATCG]	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide [1-9][0-9]*	DNAMutation
+[\-\+]*[1-9][0-9]*[- ]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide[-]*[1-9][0-9]*	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+[\-\+]*[1-9][0-9]*Nucleotide[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*- Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\)\]][1-9][0-9]*[\-]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+c.[ATCG][ ]*([-+]|[0-9])[0-9]+[ ]*[ATCG]	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[\)\]]-Nucleotide	DNAMutation
+Nucleotide\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[\)\]]Nucleotide	DNAMutation
+[ATCG][ ]*([-+]|[0-9])[0-9]+[ ]*[ATCG]	DNAMutation
+Nucleotide\([1-9][0-9]*\)\][-]*Nucleotide	DNAMutation
+Nucleotide[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*Nucleotide	DNAMutation
+Nucleotide\)[1-9][0-9]*[ ]*Nucleotide	DNAMutation
+Nucleotide\)[1-9][0-9]*\(Nucleotide	DNAMutation
+([-+]|[0-9])[0-9]+[\*]+[ATCG][ ]*GreaterThanSign[ ]*[ATCG]	DNAMutation
+(GLUTAMINE|GLUTAMIC ACID|LEUCINE|VALINE|ISOLEUCINE|LYSINE|ALANINE|GLYCINE|ASPARTATE|METHIONINE|THREONINE|HISTIDINE|ASPARTIC ACID|ARGININE|ASPARAGINE|TRYPTOPHAN|PROLINE|PHENYLALANINE|CYSTEINE|SERINE|GLUTAMATE|TYROSINE|[Gg]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine)[-to ]*[-+]*[0-9]+[-to ]*(GLUTAMINE|GLUTAMIC ACID|LEUCINE|VALINE|ISOLEUCINE|LYSINE|ALANINE|GLYCINE|ASPARTATE|METHIONINE|THREONINE|HISTIDINE|ASPARTIC ACID|ARGININE|ASPARAGINE|TRYPTOPHAN|PROLINE|PHENYLALANINE|CYSTEINE|SERINE|GLUTAMATE|TYROSINE|[Gg]lutamine|[Gg]lutamic acid|[Ll]eucine|[Vv]aline|[Ii]soleucine|[Ll]ysine|[Aa]lanine|[Gg]lycine|[Aa]spartate|[Mm]ethionine|[Tt]hreonine|[Hh]istidine|[Aa]spartic acid|[Aa]rginine|[Aa]sparagine|[Tt]ryptophan|[Pp]roline|[Pp]henylalanine|[Cc]ysteine|[Ss]erine|[Gg]lutamate|[Tt]yrosine)	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcidAminoAcid[\-\+ ]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)-AminoAcid	ProteinMutation
+p\.[ ]*([CISQMNPKDTFAGHLRWVEYX]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr)[ ]*[-+]*[0-9]+[ ]*([CISQMNPKDTFAGHLRWVEYX]|Cys|Ile|Ser|Gln|Met|Asn|Pro|Lys|Asp|Thr|Phe|Ala|Gly|His|Leu|Arg|Trp|Val|Glu|Tyr)	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\- ]+[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\- ]+[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid[\- ]+[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*both BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition Article[ ]*normal enzyme Preposition AminoAcid Preposition Article[ ]*variant enzyme Preposition Article[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\- ]+[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*AminoAcid[ ]*Conjunction[ ]*Article[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*and [ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition either AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*both SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition either AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid rather than Article[ ]*normal AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition sites [1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition Article[ ]*s[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid missense SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition either AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition the[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition the[ ]*AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*RelativePronouns Article[ ]*AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid [1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid Preposition AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*rather than AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*both BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*LatinCapital [1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid\) SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*LatinCapital [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid \(r\) Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*SurroundingWordhard2[ ]*Preposition AminoAcid	ProteinMutation
+[CISQMNPKDTFAGHLRWVEYX]+[ ]*[-+]*[0-9]+[ ]*(INS|DEL|INDEL|DELINS|DUP|ins|del|indel|delins|dup)	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid[ ]*Conjunction[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid SurroundingWord2[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Conjunction[ ]*AminoAcid\([1-9][0-9]*\)[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Conjunction[ ]*AminoAcid\([1-9][0-9]*\)\) Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid [1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid \([-+]{0,1}[1-9][0-9]*\)[ ]*Conjunction[ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[ ]*[1-9][0-9]*\)[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWordhard2 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*its SurroundingWord1 Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*SurroundingWord1 AminoAcid AminoAcid\) Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition Article[ ]*SurroundingWordhard2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)LatinCapital[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid rather than Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition either AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\(Conjunction[ ]*[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*\([1-9][0-9]*\)[ ]*Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\(Conjunction[ ]*[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid-for-AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\(Conjunction[ ]*[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction[ ]*AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\(Conjunction[ ]*[1-9][0-9]*\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition be SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*both SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition Article[ ]*SurroundingWordhard2[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*OutsideLocation[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition AminoAcid [1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*RelativePronouns AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord1 Preposition sites [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*rather than AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*OutsideLocation[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid SurroundingWord2[ ]*Preposition Article[ ]*SurroundingWordhard2[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Preposition AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid-LatinCapital[1-9][0-9]*-[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid Preposition AminoAcid[\- ]+[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid\) Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\(cd[1-9][0-9]*\)AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*Conjunction[ ]*AminoAcid Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[fecbhgcex]*[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*can be SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid rather than AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\)[ ]*AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition aa[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*SurroundingWord1 AminoAcid Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition LatinCapital[1-9][0-9]*-[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 AminoAcid as SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition Article[ ]*LatinCapital [1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition [fecbhgcex]{1,2}[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid--AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*SurroundingWord2[ ]*\(AminoAcid Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid[ ]*Conjunction[ ]*AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid[\- \(]+[1-9][0-9]*	ProteinMutation
+AminoAcid-for-AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord2[ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid SurroundingWord2[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition Article[ ]*SurroundingWordhard2[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Conjunction[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid LatinCapital [1-9][0-9]*\(i\) [1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+[CISQMNPKDTFAGHLRWVEYX][ ]*[0-9][0-9]+[ ]*[CISQMNPKDTFAGHLRWVEYX]	ProteinMutation
+AminoAcid Preposition AminoAcid\) SurroundingWord2[ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*\([fecbhgcex]{1,2}[1-9][0-9]*\)AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition SurroundingWord1 AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*SurroundingWord1 AminoAcid Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid SurroundingWord1 \(r[1-9][0-9]*	ProteinMutation
+AminoAcid-[fecbhgcex]{1,2}[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*from AminoAcid Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid [fecbhgcex]{1,2}[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Preposition Article[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition LatinCapital [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition[\- ]+[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid Preposition LatinCapital[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*AminoAcid SurroundingWord1 Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition either AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*Article[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid Preposition p[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*BeVerb[ ]*AminoAcid rather than AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*LatinCapital[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid \([glmprst][1-9][0-9]*	ProteinMutation
+AminoAcid SurroundingWord1 AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid [fecbhgcex]{1,2}[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid \(codon [1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*from AminoAcid Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*\(AminoAcid Preposition AminoAcid\)	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*Preposition AminoAcid	ProteinMutation
+AminoAcid SurroundingWord1 AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*\(i\) AminoAcid Preposition AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)\) Preposition AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\(LatinCapital\)[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid-[fecbhgcex]{1,2}[1-9][0-9]*-AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid[\-\+ ]*[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid Preposition AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition [1-9][0-9]*oh-AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*-[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid\([1-9][0-9]*	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid\([1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid [1-9][0-9]*	ProteinMutation
+AminoAcid Preposition AminoAcid [1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*: AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*-AminoAcid Preposition AminoAcid	ProteinMutation
+AminoAcid Preposition AminoAcid-[1-9][0-9]*	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid-[1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*AminoAcid Preposition AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*-AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid [1-9][0-9]*	ProteinMutation
+[\-\+]*[1-9][0-9]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[\)\]][-]*AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*[ ]*AminoAcid[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\]AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*\)AminoAcid	ProteinMutation
+AminoAcid[\-\+ ]*[1-9][0-9]*[ ]*GreaterThanSign[ ]*AminoAcid	ProteinMutation
+AminoAcid\([1-9][0-9]*\)\][-]*AminoAcid	ProteinMutation
+AminoAcid\)[1-9][0-9]*[ ]*AminoAcid	ProteinMutation
+AminoAcid\)[1-9][0-9]*\(AminoAcid	ProteinMutation
+[\-\+]*[1-9][0-9]*AminoAcid-\(AminoAcid	ProteinMutation
+AminoAcid[\)\]][1-9][0-9]*[-]*AminoAcid	ProteinMutation
+[RrSs][Ss][0-9][0-9][0-9][0-9][0-9]+	SNP
+\[[RrSs][Ss]\][ ]*[0-9][0-9][0-9]+	SNP
+[RrSs][Ss][0-9]+(,[0-9]+){1,1}	SNP

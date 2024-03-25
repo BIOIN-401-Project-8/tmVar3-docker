@@ -1,0 +1,3471 @@
+1|t|A Gene RBA with a variant P10447J.
+1|a|
+
+2|t|A Gene WJO with a variant G4607L.
+2|a|
+2	26	32	G4607L	ProteinMutation	p|SUB|G|4607|L
+
+3|t|A Gene NBR with a variant C111483T.
+3|a|
+3	26	34	C111483T	DNAMutation	g|SUB|C|111483|T
+
+4|t|A Gene WJO with a variant G4507L.
+4|a|
+4	26	32	G4507L	ProteinMutation	p|SUB|G|4507|L
+
+5|t|A Gene CASK with a variant M519T.
+5|a|
+5	27	32	M519T	ProteinMutation	p|SUB|M|519|T
+
+6|t|A Gene NORPA with a variant C1094S.
+6|a|
+6	28	34	C1094S	ProteinMutation	p|SUB|C|1094|S
+
+7|t|A Gene FAS with a variant L844C.
+7|a|
+
+8|t|A Gene KCT with a variant C4241T.
+8|a|
+8	26	32	C4241T	DNAMutation	g|SUB|C|4241|T
+
+9|t|A Gene CPC with a variant C204078T.
+9|a|
+9	26	34	C204078T	DNAMutation	g|SUB|C|204078|T
+
+10|t|A Gene HCF with a variant C133A.
+10|a|
+10	26	31	C133A	DNAMutation	c|SUB|C|133|A
+
+11|t|A Gene WJO with a variant G4407G.
+11|a|
+
+12|t|A Gene RPM with a variant I8226V.
+12|a|
+
+13|t|A Gene LMN with a variant A1908T.
+13|a|
+13	26	32	A1908T	DNAMutation	c|SUB|A|1908|T
+
+14|t|A Gene MSC with a variant E116K.
+14|a|
+14	26	31	E116K	ProteinMutation	p|SUB|E|116|K
+
+15|t|A Gene LIP with a variant F155C.
+15|a|
+15	26	31	F155C	ProteinMutation	p|SUB|F|155|C
+
+16|t|A Gene IMC with a variant C1736T.
+16|a|
+16	26	32	C1736T	DNAMutation	c|SUB|C|1736|T
+
+17|t|A Gene PDB with a variant P392L.
+17|a|
+17	26	31	P392L	ProteinMutation	p|SUB|P|392|L
+
+18|t|A Gene AUT with a variant R5644T.
+18|a|
+18	26	32	R5644T	ProteinMutation	p|SUB|R|5644|T
+
+19|t|A Gene CRYAA with a variant N101D.
+19|a|
+19	28	33	N101D	ProteinMutation	p|SUB|N|101|D
+
+20|t|A Gene TME with a variant M170A.
+20|a|
+20	26	31	M170A	ProteinMutation	p|SUB|M|170|A
+
+21|t|A Gene SNU with a variant G30099T.
+21|a|
+21	26	33	G30099T	DNAMutation	g|SUB|G|30099|T
+
+22|t|A Gene CRAF with a variant P261A.
+22|a|
+22	27	32	P261A	ProteinMutation	p|SUB|P|261|A;RS#:121434594
+
+23|t|A Gene KIA with a variant A1549L.
+23|a|
+23	26	32	A1549L	ProteinMutation	p|SUB|A|1549|L
+
+24|t|A Gene CCD with a variant C109A.
+24|a|
+24	26	31	C109A	DNAMutation	c|SUB|C|109|A
+
+25|t|A Gene SNOR with a variant D109B.
+25|a|
+
+26|t|A Gene KPR with a variant A181L.
+26|a|
+26	26	31	A181L	ProteinMutation	p|SUB|A|181|L
+
+27|t|A Gene VEG with a variant F165R.
+27|a|
+27	26	31	F165R	ProteinMutation	p|SUB|F|165|R
+
+28|t|A Gene SMO with a variant L412F.
+28|a|
+28	26	31	L412F	ProteinMutation	p|SUB|L|412|F;RS#:879255280
+
+29|t|A Gene IDH with a variant R132H.
+29|a|
+29	26	31	R132H	ProteinMutation	p|SUB|R|132|H;RS#:121913500
+
+30|t|A Gene TME with a variant M185A.
+30|a|
+30	26	31	M185A	ProteinMutation	p|SUB|M|185|A
+
+31|t|A Gene CRBN with a variant I391V.
+31|a|
+31	27	32	I391V	ProteinMutation	p|SUB|I|391|V
+
+32|t|A Gene MYOC with a variant Y437H.
+32|a|
+32	27	32	Y437H	ProteinMutation	p|SUB|Y|437|H;RS#:74315328
+
+33|t|A Gene ABC with a variant A1219K.
+33|a|
+33	26	32	A1219K	ProteinMutation	p|SUB|A|1219|K
+
+34|t|A Gene OPRK with a variant A843G.
+34|a|
+34	27	32	A843G	DNAMutation	c|SUB|A|843|G;RS#:702764
+
+35|t|A Gene NSP with a variant B500S.
+35|a|
+
+36|t|A Gene TYLC with a variant V965F.
+36|a|
+36	27	32	V965F	ProteinMutation	p|SUB|V|965|F
+
+37|t|A Gene EGFR with a variant C1025A.
+37|a|
+37	27	33	C1025A	DNAMutation	c|SUB|C|1025|A
+
+38|t|A Gene IMC with a variant C4489T.
+38|a|
+38	26	32	C4489T	DNAMutation	g|SUB|C|4489|T
+
+39|t|A Gene CERT with a variant S132A.
+39|a|
+39	27	32	S132A	ProteinMutation	p|SUB|S|132|A
+
+40|t|A Gene ADO with a variant A134F.
+40|a|
+40	26	31	A134F	ProteinMutation	p|SUB|A|134|F
+
+41|t|A Gene KCT with a variant C39571T.
+41|a|
+41	26	33	C39571T	DNAMutation	g|SUB|C|39571|T
+
+42|t|A Gene SEL with a variant P415K.
+42|a|
+42	26	31	P415K	ProteinMutation	p|SUB|P|415|K
+
+43|t|A Gene NKB with a variant G15041C.
+43|a|
+43	26	33	G15041C	DNAMutation	g|SUB|G|15041|C
+
+44|t|A Gene AAD with a variant F716L.
+44|a|
+44	26	31	F716L	ProteinMutation	p|SUB|F|716|L
+
+45|t|A Gene NCT with a variant C11390T.
+45|a|
+45	26	33	C11390T	DNAMutation	g|SUB|C|11390|T
+
+46|t|A Gene EGFR with a variant K721A.
+46|a|
+46	27	32	K721A	ProteinMutation	p|SUB|K|721|A
+
+47|t|A Gene EEP with a variant D131G.
+47|a|
+47	26	31	D131G	ProteinMutation	p|SUB|D|131|G
+
+48|t|A Gene TAU with a variant P301L.
+48|a|
+48	26	31	P301L	ProteinMutation	p|SUB|P|301|L
+
+49|t|A Gene MEH with a variant D7495A.
+49|a|
+
+50|t|A Gene WPC with a variant B131T.
+50|a|
+
+51|t|A Gene GIXX with a variant X630X.
+51|a|
+51	27	32	X630X	ProteinMutation	p|SUB|X|630|X
+
+52|t|A Gene TME with a variant M194A.
+52|a|
+52	26	31	M194A	ProteinMutation	p|SUB|M|194|A
+
+53|t|A Gene MHC with a variant C976L.
+53|a|
+
+54|t|A Gene IEX with a variant L320G.
+54|a|
+54	26	31	L320G	ProteinMutation	p|SUB|L|320|G
+
+55|t|A Gene AIS with a variant I440C.
+55|a|
+55	26	31	I440C	ProteinMutation	p|SUB|I|440|C
+
+56|t|A Gene NRR with a variant L2159A.
+56|a|
+56	26	32	L2159A	ProteinMutation	p|SUB|L|2159|A
+
+57|t|A Gene AWQ with a variant C131C.
+57|a|
+
+58|t|A Gene HHS with a variant N268200900013C.
+58|a|
+58	26	40	N268200900013C	ProteinMutation	p|SUB|N|268200900013|C
+
+59|t|A Gene DST with a variant A4637S.
+59|a|
+59	26	32	A4637S	ProteinMutation	p|SUB|A|4637|S
+
+60|t|A Gene LLO with a variant N478A.
+60|a|
+60	26	31	N478A	ProteinMutation	p|SUB|N|478|A
+
+61|t|A Gene MITF with a variant E318K.
+61|a|
+61	27	32	E318K	ProteinMutation	p|SUB|E|318|K;RS#:149617956
+
+62|t|A Gene HBU with a variant M179779T.
+62|a|
+62	26	34	M179779T	ProteinMutation	p|SUB|M|179779|T
+
+63|t|A Gene GFAP with a variant R416W.
+63|a|
+63	27	32	R416W	ProteinMutation	p|SUB|R|416|W;RS#:121909717
+
+64|t|A Gene LPL with a variant S447X.
+64|a|
+64	26	31	S447X	ProteinMutation	p|SUB|S|447|X;RS#:328
+
+65|t|A Gene KFC with a variant C10990P.
+65|a|
+65	26	33	C10990P	ProteinMutation	p|SUB|C|10990|P
+
+66|t|A Gene SSA with a variant T342A.
+66|a|
+66	26	31	T342A	DNAMutation	c|SUB|T|342|A
+
+67|t|A Gene CETP with a variant I405I.
+67|a|
+67	27	32	I405I	ProteinMutation	p|SUB|I|405|I
+
+68|t|A Gene DSP with a variant V318T.
+68|a|
+68	26	31	V318T	ProteinMutation	p|SUB|V|318|T
+
+69|t|A Gene KAC with a variant C16524T.
+69|a|
+69	26	33	C16524T	DNAMutation	g|SUB|C|16524|T
+
+70|t|A Gene KRNRYL with a variant S230F.
+70|a|
+70	29	34	S230F	ProteinMutation	p|SUB|S|230|F
+
+71|t|A Gene LOGI with a variant K1004B.
+71|a|
+
+72|t|A Gene MTC with a variant C9128T.
+72|a|
+72	26	32	C9128T	DNAMutation	g|SUB|C|9128|T
+
+73|t|A Gene YAP with a variant S127A.
+73|a|
+73	26	31	S127A	ProteinMutation	p|SUB|S|127|A;RS#:762471803
+
+74|t|A Gene PIG with a variant R1093G.
+74|a|
+74	26	32	R1093G	ProteinMutation	p|SUB|R|1093|G
+
+75|t|A Gene CGMC with a variant C115960T.
+75|a|
+75	27	35	C115960T	DNAMutation	g|SUB|C|115960|T
+
+76|t|A Gene EET with a variant A963S.
+76|a|
+76	26	31	A963S	ProteinMutation	p|SUB|A|963|S
+
+77|t|A Gene TME with a variant M132E.
+77|a|
+77	26	31	M132E	ProteinMutation	p|SUB|M|132|E
+
+78|t|A Gene MEFV with a variant E148Q.
+78|a|
+78	27	32	E148Q	ProteinMutation	p|SUB|E|148|Q;RS#:3743930
+
+79|t|A Gene AAE with a variant C370A.
+79|a|
+79	26	31	C370A	DNAMutation	c|SUB|C|370|A
+
+80|t|A Gene AMBP with a variant C1010T.
+80|a|
+80	27	33	C1010T	DNAMutation	c|SUB|C|1010|T
+
+81|t|A Gene FIX with a variant C109Y.
+81|a|
+81	26	31	C109Y	ProteinMutation	p|SUB|C|109|Y
+
+82|t|A Gene DMO with a variant T4039A.
+82|a|
+82	26	32	T4039A	DNAMutation	g|SUB|T|4039|A
+
+83|t|A Gene LNK with a variant E208Q.
+83|a|
+83	26	31	E208Q	ProteinMutation	p|SUB|E|208|Q;RS#:202080221
+
+84|t|A Gene CEC with a variant T9032T.
+84|a|
+
+85|t|A Gene SCI with a variant D5038D.
+85|a|
+85	26	32	D5038D	ProteinMutation	p|SUB|D|5038|D
+
+86|t|A Gene DII with a variant S833E.
+86|a|
+86	26	31	S833E	ProteinMutation	p|SUB|S|833|E
+
+87|t|A Gene USD with a variant A1002T.
+87|a|
+87	26	32	A1002T	DNAMutation	c|SUB|A|1002|T
+
+88|t|A Gene MPD with a variant L3208A.
+88|a|
+88	26	32	L3208A	ProteinMutation	p|SUB|L|3208|A
+
+89|t|A Gene CAA with a variant S251T.
+89|a|
+89	26	31	S251T	ProteinMutation	p|SUB|S|251|T
+
+90|t|A Gene DMU with a variant C5754A.
+90|a|
+90	26	32	C5754A	DNAMutation	g|SUB|C|5754|A
+
+91|t|A Gene CEC with a variant T8660T.
+91|a|
+
+92|t|A Gene USD with a variant A2370T.
+92|a|
+92	26	32	A2370T	DNAMutation	c|SUB|A|2370|T
+
+93|t|A Gene SGK with a variant S422D.
+93|a|
+93	26	31	S422D	ProteinMutation	p|SUB|S|422|D
+
+94|t|A Gene PAK with a variant T423E.
+94|a|
+94	26	31	T423E	ProteinMutation	p|SUB|T|423|E
+
+95|t|A Gene ATC with a variant C19812T.
+95|a|
+95	26	33	C19812T	DNAMutation	g|SUB|C|19812|T
+
+96|t|A Gene DEL with a variant D304A.
+96|a|
+96	26	31	D304A	ProteinMutation	p|SUB|D|304|A
+
+97|t|A Gene ATC with a variant C33466T.
+97|a|
+97	26	33	C33466T	DNAMutation	g|SUB|C|33466|T
+
+98|t|A Gene CFB with a variant P2107T.
+98|a|
+98	26	32	P2107T	ProteinMutation	p|SUB|P|2107|T
+
+99|t|A Gene IMC with a variant C3135T.
+99|a|
+99	26	32	C3135T	DNAMutation	g|SUB|C|3135|T
+
+100|t|A Gene IMC with a variant C27201T.
+100|a|
+100	26	33	C27201T	DNAMutation	g|SUB|C|27201|T
+
+101|t|A Gene MPL with a variant S505N.
+101|a|
+101	26	31	S505N	ProteinMutation	p|SUB|S|505|N;RS#:121913614
+
+102|t|A Gene APP with a variant V715F.
+102|a|
+102	26	31	V715F	ProteinMutation	p|SUB|V|715|F
+
+103|t|A Gene PKC with a variant I700D.
+103|a|
+103	26	31	I700D	ProteinMutation	p|SUB|I|700|D
+
+104|t|A Gene JCO with a variant G1302A.
+104|a|
+104	26	32	G1302A	DNAMutation	c|SUB|G|1302|A
+
+105|t|A Gene AKA with a variant P350A.
+105|a|
+105	26	31	P350A	ProteinMutation	p|SUB|P|350|A
+
+106|t|A Gene LEP with a variant A1457G.
+106|a|
+106	26	32	A1457G	DNAMutation	c|SUB|A|1457|G
+
+107|t|A Gene RAH with a variant L352F.
+107|a|
+107	26	31	L352F	ProteinMutation	p|SUB|L|352|F
+
+108|t|A Gene KYS with a variant E170K.
+108|a|
+108	26	31	E170K	ProteinMutation	p|SUB|E|170|K
+
+109|t|A Gene KFC with a variant C11389P.
+109|a|
+109	26	33	C11389P	ProteinMutation	p|SUB|C|11389|P
+
+110|t|A Gene ALPP with a variant E451G.
+110|a|
+110	27	32	E451G	ProteinMutation	p|SUB|E|451|G;RS#:1048994
+
+111|t|A Gene CEC with a variant T9035T.
+111|a|
+
+112|t|A Gene EGFR with a variant L858R.
+112|a|
+112	27	32	L858R	ProteinMutation	p|SUB|L|858|R;RS#:121434568
+
+113|t|A Gene MCM with a variant V5322A.
+113|a|
+113	26	32	V5322A	ProteinMutation	p|SUB|V|5322|A
+
+114|t|A Gene GAP with a variant U103A.
+114|a|
+
+115|t|A Gene IMC with a variant C25679T.
+115|a|
+115	26	33	C25679T	DNAMutation	g|SUB|C|25679|T
+
+116|t|A Gene HTC with a variant C2155T.
+116|a|
+116	26	32	C2155T	DNAMutation	c|SUB|C|2155|T
+
+117|t|A Gene IBF with a variant C2009T.
+117|a|
+117	26	32	C2009T	DNAMutation	c|SUB|C|2009|T
+
+118|t|A Gene TME with a variant M161A.
+118|a|
+118	26	31	M161A	ProteinMutation	p|SUB|M|161|A
+
+119|t|A Gene APC with a variant I1307K.
+119|a|
+119	26	32	I1307K	ProteinMutation	p|SUB|I|1307|K;RS#:1801155
+
+120|t|A Gene ACG with a variant S461E.
+120|a|
+120	26	31	S461E	ProteinMutation	p|SUB|S|461|E
+
+121|t|A Gene EST with a variant L120P.
+121|a|
+121	26	31	L120P	ProteinMutation	p|SUB|L|120|P
+
+122|t|A Gene PMT with a variant C1165S.
+122|a|
+122	26	32	C1165S	ProteinMutation	p|SUB|C|1165|S
+
+123|t|A Gene MOP with a variant C104E.
+123|a|
+
+124|t|A Gene RIT with a variant F806T.
+124|a|
+124	26	31	F806T	ProteinMutation	p|SUB|F|806|T
+
+125|t|A Gene WCHEC with a variant L1597T.
+125|a|
+125	28	34	L1597T	ProteinMutation	p|SUB|L|1597|T
+
+126|t|A Gene SYK with a variant E748A.
+126|a|
+126	26	31	E748A	ProteinMutation	p|SUB|E|748|A
+
+127|t|A Gene LHO with a variant N4216C.
+127|a|
+127	26	32	N4216C	ProteinMutation	p|SUB|N|4216|C
+
+128|t|A Gene FUS with a variant R521C.
+128|a|
+128	26	31	R521C	ProteinMutation	p|SUB|R|521|C;RS#:121909668
+
+129|t|A Gene BXE with a variant O781A.
+129|a|
+
+130|t|A Gene LNU with a variant B461T.
+130|a|
+
+131|t|A Gene TME with a variant M183A.
+131|a|
+131	26	31	M183A	ProteinMutation	p|SUB|M|183|A
+
+132|t|A Gene HHS with a variant N261201600007I.
+132|a|
+132	26	40	N261201600007I	ProteinMutation	p|SUB|N|261201600007|I
+
+133|t|A Gene ATC with a variant C19188T.
+133|a|
+133	26	33	C19188T	DNAMutation	g|SUB|C|19188|T
+
+134|t|A Gene TAF with a variant I1040C.
+134|a|
+134	26	32	I1040C	ProteinMutation	p|SUB|I|1040|C
+
+135|t|A Gene KNU with a variant C7312T.
+135|a|
+135	26	32	C7312T	DNAMutation	g|SUB|C|7312|T
+
+136|t|A Gene KUD with a variant C4121T.
+136|a|
+136	26	32	C4121T	DNAMutation	g|SUB|C|4121|T
+
+137|t|A Gene LASE with a variant R750S.
+137|a|
+137	27	32	R750S	ProteinMutation	p|SUB|R|750|S
+
+138|t|A Gene IMC with a variant C3101T.
+138|a|
+138	26	32	C3101T	DNAMutation	g|SUB|C|3101|T
+
+139|t|A Gene WPC with a variant B133T.
+139|a|
+
+140|t|A Gene RVJS with a variant B1175D.
+140|a|
+
+141|t|A Gene FNR with a variant D154A.
+141|a|
+141	26	31	D154A	ProteinMutation	p|SUB|D|154|A
+
+142|t|A Gene TNFA with a variant G308A.
+142|a|
+142	27	32	G308A	DNAMutation	c|SUB|G|308|A;RS#:1800629
+
+143|t|A Gene CEC with a variant T4023T.
+143|a|
+
+144|t|A Gene ATC with a variant C43715T.
+144|a|
+144	26	33	C43715T	DNAMutation	g|SUB|C|43715|T
+
+145|t|A Gene KYS with a variant E150R.
+145|a|
+145	26	31	E150R	ProteinMutation	p|SUB|E|150|R
+
+146|t|A Gene TME with a variant M131L.
+146|a|
+146	26	31	M131L	ProteinMutation	p|SUB|M|131|L
+
+147|t|A Gene MDAM with a variant B435S.
+147|a|
+
+148|t|A Gene MSVC with a variant P182V.
+148|a|
+148	27	32	P182V	ProteinMutation	p|SUB|P|182|V
+
+149|t|A Gene FMRP with a variant I304N.
+149|a|
+149	27	32	I304N	ProteinMutation	p|SUB|I|304|N
+
+150|t|A Gene TME with a variant M176A.
+150|a|
+150	26	31	M176A	ProteinMutation	p|SUB|M|176|A
+
+151|t|A Gene MPL with a variant Y591D.
+151|a|
+151	26	31	Y591D	ProteinMutation	p|SUB|Y|591|D
+
+152|t|A Gene APC with a variant F8015F.
+152|a|
+
+153|t|A Gene CCD with a variant C109B.
+153|a|
+
+154|t|A Gene ATC with a variant C29283T.
+154|a|
+154	26	33	C29283T	DNAMutation	g|SUB|C|29283|T
+
+155|t|A Gene BAD with a variant S112A.
+155|a|
+155	26	31	S112A	ProteinMutation	p|SUB|S|112|A
+
+156|t|A Gene SOD with a variant V148G.
+156|a|
+156	26	31	V148G	ProteinMutation	p|SUB|V|148|G
+
+157|t|A Gene HHS with a variant N275200403394C.
+157|a|
+157	26	40	N275200403394C	ProteinMutation	p|SUB|N|275200403394|C
+
+158|t|A Gene DXHX with a variant S6673E.
+158|a|
+
+159|t|A Gene APP with a variant T668A.
+159|a|
+159	26	31	T668A	DNAMutation	c|SUB|T|668|A
+
+160|t|A Gene HTC with a variant C2654T.
+160|a|
+160	26	32	C2654T	DNAMutation	c|SUB|C|2654|T
+
+161|t|A Gene SEA with a variant H187A.
+161|a|
+161	26	31	H187A	ProteinMutation	p|SUB|H|187|A
+
+162|t|A Gene HTC with a variant C2503T.
+162|a|
+162	26	32	C2503T	DNAMutation	c|SUB|C|2503|T
+
+163|t|A Gene TME with a variant M170B.
+163|a|
+
+164|t|A Gene IRC with a variant T2015100324327N.
+164|a|
+164	26	41	T2015100324327N	ProteinMutation	p|SUB|T|2015100324327|N
+
+165|t|A Gene MTHFR with a variant C677T.
+165|a|
+165	28	33	C677T	DNAMutation	c|SUB|C|677|T;RS#:1801133
+
+166|t|A Gene ETA with a variant H440N.
+166|a|
+166	26	31	H440N	ProteinMutation	p|SUB|H|440|N
+
+167|t|A Gene ABL with a variant T315I.
+167|a|
+167	26	31	T315I	ProteinMutation	p|SUB|T|315|I;RS#:121913459
+
+168|t|A Gene DYS with a variant S389I.
+168|a|
+168	26	31	S389I	ProteinMutation	p|SUB|S|389|I
+
+169|t|A Gene NCT with a variant C12261T.
+169|a|
+169	26	33	C12261T	DNAMutation	g|SUB|C|12261|T
+
+170|t|A Gene CEN with a variant A713B.
+170|a|
+
+171|t|A Gene NBR with a variant I2650R.
+171|a|
+171	26	32	I2650R	ProteinMutation	p|SUB|I|2650|R
+
+172|t|A Gene STA with a variant T300F.
+172|a|
+172	26	31	T300F	ProteinMutation	p|SUB|T|300|F
+
+173|t|A Gene KYS with a variant E170R.
+173|a|
+173	26	31	E170R	ProteinMutation	p|SUB|E|170|R
+
+174|t|A Gene DCD with a variant T2980S.
+174|a|
+174	26	32	T2980S	ProteinMutation	p|SUB|T|2980|S
+
+175|t|A Gene CCG with a variant E525T.
+175|a|
+175	26	31	E525T	ProteinMutation	p|SUB|E|525|T
+
+176|t|A Gene CHGB with a variant P413L.
+176|a|
+176	27	32	P413L	ProteinMutation	p|SUB|P|413|L;RS#:742710
+
+177|t|A Gene MPL with a variant W515K.
+177|a|
+177	26	31	W515K	ProteinMutation	p|SUB|W|515|K;RS#:121913616
+
+178|t|A Gene MOR with a variant S196A.
+178|a|
+178	26	31	S196A	ProteinMutation	p|SUB|S|196|A
+
+179|t|A Gene IMC with a variant C1962T.
+179|a|
+179	26	32	C1962T	DNAMutation	c|SUB|C|1962|T
+
+180|t|A Gene AGT with a variant T174M.
+180|a|
+180	26	31	T174M	ProteinMutation	p|SUB|T|174|M;RS#:4762
+
+181|t|A Gene GNAS with a variant R201C.
+181|a|
+
+182|t|A Gene INVO with a variant S5100C.
+182|a|
+182	27	33	S5100C	ProteinMutation	p|SUB|S|5100|C
+
+183|t|A Gene ICE with a variant C285G.
+183|a|
+183	26	31	C285G	DNAMutation	c|SUB|C|285|G
+
+184|t|A Gene ATC with a variant C27335T.
+184|a|
+184	26	33	C27335T	DNAMutation	g|SUB|C|27335|T
+
+185|t|A Gene PTHR with a variant A20210G.
+185|a|
+185	27	34	A20210G	DNAMutation	g|SUB|A|20210|G
+
+186|t|A Gene AGA with a variant T142P.
+186|a|
+186	26	31	T142P	ProteinMutation	p|SUB|T|142|P
+
+187|t|A Gene ABC with a variant B11236C.
+187|a|
+
+188|t|A Gene FER with a variant K565R.
+188|a|
+188	26	31	K565R	ProteinMutation	p|SUB|K|565|R
+
+189|t|A Gene GDH with a variant H454Y.
+189|a|
+189	26	31	H454Y	ProteinMutation	p|SUB|H|454|Y;RS#:121909730
+
+190|t|A Gene BFD with a variant L461A.
+190|a|
+190	26	31	L461A	ProteinMutation	p|SUB|L|461|A
+
+191|t|A Gene HHS with a variant N268201300008C.
+191|a|
+191	26	40	N268201300008C	ProteinMutation	p|SUB|N|268201300008|C
+
+192|t|A Gene DST with a variant P3086S.
+192|a|
+192	26	32	P3086S	ProteinMutation	p|SUB|P|3086|S
+
+193|t|A Gene MVA with a variant V6203A.
+193|a|
+
+194|t|A Gene LDY with a variant T14459A.
+194|a|
+194	26	33	T14459A	DNAMutation	g|SUB|T|14459|A
+
+195|t|A Gene APP with a variant E693G.
+195|a|
+195	26	31	E693G	ProteinMutation	p|SUB|E|693|G;RS#:63751039
+
+196|t|A Gene DLY with a variant D161C.
+196|a|
+
+197|t|A Gene CSUR with a variant P4266T.
+197|a|
+197	27	33	P4266T	ProteinMutation	p|SUB|P|4266|T
+
+198|t|A Gene HHS with a variant N268201300071C.
+198|a|
+198	26	40	N268201300071C	ProteinMutation	p|SUB|N|268201300071|C
+
+199|t|A Gene APP with a variant V717I.
+199|a|
+199	26	31	V717I	ProteinMutation	p|SUB|V|717|I;RS#:63750264
+
+200|t|A Gene TGFBI with a variant R124H.
+200|a|
+200	28	33	R124H	ProteinMutation	p|SUB|R|124|H;RS#:121909211
+
+201|t|A Gene GTB with a variant E303C.
+201|a|
+
+202|t|A Gene BAD with a variant D119G.
+202|a|
+202	26	31	D119G	ProteinMutation	p|SUB|D|119|G
+
+203|t|A Gene ATC with a variant C15264T.
+203|a|
+203	26	33	C15264T	DNAMutation	g|SUB|C|15264|T
+
+204|t|A Gene MET with a variant D1228V.
+204|a|
+204	26	32	D1228V	ProteinMutation	p|SUB|D|1228|V
+
+205|t|A Gene AGT with a variant M235T.
+205|a|
+205	26	31	M235T	ProteinMutation	p|SUB|M|235|T;RS#:699
+
+206|t|A Gene HHT with a variant R114T.
+206|a|
+206	26	31	R114T	ProteinMutation	p|SUB|R|114|T
+
+207|t|A Gene LEA with a variant P3000X.
+207|a|
+207	26	32	P3000X	ProteinMutation	p|SUB|P|3000|X
+
+208|t|A Gene HTC with a variant C2501T.
+208|a|
+208	26	32	C2501T	DNAMutation	c|SUB|C|2501|T
+
+209|t|A Gene DBAT with a variant H162A.
+209|a|
+209	27	32	H162A	ProteinMutation	p|SUB|H|162|A
+
+210|t|A Gene DHF with a variant R312C.
+210|a|
+210	26	31	R312C	ProteinMutation	p|SUB|R|312|C
+
+211|t|A Gene DEF with a variant B108B.
+211|a|
+
+212|t|A Gene PKD with a variant K618N.
+212|a|
+212	26	31	K618N	ProteinMutation	p|SUB|K|618|N
+
+213|t|A Gene ACC with a variant C19180T.
+213|a|
+213	26	33	C19180T	DNAMutation	g|SUB|C|19180|T
+
+214|t|A Gene CYLD with a variant P904L.
+214|a|
+214	27	32	P904L	ProteinMutation	p|SUB|P|904|L
+
+215|t|A Gene ARVC with a variant F930C.
+215|a|
+215	27	32	F930C	ProteinMutation	p|SUB|F|930|C
+
+216|t|A Gene IHHN with a variant V309F.
+216|a|
+216	27	32	V309F	ProteinMutation	p|SUB|V|309|F
+
+217|t|A Gene APP with a variant M596V.
+217|a|
+217	26	31	M596V	ProteinMutation	p|SUB|M|596|V
+
+218|t|A Gene GFP with a variant M150L.
+218|a|
+218	26	31	M150L	ProteinMutation	p|SUB|M|150|L
+
+219|t|A Gene DHF with a variant R312T.
+219|a|
+219	26	31	R312T	ProteinMutation	p|SUB|R|312|T
+
+220|t|A Gene USD with a variant A110T.
+220|a|
+220	26	31	A110T	DNAMutation	c|SUB|A|110|T
+
+221|t|A Gene LCAT with a variant R135D.
+221|a|
+221	27	32	R135D	ProteinMutation	p|SUB|R|135|D
+
+222|t|A Gene PLAPE with a variant G9604H.
+222|a|
+
+223|t|A Gene HIC with a variant R111A.
+223|a|
+223	26	31	R111A	ProteinMutation	p|SUB|R|111|A
+
+224|t|A Gene ALK with a variant L1196M.
+224|a|
+224	26	32	L1196M	ProteinMutation	p|SUB|L|1196|M;RS#:1057519784
+
+225|t|A Gene GBA with a variant D409H.
+225|a|
+225	26	31	D409H	ProteinMutation	p|SUB|D|409|H;RS#:1064651
+
+226|t|A Gene PDEF with a variant B103A.
+226|a|
+
+227|t|A Gene MOR with a variant S196L.
+227|a|
+227	26	31	S196L	ProteinMutation	p|SUB|S|196|L
+
+228|t|A Gene IMC with a variant C1877T.
+228|a|
+228	26	32	C1877T	DNAMutation	c|SUB|C|1877|T
+
+229|t|A Gene WJO with a variant G7212G.
+229|a|
+
+230|t|A Gene WSCY with a variant P734B.
+230|a|
+
+231|t|A Gene HER with a variant K721A.
+231|a|
+231	26	31	K721A	ProteinMutation	p|SUB|K|721|A
+
+232|t|A Gene ABC with a variant B11936A.
+232|a|
+
+233|t|A Gene HER with a variant K293T.
+233|a|
+233	26	31	K293T	ProteinMutation	p|SUB|K|293|T
+
+234|t|A Gene MBI with a variant C1298T.
+234|a|
+234	26	32	C1298T	DNAMutation	c|SUB|C|1298|T
+
+235|t|A Gene SMN with a variant Q282A.
+235|a|
+235	26	31	Q282A	ProteinMutation	p|SUB|Q|282|A
+
+236|t|A Gene EDAR with a variant V370A.
+236|a|
+236	27	32	V370A	ProteinMutation	p|SUB|V|370|A;RS#:3827760
+
+237|t|A Gene PKR with a variant K296R.
+237|a|
+237	26	31	K296R	ProteinMutation	p|SUB|K|296|R
+
+238|t|A Gene GAT with a variant A185H.
+238|a|
+238	26	31	A185H	ProteinMutation	p|SUB|A|185|H
+
+239|t|A Gene WJO with a variant G4207L.
+239|a|
+239	26	32	G4207L	ProteinMutation	p|SUB|G|4207|L
+
+240|t|A Gene MHA with a variant B5553A.
+240|a|
+
+241|t|A Gene ATC with a variant C10556T.
+241|a|
+241	26	33	C10556T	DNAMutation	g|SUB|C|10556|T
+
+242|t|A Gene MLD with a variant L1278A.
+242|a|
+242	26	32	L1278A	ProteinMutation	p|SUB|L|1278|A
+
+243|t|A Gene BRAF with a variant T1796A.
+243|a|
+243	27	33	T1796A	DNAMutation	c|SUB|T|1796|A
+
+244|t|A Gene SDH with a variant Y236F.
+244|a|
+244	26	31	Y236F	ProteinMutation	p|SUB|Y|236|F
+
+245|t|A Gene ATC with a variant C14579T.
+245|a|
+245	26	33	C14579T	DNAMutation	g|SUB|C|14579|T
+
+246|t|A Gene NBR with a variant I16716A.
+246|a|
+246	26	33	I16716A	ProteinMutation	p|SUB|I|16716|A
+
+247|t|A Gene RDL with a variant M314S.
+247|a|
+247	26	31	M314S	ProteinMutation	p|SUB|M|314|S
+
+248|t|A Gene HHS with a variant N268200800008C.
+248|a|
+248	26	40	N268200800008C	ProteinMutation	p|SUB|N|268200800008|C
+
+249|t|A Gene SCR with a variant I179T.
+249|a|
+249	26	31	I179T	ProteinMutation	p|SUB|I|179|T
+
+250|t|A Gene MFG with a variant R1877A.
+250|a|
+250	26	32	R1877A	ProteinMutation	p|SUB|R|1877|A
+
+251|t|A Gene CFH with a variant Y402H.
+251|a|
+251	26	31	Y402H	ProteinMutation	p|SUB|Y|402|H;RS#:10801555
+
+252|t|A Gene MEH with a variant D7945A.
+252|a|
+
+253|t|A Gene TME with a variant M176B.
+253|a|
+
+254|t|A Gene KAC with a variant C18891T.
+254|a|
+254	26	33	C18891T	DNAMutation	g|SUB|C|18891|T
+
+255|t|A Gene LEP with a variant R223R.
+255|a|
+255	26	31	R223R	ProteinMutation	p|SUB|R|223|R
+
+256|t|A Gene DAO with a variant R199W.
+256|a|
+256	26	31	R199W	ProteinMutation	p|SUB|R|199|W;RS#:139166976
+
+257|t|A Gene NUD with a variant T15404C.
+257|a|
+257	26	33	T15404C	DNAMutation	g|SUB|T|15404|C
+
+258|t|A Gene TME with a variant M200C.
+258|a|
+
+259|t|A Gene GPIX with a variant W127X.
+259|a|
+259	27	32	W127X	ProteinMutation	p|SUB|W|127|X
+
+260|t|A Gene ATC with a variant C25978T.
+260|a|
+260	26	33	C25978T	DNAMutation	g|SUB|C|25978|T
+
+261|t|A Gene KKRRGK with a variant R367S.
+261|a|
+261	29	34	R367S	ProteinMutation	p|SUB|R|367|S
+
+262|t|A Gene MPL with a variant Y252H.
+262|a|
+262	26	31	Y252H	ProteinMutation	p|SUB|Y|252|H;RS#:141311765
+
+263|t|A Gene PRA with a variant T3036B.
+263|a|
+
+264|t|A Gene KIT with a variant G565R.
+264|a|
+264	26	31	G565R	ProteinMutation	p|SUB|G|565|R
+
+265|t|A Gene GXD with a variant Y460B.
+265|a|
+
+266|t|A Gene NIB with a variant P100A.
+266|a|
+266	26	31	P100A	ProteinMutation	p|SUB|P|100|A
+
+267|t|A Gene KIT with a variant V560D.
+267|a|
+267	26	31	V560D	ProteinMutation	p|SUB|V|560|D;RS#:121913521
+
+268|t|A Gene PTP with a variant N221858T.
+268|a|
+268	26	34	N221858T	ProteinMutation	p|SUB|N|221858|T
+
+269|t|A Gene HHS with a variant N275201200005C.
+269|a|
+269	26	40	N275201200005C	ProteinMutation	p|SUB|N|275201200005|C
+
+270|t|A Gene PAH with a variant V106A.
+270|a|
+270	26	31	V106A	ProteinMutation	p|SUB|V|106|A
+
+271|t|A Gene VDR with a variant S208D.
+271|a|
+271	26	31	S208D	ProteinMutation	p|SUB|S|208|D
+
+272|t|A Gene MANE with a variant X7374A.
+272|a|
+
+273|t|A Gene NCT with a variant C11325T.
+273|a|
+273	26	33	C11325T	DNAMutation	g|SUB|C|11325|T
+
+274|t|A Gene IMC with a variant C34762T.
+274|a|
+274	26	33	C34762T	DNAMutation	g|SUB|C|34762|T
+
+275|t|A Gene RHO with a variant P347S.
+275|a|
+275	26	31	P347S	ProteinMutation	p|SUB|P|347|S;RS#:29001637
+
+276|t|A Gene ATC with a variant C11633T.
+276|a|
+276	26	33	C11633T	DNAMutation	g|SUB|C|11633|T
+
+277|t|A Gene ACC with a variant C19863T.
+277|a|
+277	26	33	C19863T	DNAMutation	g|SUB|C|19863|T
+
+278|t|A Gene KIT with a variant T670I.
+278|a|
+278	26	31	T670I	ProteinMutation	p|SUB|T|670|I;RS#:121913516
+
+279|t|A Gene PKKKRK with a variant V132K.
+279|a|
+279	29	34	V132K	ProteinMutation	p|SUB|V|132|K
+
+280|t|A Gene MIN with a variant T1526A.
+280|a|
+280	26	32	T1526A	DNAMutation	c|SUB|T|1526|A
+
+281|t|A Gene MSH with a variant R1132T.
+281|a|
+281	26	32	R1132T	ProteinMutation	p|SUB|R|1132|T
+
+282|t|A Gene IRC with a variant T201106306925N.
+282|a|
+282	26	40	T201106306925N	ProteinMutation	p|SUB|T|201106306925|N
+
+283|t|A Gene ATC with a variant C621H.
+283|a|
+283	26	31	C621H	ProteinMutation	p|SUB|C|621|H
+
+284|t|A Gene TME with a variant M184A.
+284|a|
+284	26	31	M184A	ProteinMutation	p|SUB|M|184|A
+
+285|t|A Gene ROC with a variant N1437H.
+285|a|
+285	26	32	N1437H	ProteinMutation	p|SUB|N|1437|H
+
+286|t|A Gene ATC with a variant C7061T.
+286|a|
+286	26	32	C7061T	DNAMutation	g|SUB|C|7061|T
+
+287|t|A Gene CCO with a variant S808T.
+287|a|
+287	26	31	S808T	ProteinMutation	p|SUB|S|808|T
+
+288|t|A Gene FLGF with a variant T389Y.
+288|a|
+288	27	32	T389Y	ProteinMutation	p|SUB|T|389|Y
+
+289|t|A Gene CIC with a variant C10837T.
+289|a|
+289	26	33	C10837T	DNAMutation	g|SUB|C|10837|T
+
+290|t|A Gene CFTR with a variant V232D.
+290|a|
+290	27	32	V232D	ProteinMutation	p|SUB|V|232|D;RS#:397508783(Expired)
+
+291|t|A Gene GEN with a variant E1622X.
+291|a|
+291	26	32	E1622X	ProteinMutation	p|SUB|E|1622|X
+
+292|t|A Gene WJO with a variant G8515L.
+292|a|
+
+293|t|A Gene REL with a variant A2015A.
+293|a|
+
+294|t|A Gene KFC with a variant C11363P.
+294|a|
+294	26	33	C11363P	ProteinMutation	p|SUB|C|11363|P
+
+295|t|A Gene DIA with a variant P170K.
+295|a|
+295	26	31	P170K	ProteinMutation	p|SUB|P|170|K
+
+296|t|A Gene CEN with a variant A713D.
+296|a|
+296	26	31	A713D	ProteinMutation	p|SUB|A|713|D
+
+297|t|A Gene IMC with a variant C26013T.
+297|a|
+297	26	33	C26013T	DNAMutation	g|SUB|C|26013|T
+
+298|t|A Gene GHR with a variant P495T.
+298|a|
+298	26	31	P495T	ProteinMutation	p|SUB|P|495|T;RS#:6183
+
+299|t|A Gene VSP with a variant R153Q.
+299|a|
+299	26	31	R153Q	ProteinMutation	p|SUB|R|153|Q
+
+300|t|A Gene WPC with a variant B189T.
+300|a|
+
+301|t|A Gene POLG with a variant D257A.
+301|a|
+301	27	32	D257A	ProteinMutation	p|SUB|D|257|A
+
+302|t|A Gene APP with a variant T668E.
+302|a|
+302	26	31	T668E	ProteinMutation	p|SUB|T|668|E
+
+303|t|A Gene ATC with a variant C33323T.
+303|a|
+303	26	33	C33323T	DNAMutation	g|SUB|C|33323|T
+
+304|t|A Gene ATL with a variant V218W.
+304|a|
+304	26	31	V218W	ProteinMutation	p|SUB|V|218|W
+
+305|t|A Gene GRG with a variant M900C.
+305|a|
+
+306|t|A Gene IMC with a variant C3490T.
+306|a|
+306	26	32	C3490T	DNAMutation	g|SUB|C|3490|T
+
+307|t|A Gene KCT with a variant C42963T.
+307|a|
+307	26	33	C42963T	DNAMutation	g|SUB|C|42963|T
+
+308|t|A Gene PRT with a variant G20210A.
+308|a|
+308	26	33	G20210A	DNAMutation	g|SUB|G|20210|A
+
+309|t|A Gene KAC with a variant C93057P.
+309|a|
+
+310|t|A Gene TER with a variant T988Y.
+310|a|
+310	26	31	T988Y	ProteinMutation	p|SUB|T|988|Y
+
+311|t|A Gene ATC with a variant C49188T.
+311|a|
+311	26	33	C49188T	DNAMutation	g|SUB|C|49188|T
+
+312|t|A Gene FUS with a variant P525L.
+312|a|
+312	26	31	P525L	ProteinMutation	p|SUB|P|525|L;RS#:886041390
+
+313|t|A Gene LPC with a variant S265A.
+313|a|
+313	26	31	S265A	ProteinMutation	p|SUB|S|265|A
+
+314|t|A Gene TME with a variant M150B.
+314|a|
+
+315|t|A Gene CCO with a variant S1194T.
+315|a|
+315	26	32	S1194T	ProteinMutation	p|SUB|S|1194|T
+
+316|t|A Gene CFB with a variant P3304T.
+316|a|
+316	26	32	P3304T	ProteinMutation	p|SUB|P|3304|T
+
+317|t|A Gene DEF with a variant B103A.
+317|a|
+
+318|t|A Gene HEKS with a variant V293T.
+318|a|
+318	27	32	V293T	ProteinMutation	p|SUB|V|293|T
+
+319|t|A Gene NBR with a variant C14164T.
+319|a|
+319	26	33	C14164T	DNAMutation	g|SUB|C|14164|T
+
+320|t|A Gene RMVT with a variant M707B.
+320|a|
+
+321|t|A Gene LEP with a variant G2548A.
+321|a|
+321	26	32	G2548A	DNAMutation	c|SUB|G|2548|A
+
+322|t|A Gene FTO with a variant I367F.
+322|a|
+322	26	31	I367F	ProteinMutation	p|SUB|I|367|F
+
+323|t|A Gene TME with a variant M123D.
+323|a|
+323	26	31	M123D	ProteinMutation	p|SUB|M|123|D
+
+324|t|A Gene ACC with a variant C19728T.
+324|a|
+324	26	33	C19728T	DNAMutation	g|SUB|C|19728|T
+
+325|t|A Gene TNF with a variant B252G.
+325|a|
+
+326|t|A Gene APP with a variant N467K.
+326|a|
+326	26	31	N467K	ProteinMutation	p|SUB|N|467|K
+
+327|t|A Gene ATTR with a variant V122I.
+327|a|
+327	27	32	V122I	ProteinMutation	p|SUB|V|122|I;RS#:76992529
+
+328|t|A Gene LBD with a variant G521T.
+328|a|
+328	26	31	G521T	DNAMutation	c|SUB|G|521|T
+
+329|t|A Gene PEPD with a variant G278D.
+329|a|
+329	27	32	G278D	ProteinMutation	p|SUB|G|278|D;RS#:121917723
+
+330|t|A Gene PNP with a variant F159Y.
+330|a|
+330	26	31	F159Y	ProteinMutation	p|SUB|F|159|Y
+
+331|t|A Gene SAGF with a variant F179A.
+331|a|
+331	27	32	F179A	ProteinMutation	p|SUB|F|179|A
+
+332|t|A Gene NCT with a variant C10713T.
+332|a|
+332	26	33	C10713T	DNAMutation	g|SUB|C|10713|T
+
+333|t|A Gene VII with a variant Q217A.
+333|a|
+333	26	31	Q217A	ProteinMutation	p|SUB|Q|217|A
+
+334|t|A Gene PAM with a variant C27389T.
+334|a|
+334	26	33	C27389T	DNAMutation	g|SUB|C|27389|T
+
+335|t|A Gene VKOR with a variant C109A.
+335|a|
+335	27	32	C109A	DNAMutation	c|SUB|C|109|A
+
+336|t|A Gene WJTO with a variant G4607L.
+336|a|
+336	27	33	G4607L	ProteinMutation	p|SUB|G|4607|L
+
+337|t|A Gene FVI with a variant I303T.
+337|a|
+337	26	31	I303T	ProteinMutation	p|SUB|I|303|T
+
+338|t|A Gene CCO with a variant S1042T.
+338|a|
+338	26	32	S1042T	ProteinMutation	p|SUB|S|1042|T
+
+339|t|A Gene NBR with a variant C12815T.
+339|a|
+339	26	33	C12815T	DNAMutation	g|SUB|C|12815|T
+
+340|t|A Gene KCT with a variant C19217T.
+340|a|
+340	26	33	C19217T	DNAMutation	g|SUB|C|19217|T
+
+341|t|A Gene MTHF with a variant D11958G.
+341|a|
+341	27	34	D11958G	ProteinMutation	p|SUB|D|11958|G
+
+342|t|A Gene PAE with a variant N513F.
+342|a|
+342	26	31	N513F	ProteinMutation	p|SUB|N|513|F
+
+343|t|A Gene RPG with a variant T908T.
+343|a|
+
+344|t|A Gene CIRA with a variant D139A.
+344|a|
+344	27	32	D139A	ProteinMutation	p|SUB|D|139|A
+
+345|t|A Gene EUS with a variant A2003B.
+345|a|
+
+346|t|A Gene BRAF with a variant V600E.
+346|a|
+346	27	32	V600E	ProteinMutation	p|SUB|V|600|E;RS#:113488022|121913377
+
+347|t|A Gene DEV with a variant D723G.
+347|a|
+347	26	31	D723G	ProteinMutation	p|SUB|D|723|G
+
+348|t|A Gene CPVT with a variant D307H.
+348|a|
+348	27	32	D307H	ProteinMutation	p|SUB|D|307|H
+
+349|t|A Gene SCYJ with a variant L170C.
+349|a|
+
+350|t|A Gene CFB with a variant P2106T.
+350|a|
+350	26	32	P2106T	ProteinMutation	p|SUB|P|2106|T
+
+351|t|A Gene KCT with a variant C19901T.
+351|a|
+351	26	33	C19901T	DNAMutation	g|SUB|C|19901|T
+
+352|t|A Gene EDT with a variant A120D.
+352|a|
+352	26	31	A120D	ProteinMutation	p|SUB|A|120|D
+
+353|t|A Gene PSI with a variant M146L.
+353|a|
+353	26	31	M146L	ProteinMutation	p|SUB|M|146|L
+
+354|t|A Gene HPMC with a variant K100M.
+354|a|
+354	27	32	K100M	ProteinMutation	p|SUB|K|100|M
+
+355|t|A Gene DSM with a variant Z29286T.
+355|a|
+
+356|t|A Gene BIO with a variant T1858G.
+356|a|
+356	26	32	T1858G	DNAMutation	c|SUB|T|1858|G
+
+357|t|A Gene TME with a variant M126B.
+357|a|
+
+358|t|A Gene JCO with a variant G1315C.
+358|a|
+358	26	32	G1315C	DNAMutation	c|SUB|G|1315|C
+
+359|t|A Gene HHS with a variant N278200554096C.
+359|a|
+359	26	40	N278200554096C	ProteinMutation	p|SUB|N|278200554096|C
+
+360|t|A Gene AID with a variant F193A.
+360|a|
+360	26	31	F193A	ProteinMutation	p|SUB|F|193|A
+
+361|t|A Gene CJD with a variant G114V.
+361|a|
+361	26	31	G114V	ProteinMutation	p|SUB|G|114|V
+
+362|t|A Gene KCT with a variant C33730T.
+362|a|
+362	26	33	C33730T	DNAMutation	g|SUB|C|33730|T
+
+363|t|A Gene BURP with a variant S1106A.
+363|a|
+363	27	33	S1106A	ProteinMutation	p|SUB|S|1106|A
+
+364|t|A Gene SKVL with a variant B600R.
+364|a|
+
+365|t|A Gene HBUA with a variant S52074T.
+365|a|
+365	27	34	S52074T	ProteinMutation	p|SUB|S|52074|T
+
+366|t|A Gene MMP with a variant S466P.
+366|a|
+366	26	31	S466P	ProteinMutation	p|SUB|S|466|P
+
+367|t|A Gene EVE with a variant S2690R.
+367|a|
+367	26	32	S2690R	ProteinMutation	p|SUB|S|2690|R
+
+368|t|A Gene ATC with a variant C29418T.
+368|a|
+368	26	33	C29418T	DNAMutation	g|SUB|C|29418|T
+
+369|t|A Gene MPO with a variant Y173C.
+369|a|
+369	26	31	Y173C	ProteinMutation	p|SUB|Y|173|C;RS#:78950939
+
+370|t|A Gene TIST with a variant R2208T.
+370|a|
+370	27	33	R2208T	ProteinMutation	p|SUB|R|2208|T
+
+371|t|A Gene KIA with a variant A1211L.
+371|a|
+371	26	32	A1211L	ProteinMutation	p|SUB|A|1211|L
+
+372|t|A Gene PCNA with a variant K107R.
+372|a|
+372	27	32	K107R	ProteinMutation	p|SUB|K|107|R
+
+373|t|A Gene TME with a variant M167A.
+373|a|
+373	26	31	M167A	ProteinMutation	p|SUB|M|167|A
+
+374|t|A Gene FVIII with a variant R336I.
+374|a|
+374	28	33	R336I	ProteinMutation	p|SUB|R|336|I
+
+375|t|A Gene ARAF with a variant S214F.
+375|a|
+375	27	32	S214F	ProteinMutation	p|SUB|S|214|F;RS#:1057519786
+
+376|t|A Gene GNAQ with a variant G183A.
+376|a|
+376	27	32	G183A	DNAMutation	c|SUB|G|183|A
+
+377|t|A Gene AIS with a variant I316L.
+377|a|
+377	26	31	I316L	ProteinMutation	p|SUB|I|316|L
+
+378|t|A Gene EGFR with a variant G724S.
+378|a|
+378	27	32	G724S	ProteinMutation	p|SUB|G|724|S;RS#:748011710
+
+379|t|A Gene GNA with a variant S314T.
+379|a|
+379	26	31	S314T	ProteinMutation	p|SUB|S|314|T
+
+380|t|A Gene HFE with a variant C282Y.
+380|a|
+380	26	31	C282Y	ProteinMutation	p|SUB|C|282|Y;RS#:1800562
+
+381|t|A Gene HHS with a variant N261201100045C.
+381|a|
+381	26	40	N261201100045C	ProteinMutation	p|SUB|N|261201100045|C
+
+382|t|A Gene MNR with a variant P1685A.
+382|a|
+382	26	32	P1685A	ProteinMutation	p|SUB|P|1685|A
+
+383|t|A Gene ATC with a variant C17749T.
+383|a|
+383	26	33	C17749T	DNAMutation	g|SUB|C|17749|T
+
+384|t|A Gene IMC with a variant C34758T.
+384|a|
+384	26	33	C34758T	DNAMutation	g|SUB|C|34758|T
+
+385|t|A Gene NCT with a variant C11184T.
+385|a|
+385	26	33	C11184T	DNAMutation	g|SUB|C|11184|T
+
+386|t|A Gene FII with a variant G20210A.
+386|a|
+386	26	33	G20210A	DNAMutation	g|SUB|G|20210|A
+
+387|t|A Gene NCI with a variant H295R.
+387|a|
+
+388|t|A Gene RET with a variant M918T.
+388|a|
+388	26	31	M918T	ProteinMutation	p|SUB|M|918|T;RS#:74799832
+
+389|t|A Gene TME with a variant M106C.
+389|a|
+
+390|t|A Gene HBUA with a variant S51001T.
+390|a|
+390	27	34	S51001T	ProteinMutation	p|SUB|S|51001|T
+
+391|t|A Gene NIE with a variant S843T.
+391|a|
+391	26	31	S843T	ProteinMutation	p|SUB|S|843|T
+
+392|t|A Gene HAMB with a variant I3541T.
+392|a|
+392	27	33	I3541T	ProteinMutation	p|SUB|I|3541|T
+
+393|t|A Gene FRALL with a variant E2000T.
+393|a|
+393	28	34	E2000T	ProteinMutation	p|SUB|E|2000|T
+
+394|t|A Gene NBR with a variant I16716B.
+394|a|
+
+395|t|A Gene CEBPD with a variant K120A.
+395|a|
+395	28	33	K120A	ProteinMutation	p|SUB|K|120|A
+
+396|t|A Gene TNK with a variant S478A.
+396|a|
+396	26	31	S478A	ProteinMutation	p|SUB|S|478|A
+
+397|t|A Gene MTHFR with a variant A1298C.
+397|a|
+397	28	34	A1298C	DNAMutation	c|SUB|A|1298|C;RS#:1801131
+
+398|t|A Gene KIT with a variant V560G.
+398|a|
+398	26	31	V560G	ProteinMutation	p|SUB|V|560|G;RS#:121913521
+
+399|t|A Gene DEF with a variant B108P.
+399|a|
+
+400|t|A Gene IMC with a variant C3317T.
+400|a|
+400	26	32	C3317T	DNAMutation	g|SUB|C|3317|T
+
+401|t|A Gene VUII with a variant S1009A.
+401|a|
+401	27	33	S1009A	ProteinMutation	p|SUB|S|1009|A
+
+402|t|A Gene DCL with a variant L9718A.
+402|a|
+
+403|t|A Gene IMC with a variant C3228T.
+403|a|
+403	26	32	C3228T	DNAMutation	g|SUB|C|3228|T
+
+404|t|A Gene VKOR with a variant C11173C.
+404|a|
+
+405|t|A Gene BTC with a variant T4465A.
+405|a|
+405	26	32	T4465A	DNAMutation	g|SUB|T|4465|A
+
+406|t|A Gene MTHF with a variant R677C.
+406|a|
+406	27	32	R677C	ProteinMutation	p|SUB|R|677|C
+
+407|t|A Gene PAGH with a variant G474L.
+407|a|
+407	27	32	G474L	ProteinMutation	p|SUB|G|474|L
+
+408|t|A Gene DFR with a variant F4539A.
+408|a|
+408	26	32	F4539A	ProteinMutation	p|SUB|F|4539|A
+
+409|t|A Gene TME with a variant M126A.
+409|a|
+409	26	31	M126A	ProteinMutation	p|SUB|M|126|A
+
+410|t|A Gene CCD with a variant C163P.
+410|a|
+410	26	31	C163P	ProteinMutation	p|SUB|C|163|P
+
+411|t|A Gene MAF with a variant F303099T.
+411|a|
+411	26	34	F303099T	ProteinMutation	p|SUB|F|303099|T
+
+412|t|A Gene KCN with a variant Q101T.
+412|a|
+412	26	31	Q101T	ProteinMutation	p|SUB|Q|101|T
+
+413|t|A Gene KSC with a variant C1501A.
+413|a|
+413	26	32	C1501A	DNAMutation	c|SUB|C|1501|A
+
+414|t|A Gene CBM with a variant B205T.
+414|a|
+
+415|t|A Gene MTHF with a variant R677T.
+415|a|
+415	27	32	R677T	ProteinMutation	p|SUB|R|677|T
+
+416|t|A Gene DXY with a variant S156Y.
+416|a|
+416	26	31	S156Y	ProteinMutation	p|SUB|S|156|Y
+
+417|t|A Gene APP with a variant V717G.
+417|a|
+417	26	31	V717G	ProteinMutation	p|SUB|V|717|G;RS#:63749964
+
+418|t|A Gene FVI with a variant I353Q.
+418|a|
+418	26	31	I353Q	ProteinMutation	p|SUB|I|353|Q
+
+419|t|A Gene DHV with a variant D112L.
+419|a|
+419	26	31	D112L	ProteinMutation	p|SUB|D|112|L
+
+420|t|A Gene BCRP with a variant C421A.
+420|a|
+420	27	32	C421A	DNAMutation	c|SUB|C|421|A
+
+421|t|A Gene IMC with a variant C34151T.
+421|a|
+421	26	33	C34151T	DNAMutation	g|SUB|C|34151|T
+
+422|t|A Gene TAC with a variant E172T.
+422|a|
+422	26	31	E172T	ProteinMutation	p|SUB|E|172|T
+
+423|t|A Gene TME with a variant M225B.
+423|a|
+
+424|t|A Gene ERK with a variant T202A.
+424|a|
+424	26	31	T202A	DNAMutation	c|SUB|T|202|A
+
+425|t|A Gene USD with a variant A192C.
+425|a|
+425	26	31	A192C	DNAMutation	c|SUB|A|192|C
+
+426|t|A Gene CFTR with a variant K464A.
+426|a|
+426	27	32	K464A	ProteinMutation	p|SUB|K|464|A
+
+427|t|A Gene EGFR with a variant S492R.
+427|a|
+427	27	32	S492R	ProteinMutation	p|SUB|S|492|R;RS#:1057519860
+
+428|t|A Gene HTC with a variant C2506T.
+428|a|
+428	26	32	C2506T	DNAMutation	c|SUB|C|2506|T
+
+429|t|A Gene KCT with a variant C32998T.
+429|a|
+429	26	33	C32998T	DNAMutation	g|SUB|C|32998|T
+
+430|t|A Gene KCT with a variant C62324T.
+430|a|
+430	26	33	C62324T	DNAMutation	g|SUB|C|62324|T
+
+431|t|A Gene GEF with a variant W1056E.
+431|a|
+
+432|t|A Gene BRAF with a variant G469A.
+432|a|
+432	27	32	G469A	DNAMutation	c|SUB|G|469|A;RS#:121913355
+
+433|t|A Gene WJO with a variant G9416L.
+433|a|
+
+434|t|A Gene MTC with a variant C8336T.
+434|a|
+434	26	32	C8336T	DNAMutation	g|SUB|C|8336|T
+
+435|t|A Gene ENP with a variant P1121Q.
+435|a|
+435	26	32	P1121Q	ProteinMutation	p|SUB|P|1121|Q
+
+436|t|A Gene FRI with a variant K47001P.
+436|a|
+436	26	33	K47001P	ProteinMutation	p|SUB|K|47001|P
+
+437|t|A Gene ACT with a variant G116B.
+437|a|
+
+438|t|A Gene IRC with a variant T20171014036766N.
+438|a|
+438	26	42	T20171014036766N	ProteinMutation	p|SUB|T|20171014036766|N
+
+439|t|A Gene DXH with a variant X254E.
+439|a|
+439	26	31	X254E	ProteinMutation	p|SUB|X|254|E
+
+440|t|A Gene SEA with a variant P2017V.
+440|a|
+440	26	32	P2017V	ProteinMutation	p|SUB|P|2017|V
+
+441|t|A Gene VHL with a variant R200W.
+441|a|
+441	26	31	R200W	ProteinMutation	p|SUB|R|200|W;RS#:28940298
+
+442|t|A Gene LOGI with a variant K1004A.
+442|a|
+442	27	33	K1004A	ProteinMutation	p|SUB|K|1004|A
+
+443|t|A Gene TME with a variant M194B.
+443|a|
+
+444|t|A Gene RRKR with a variant R155S.
+444|a|
+444	27	32	R155S	ProteinMutation	p|SUB|R|155|S
+
+445|t|A Gene TME with a variant M132B.
+445|a|
+
+446|t|A Gene MTR with a variant A2756G.
+446|a|
+446	26	32	A2756G	DNAMutation	c|SUB|A|2756|G
+
+447|t|A Gene BTER with a variant T572Y.
+447|a|
+447	27	32	T572Y	ProteinMutation	p|SUB|T|572|Y
+
+448|t|A Gene GIF with a variant U11526T.
+448|a|
+
+449|t|A Gene OPRM with a variant A118G.
+449|a|
+449	27	32	A118G	DNAMutation	c|SUB|A|118|G;RS#:1799971
+
+450|t|A Gene OCP with a variant W288A.
+450|a|
+
+451|t|A Gene HRK with a variant V380D.
+451|a|
+451	26	31	V380D	ProteinMutation	p|SUB|V|380|D
+
+452|t|A Gene MAPT with a variant P301L.
+452|a|
+452	27	32	P301L	ProteinMutation	p|SUB|P|301|L;RS#:63751273
+
+453|t|A Gene UCM with a variant A15228T.
+453|a|
+453	26	33	A15228T	DNAMutation	g|SUB|A|15228|T
+
+454|t|A Gene EUR with a variant Y498R.
+454|a|
+454	26	31	Y498R	ProteinMutation	p|SUB|Y|498|R
+
+455|t|A Gene ATC with a variant C11325T.
+455|a|
+455	26	33	C11325T	DNAMutation	g|SUB|C|11325|T
+
+456|t|A Gene APP with a variant Y687A.
+456|a|
+456	26	31	Y687A	ProteinMutation	p|SUB|Y|687|A
+
+457|t|A Gene BRC with a variant A27997G.
+457|a|
+457	26	33	A27997G	DNAMutation	g|SUB|A|27997|G
+
+458|t|A Gene NBR with a variant C12873T.
+458|a|
+458	26	33	C12873T	DNAMutation	g|SUB|C|12873|T
+
+459|t|A Gene BSEP with a variant C129Y.
+459|a|
+459	27	32	C129Y	ProteinMutation	p|SUB|C|129|Y
+
+460|t|A Gene RET with a variant C611Y.
+460|a|
+460	26	31	C611Y	ProteinMutation	p|SUB|C|611|Y;RS#:377767397|377767398
+
+461|t|A Gene PCNA with a variant S228I.
+461|a|
+461	27	32	S228I	ProteinMutation	p|SUB|S|228|I;RS#:369958038
+
+462|t|A Gene MHA with a variant A45449A.
+462|a|
+
+463|t|A Gene ILC with a variant C801T.
+463|a|
+463	26	31	C801T	DNAMutation	c|SUB|C|801|T
+
+464|t|A Gene SGK with a variant S422A.
+464|a|
+464	26	31	S422A	ProteinMutation	p|SUB|S|422|A
+
+465|t|A Gene TME with a variant M106B.
+465|a|
+
+466|t|A Gene CSUR with a variant P3835T.
+466|a|
+466	27	33	P3835T	ProteinMutation	p|SUB|P|3835|T
+
+467|t|A Gene UTT with a variant R1147A.
+467|a|
+467	26	32	R1147A	ProteinMutation	p|SUB|R|1147|A
+
+468|t|A Gene DSX with a variant Y973T.
+468|a|
+468	26	31	Y973T	ProteinMutation	p|SUB|Y|973|T
+
+469|t|A Gene ACC with a variant C19714T.
+469|a|
+469	26	33	C19714T	DNAMutation	g|SUB|C|19714|T
+
+470|t|A Gene CFTR with a variant G551D.
+470|a|
+470	27	32	G551D	ProteinMutation	p|SUB|G|551|D;RS#:75527207
+
+471|t|A Gene TOM with a variant V106A.
+471|a|
+471	26	31	V106A	ProteinMutation	p|SUB|V|106|A
+
+472|t|A Gene FLNB with a variant G1586R.
+472|a|
+472	27	33	G1586R	ProteinMutation	p|SUB|G|1586|R;RS#:80356513
+
+473|t|A Gene ATC with a variant C43101T.
+473|a|
+473	26	33	C43101T	DNAMutation	g|SUB|C|43101|T
+
+474|t|A Gene COMT with a variant G216A.
+474|a|
+474	27	32	G216A	DNAMutation	c|SUB|G|216|A
+
+475|t|A Gene CSUR with a variant P2882T.
+475|a|
+475	27	33	P2882T	ProteinMutation	p|SUB|P|2882|T
+
+476|t|A Gene KRAS with a variant C118S.
+476|a|
+476	27	32	C118S	ProteinMutation	p|SUB|C|118|S
+
+477|t|A Gene PON with a variant Q192R.
+477|a|
+477	26	31	Q192R	ProteinMutation	p|SUB|Q|192|R;RS#:662
+
+478|t|A Gene QRRGRTG with a variant R1493G.
+478|a|
+478	30	36	R1493G	ProteinMutation	p|SUB|R|1493|G
+
+479|t|A Gene HHS with a variant N26120130003C.
+479|a|
+479	26	39	N26120130003C	ProteinMutation	p|SUB|N|26120130003|C
+
+480|t|A Gene FVI with a variant I294X.
+480|a|
+480	26	31	I294X	ProteinMutation	p|SUB|I|294|X
+
+481|t|A Gene TTH with a variant B212N.
+481|a|
+
+482|t|A Gene CHO with a variant K1018A.
+482|a|
+482	26	32	K1018A	ProteinMutation	p|SUB|K|1018|A
+
+483|t|A Gene ICD with a variant G407S.
+483|a|
+483	26	31	G407S	ProteinMutation	p|SUB|G|407|S
+
+484|t|A Gene BRAF with a variant V599E.
+484|a|
+484	27	32	V599E	ProteinMutation	p|SUB|V|599|E
+
+485|t|A Gene ARSA with a variant N350S.
+485|a|
+485	27	32	N350S	ProteinMutation	p|SUB|N|350|S;RS#:2071421
+
+486|t|A Gene BTK with a variant T316A.
+486|a|
+486	26	31	T316A	DNAMutation	c|SUB|T|316|A
+
+487|t|A Gene ATC with a variant C6538P.
+487|a|
+
+488|t|A Gene CCD with a variant C102B.
+488|a|
+
+489|t|A Gene PAE with a variant N515F.
+489|a|
+489	26	31	N515F	ProteinMutation	p|SUB|N|515|F
+
+490|t|A Gene TME with a variant M184C.
+490|a|
+
+491|t|A Gene PLI with a variant N11482A.
+491|a|
+491	26	33	N11482A	ProteinMutation	p|SUB|N|11482|A
+
+492|t|A Gene ORP with a variant H3000C.
+492|a|
+492	26	32	H3000C	ProteinMutation	p|SUB|H|3000|C
+
+493|t|A Gene CFB with a variant P2101T.
+493|a|
+493	26	32	P2101T	ProteinMutation	p|SUB|P|2101|T
+
+494|t|A Gene HIR with a variant T1336N.
+494|a|
+494	26	32	T1336N	ProteinMutation	p|SUB|T|1336|N
+
+495|t|A Gene MST with a variant O211H.
+495|a|
+
+496|t|A Gene CCO with a variant S1165T.
+496|a|
+496	26	32	S1165T	ProteinMutation	p|SUB|S|1165|T
+
+497|t|A Gene TME with a variant M229A.
+497|a|
+497	26	31	M229A	ProteinMutation	p|SUB|M|229|A
+
+498|t|A Gene HEK with a variant G671V.
+498|a|
+498	26	31	G671V	ProteinMutation	p|SUB|G|671|V
+
+499|t|A Gene MLT with a variant A3698A.
+499|a|
+
+500|t|A Gene GMO with a variant O637D.
+500|a|
+
+501|t|A Gene SYP with a variant B2100T.
+501|a|
+
+502|t|A Gene FIX with a variant R333Q.
+502|a|
+502	26	31	R333Q	ProteinMutation	p|SUB|R|333|Q;RS#:137852259
+
+503|t|A Gene AMC with a variant R277A.
+503|a|
+503	26	31	R277A	ProteinMutation	p|SUB|R|277|A
+
+504|t|A Gene CCO with a variant S969T.
+504|a|
+504	26	31	S969T	ProteinMutation	p|SUB|S|969|T
+
+505|t|A Gene ECD with a variant C423S.
+505|a|
+505	26	31	C423S	ProteinMutation	p|SUB|C|423|S
+
+506|t|A Gene TME with a variant M178B.
+506|a|
+
+507|t|A Gene JCO with a variant G1110A.
+507|a|
+507	26	32	G1110A	DNAMutation	c|SUB|G|1110|A
+
+508|t|A Gene ALK with a variant N1178H.
+508|a|
+508	26	32	N1178H	ProteinMutation	p|SUB|N|1178|H
+
+509|t|A Gene SUL with a variant T202E.
+509|a|
+509	26	31	T202E	ProteinMutation	p|SUB|T|202|E
+
+510|t|A Gene DXY with a variant S241Y.
+510|a|
+510	26	31	S241Y	ProteinMutation	p|SUB|S|241|Y
+
+511|t|A Gene LBBM with a variant A111A.
+511|a|
+
+512|t|A Gene APC with a variant T1493C.
+512|a|
+512	26	32	T1493C	DNAMutation	c|SUB|T|1493|C;RS#:368434773
+
+513|t|A Gene CCU with a variant G47497T.
+513|a|
+513	26	33	G47497T	DNAMutation	g|SUB|G|47497|T
+
+514|t|A Gene ATC with a variant C27294T.
+514|a|
+514	26	33	C27294T	DNAMutation	g|SUB|C|27294|T
+
+515|t|A Gene FVIII with a variant Q305P.
+515|a|
+515	28	33	Q305P	ProteinMutation	p|SUB|Q|305|P
+
+516|t|A Gene IMC with a variant C9565T.
+516|a|
+516	26	32	C9565T	DNAMutation	g|SUB|C|9565|T
+
+517|t|A Gene LSL with a variant R172H.
+517|a|
+517	26	31	R172H	ProteinMutation	p|SUB|R|172|H
+
+518|t|A Gene WJO with a variant G5008L.
+518|a|
+518	26	32	G5008L	ProteinMutation	p|SUB|G|5008|L
+
+519|t|A Gene VCP with a variant R155H.
+519|a|
+519	26	31	R155H	ProteinMutation	p|SUB|R|155|H;RS#:121909329
+
+520|t|A Gene SSB with a variant Q110L.
+520|a|
+520	26	31	Q110L	ProteinMutation	p|SUB|Q|110|L
+
+521|t|A Gene TARDBP with a variant M337V.
+521|a|
+521	29	34	M337V	ProteinMutation	p|SUB|M|337|V;RS#:80356730
+
+522|t|A Gene ADI with a variant C399S.
+522|a|
+522	26	31	C399S	ProteinMutation	p|SUB|C|399|S
+
+523|t|A Gene ATT with a variant O647N.
+523|a|
+
+524|t|A Gene DMQ with a variant D330N.
+524|a|
+524	26	31	D330N	ProteinMutation	p|SUB|D|330|N
+
+525|t|A Gene RBF with a variant D253A.
+525|a|
+525	26	31	D253A	ProteinMutation	p|SUB|D|253|A
+
+526|t|A Gene PRLR with a variant I146L.
+526|a|
+526	27	32	I146L	ProteinMutation	p|SUB|I|146|L;RS#:72478580
+
+527|t|A Gene PCNA with a variant Y114A.
+527|a|
+527	27	32	Y114A	ProteinMutation	p|SUB|Y|114|A
+
+528|t|A Gene WJO with a variant G4307L.
+528|a|
+528	26	32	G4307L	ProteinMutation	p|SUB|G|4307|L
+
+529|t|A Gene FKRP with a variant P448L.
+529|a|
+529	27	32	P448L	ProteinMutation	p|SUB|P|448|L;RS#:104894681
+
+530|t|A Gene APP with a variant V717F.
+530|a|
+530	26	31	V717F	ProteinMutation	p|SUB|V|717|F;RS#:63750264
+
+531|t|A Gene RHD with a variant K407K.
+531|a|
+531	26	31	K407K	ProteinMutation	p|SUB|K|407|K
+
+532|t|A Gene MCA with a variant F5352A.
+532|a|
+532	26	32	F5352A	ProteinMutation	p|SUB|F|5352|A
+
+533|t|A Gene RTA with a variant F108L.
+533|a|
+533	26	31	F108L	ProteinMutation	p|SUB|F|108|L
+
+534|t|A Gene ANLN with a variant R431C.
+534|a|
+534	27	32	R431C	ProteinMutation	p|SUB|R|431|C;RS#:587777741
+
+535|t|A Gene AIP with a variant R304X.
+535|a|
+535	26	31	R304X	ProteinMutation	p|SUB|R|304|X;RS#:104894195
+
+536|t|A Gene FAAH with a variant T488A.
+536|a|
+536	27	32	T488A	DNAMutation	c|SUB|T|488|A
+
+537|t|A Gene NAGK with a variant H268N.
+537|a|
+537	27	32	H268N	ProteinMutation	p|SUB|H|268|N
+
+538|t|A Gene FAK with a variant Y397F.
+538|a|
+538	26	31	Y397F	ProteinMutation	p|SUB|Y|397|F
+
+539|t|A Gene BCR with a variant C15423T.
+539|a|
+539	26	33	C15423T	DNAMutation	g|SUB|C|15423|T
+
+540|t|A Gene SERIN with a variant C5293T.
+540|a|
+540	28	34	C5293T	DNAMutation	g|SUB|C|5293|T
+
+541|t|A Gene HERG with a variant Y327A.
+541|a|
+541	27	32	Y327A	ProteinMutation	p|SUB|Y|327|A
+
+542|t|A Gene RARA with a variant K160R.
+542|a|
+542	27	32	K160R	ProteinMutation	p|SUB|K|160|R
+
+543|t|A Gene WEH with a variant I164S.
+543|a|
+543	26	31	I164S	ProteinMutation	p|SUB|I|164|S
+
+544|t|A Gene YFC with a variant C100M.
+544|a|
+
+545|t|A Gene KCT with a variant C39903T.
+545|a|
+545	26	33	C39903T	DNAMutation	g|SUB|C|39903|T
+
+546|t|A Gene FAP with a variant S624A.
+546|a|
+546	26	31	S624A	ProteinMutation	p|SUB|S|624|A
+
+547|t|A Gene TERT with a variant T1129P.
+547|a|
+547	27	33	T1129P	ProteinMutation	p|SUB|T|1129|P
+
+548|t|A Gene FXN with a variant W168R.
+548|a|
+548	26	31	W168R	ProteinMutation	p|SUB|W|168|R
+
+549|t|A Gene GNA with a variant T3597T.
+549|a|
+
+550|t|A Gene DQT with a variant D352G.
+550|a|
+550	26	31	D352G	ProteinMutation	p|SUB|D|352|G
+
+551|t|A Gene CAT with a variant A138T.
+551|a|
+551	26	31	A138T	DNAMutation	c|SUB|A|138|T
+
+552|t|A Gene GFP with a variant H148C.
+552|a|
+552	26	31	H148C	ProteinMutation	p|SUB|H|148|C
+
+553|t|A Gene IRC with a variant T2013020712391N.
+553|a|
+553	26	41	T2013020712391N	ProteinMutation	p|SUB|T|2013020712391|N
+
+554|t|A Gene RPM with a variant I8866Y.
+554|a|
+
+555|t|A Gene ICA with a variant M1241G.
+555|a|
+555	26	32	M1241G	ProteinMutation	p|SUB|M|1241|G
+
+556|t|A Gene GNAQ with a variant Q209P.
+556|a|
+556	27	32	Q209P	ProteinMutation	p|SUB|Q|209|P;RS#:121913492
+
+557|t|A Gene WYB with a variant S2001T.
+557|a|
+557	26	32	S2001T	ProteinMutation	p|SUB|S|2001|T
+
+558|t|A Gene ATC with a variant C8287T.
+558|a|
+558	26	32	C8287T	DNAMutation	g|SUB|C|8287|T
+
+559|t|A Gene ATC with a variant C14028S.
+559|a|
+559	26	33	C14028S	ProteinMutation	p|SUB|C|14028|S
+
+560|t|A Gene IMC with a variant C1731T.
+560|a|
+560	26	32	C1731T	DNAMutation	c|SUB|C|1731|T
+
+561|t|A Gene USMA with a variant A1020T.
+561|a|
+561	27	33	A1020T	DNAMutation	c|SUB|A|1020|T
+
+562|t|A Gene YAP with a variant S127D.
+562|a|
+562	26	31	S127D	ProteinMutation	p|SUB|S|127|D
+
+563|t|A Gene WJO with a variant G4708L.
+563|a|
+563	26	32	G4708L	ProteinMutation	p|SUB|G|4708|L
+
+564|t|A Gene HTC with a variant C2559T.
+564|a|
+564	26	32	C2559T	DNAMutation	c|SUB|C|2559|T
+
+565|t|A Gene TME with a variant M106A.
+565|a|
+565	26	31	M106A	ProteinMutation	p|SUB|M|106|A
+
+566|t|A Gene IMC with a variant C3195T.
+566|a|
+566	26	32	C3195T	DNAMutation	g|SUB|C|3195|T
+
+567|t|A Gene IMC with a variant C9719T.
+567|a|
+567	26	32	C9719T	DNAMutation	g|SUB|C|9719|T
+
+568|t|A Gene LAT with a variant Y136F.
+568|a|
+568	26	31	Y136F	ProteinMutation	p|SUB|Y|136|F
+
+569|t|A Gene NBR with a variant C106750T.
+569|a|
+569	26	34	C106750T	DNAMutation	g|SUB|C|106750|T
+
+570|t|A Gene BAS with a variant T217B.
+570|a|
+
+571|t|A Gene IRC with a variant T138804272200N.
+571|a|
+571	26	40	T138804272200N	ProteinMutation	p|SUB|T|138804272200|N
+
+572|t|A Gene NCI with a variant H358M.
+572|a|
+572	26	31	H358M	ProteinMutation	p|SUB|H|358|M
+
+573|t|A Gene JAK with a variant V617F.
+573|a|
+
+574|t|A Gene DLB with a variant S1033F.
+574|a|
+574	26	32	S1033F	ProteinMutation	p|SUB|S|1033|F
+
+575|t|A Gene LCM with a variant S2010A.
+575|a|
+575	26	32	S2010A	ProteinMutation	p|SUB|S|2010|A
+
+576|t|A Gene NRR with a variant L3382R.
+576|a|
+576	26	32	L3382R	ProteinMutation	p|SUB|L|3382|R
+
+577|t|A Gene MTR with a variant X1011A.
+577|a|
+577	26	32	X1011A	ProteinMutation	p|SUB|X|1011|A
+
+578|t|A Gene TER with a variant T572Y.
+578|a|
+578	26	31	T572Y	ProteinMutation	p|SUB|T|572|Y
+
+579|t|A Gene NCB with a variant T110A.
+579|a|
+579	26	31	T110A	DNAMutation	c|SUB|T|110|A
+
+580|t|A Gene KIA with a variant A1324L.
+580|a|
+580	26	32	A1324L	ProteinMutation	p|SUB|A|1324|L
+
+581|t|A Gene LEPR with a variant Q223R.
+581|a|
+581	27	32	Q223R	ProteinMutation	p|SUB|Q|223|R;RS#:1137101
+
+582|t|A Gene DAVI with a variant S240C.
+582|a|
+582	27	32	S240C	ProteinMutation	p|SUB|S|240|C
+
+583|t|A Gene EGF with a variant L858R.
+583|a|
+583	26	31	L858R	ProteinMutation	p|SUB|L|858|R
+
+584|t|A Gene MBL with a variant B1234T.
+584|a|
+
+585|t|A Gene PDGFRA with a variant D842V.
+585|a|
+585	29	34	D842V	ProteinMutation	p|SUB|D|842|V;RS#:121908585
+
+586|t|A Gene RAF with a variant V600E.
+586|a|
+586	26	31	V600E	ProteinMutation	p|SUB|V|600|E
+
+587|t|A Gene CNB with a variant P2152D.
+587|a|
+587	26	32	P2152D	ProteinMutation	p|SUB|P|2152|D
+
+588|t|A Gene PRB with a variant E911A.
+588|a|
+588	26	31	E911A	ProteinMutation	p|SUB|E|911|A
+
+589|t|A Gene USO with a variant O5340591A.
+589|a|
+
+590|t|A Gene APP with a variant K670N.
+590|a|
+590	26	31	K670N	ProteinMutation	p|SUB|K|670|N;RS#:371425292
+
+591|t|A Gene AMPH with a variant O4070A.
+591|a|
+
+592|t|A Gene DXY with a variant S156X.
+592|a|
+592	26	31	S156X	ProteinMutation	p|SUB|S|156|X
+
+593|t|A Gene SNOR with a variant D109A.
+593|a|
+593	27	32	D109A	ProteinMutation	p|SUB|D|109|A
+
+594|t|A Gene GKSRTG with a variant K500S.
+594|a|
+594	29	34	K500S	ProteinMutation	p|SUB|K|500|S
+
+595|t|A Gene DEV with a variant D396G.
+595|a|
+595	26	31	D396G	ProteinMutation	p|SUB|D|396|G
+
+596|t|A Gene HHS with a variant N261201200052C.
+596|a|
+596	26	40	N261201200052C	ProteinMutation	p|SUB|N|261201200052|C
+
+597|t|A Gene MRI with a variant R240C.
+597|a|
+597	26	31	R240C	ProteinMutation	p|SUB|R|240|C
+
+598|t|A Gene WPC with a variant P131T.
+598|a|
+598	26	31	P131T	ProteinMutation	p|SUB|P|131|T
+
+599|t|A Gene CLOC with a variant K3111C.
+599|a|
+
+600|t|A Gene CRYAB with a variant C802G.
+600|a|
+600	28	33	C802G	DNAMutation	c|SUB|C|802|G
+
+601|t|A Gene HXD with a variant X111H.
+601|a|
+601	26	31	X111H	ProteinMutation	p|SUB|X|111|H
+
+602|t|A Gene VCP with a variant A232E.
+602|a|
+602	26	31	A232E	ProteinMutation	p|SUB|A|232|E;RS#:121909331
+
+603|t|A Gene WPC with a variant B118T.
+603|a|
+
+604|t|A Gene MOL with a variant A115T.
+604|a|
+604	26	31	A115T	DNAMutation	c|SUB|A|115|T
+
+605|t|A Gene DEF with a variant B103B.
+605|a|
+
+606|t|A Gene EET with a variant A956S.
+606|a|
+606	26	31	A956S	ProteinMutation	p|SUB|A|956|S
+
+607|t|A Gene MST with a variant P2109A.
+607|a|
+607	26	32	P2109A	ProteinMutation	p|SUB|P|2109|A
+
+608|t|A Gene HHS with a variant O10020130019C.
+608|a|
+
+609|t|A Gene CREB with a variant Y134F.
+609|a|
+609	27	32	Y134F	ProteinMutation	p|SUB|Y|134|F
+
+610|t|A Gene CMRVS with a variant P5791T.
+610|a|
+610	28	34	P5791T	ProteinMutation	p|SUB|P|5791|T
+
+611|t|A Gene HBUA with a variant S61001T.
+611|a|
+
+612|t|A Gene SNP with a variant A1660G.
+612|a|
+612	26	32	A1660G	DNAMutation	c|SUB|A|1660|G
+
+613|t|A Gene HRE with a variant C12133B.
+613|a|
+
+614|t|A Gene ABC with a variant G2421C.
+614|a|
+614	26	32	G2421C	DNAMutation	c|SUB|G|2421|C
+
+615|t|A Gene PLL with a variant A2003D.
+615|a|
+615	26	32	A2003D	ProteinMutation	p|SUB|A|2003|D
+
+616|t|A Gene ALK with a variant G1202R.
+616|a|
+616	26	32	G1202R	ProteinMutation	p|SUB|G|1202|R;RS#:1057519783
+
+617|t|A Gene PNP with a variant F159A.
+617|a|
+617	26	31	F159A	ProteinMutation	p|SUB|F|159|A
+
+618|t|A Gene BRAF with a variant T1799A.
+618|a|
+618	27	33	T1799A	DNAMutation	c|SUB|T|1799|A;RS#:113488022
+
+619|t|A Gene CREB with a variant S133A.
+619|a|
+619	27	32	S133A	ProteinMutation	p|SUB|S|133|A
+
+620|t|A Gene VOIC with a variant E200R.
+620|a|
+620	27	32	E200R	ProteinMutation	p|SUB|E|200|R
+
+621|t|A Gene TDP with a variant G298S.
+621|a|
+621	26	31	G298S	ProteinMutation	p|SUB|G|298|S
+
+622|t|A Gene APC with a variant N329T.
+622|a|
+622	26	31	N329T	ProteinMutation	p|SUB|N|329|T
+
+623|t|A Gene TME with a variant M132A.
+623|a|
+623	26	31	M132A	ProteinMutation	p|SUB|M|132|A
+
+624|t|A Gene CHDF with a variant L157D.
+624|a|
+624	27	32	L157D	ProteinMutation	p|SUB|L|157|D
+
+625|t|A Gene EDE with a variant N260V.
+625|a|
+625	26	31	N260V	ProteinMutation	p|SUB|N|260|V
+
+626|t|A Gene CAST with a variant A499C.
+626|a|
+626	27	32	A499C	DNAMutation	c|SUB|A|499|C
+
+627|t|A Gene HHS with a variant N268200448189C.
+627|a|
+627	26	40	N268200448189C	ProteinMutation	p|SUB|N|268200448189|C
+
+628|t|A Gene PXR with a variant D115A.
+628|a|
+628	26	31	D115A	ProteinMutation	p|SUB|D|115|A
+
+629|t|A Gene AGCH with a variant D11113A.
+629|a|
+629	27	34	D11113A	ProteinMutation	p|SUB|D|11113|A
+
+630|t|A Gene HER with a variant L755S.
+630|a|
+630	26	31	L755S	ProteinMutation	p|SUB|L|755|S
+
+631|t|A Gene WJO with a variant G8715L.
+631|a|
+
+632|t|A Gene CCNF with a variant S621G.
+632|a|
+632	27	32	S621G	ProteinMutation	p|SUB|S|621|G
+
+633|t|A Gene TME with a variant M184B.
+633|a|
+
+634|t|A Gene FIX with a variant D276A.
+634|a|
+634	26	31	D276A	ProteinMutation	p|SUB|D|276|A
+
+635|t|A Gene MIF with a variant N110C.
+635|a|
+635	26	31	N110C	ProteinMutation	p|SUB|N|110|C
+
+636|t|A Gene CEN with a variant A595T.
+636|a|
+636	26	31	A595T	DNAMutation	c|SUB|A|595|T
+
+637|t|A Gene UCYT with a variant B151F.
+637|a|
+
+638|t|A Gene AIS with a variant I304L.
+638|a|
+638	26	31	I304L	ProteinMutation	p|SUB|I|304|L
+
+639|t|A Gene ATC with a variant C7966T.
+639|a|
+639	26	32	C7966T	DNAMutation	g|SUB|C|7966|T
+
+640|t|A Gene CIC with a variant C10485T.
+640|a|
+640	26	33	C10485T	DNAMutation	g|SUB|C|10485|T
+
+641|t|A Gene IRC with a variant T2015101823298N.
+641|a|
+641	26	41	T2015101823298N	ProteinMutation	p|SUB|T|2015101823298|N
+
+642|t|A Gene CTSB with a variant N298A.
+642|a|
+642	27	32	N298A	ProteinMutation	p|SUB|N|298|A
+
+643|t|A Gene KCT with a variant C15450T.
+643|a|
+643	26	33	C15450T	DNAMutation	g|SUB|C|15450|T
+
+644|t|A Gene LSL with a variant V600E.
+644|a|
+644	26	31	V600E	ProteinMutation	p|SUB|V|600|E
+
+645|t|A Gene MIR with a variant N125B.
+645|a|
+
+646|t|A Gene ABC with a variant B12677G.
+646|a|
+
+647|t|A Gene WJO with a variant G5208L.
+647|a|
+647	26	32	G5208L	ProteinMutation	p|SUB|G|5208|L
+
+648|t|A Gene KIT with a variant P551L.
+648|a|
+648	26	31	P551L	ProteinMutation	p|SUB|P|551|L
+
+649|t|A Gene ATTR with a variant Y114C.
+649|a|
+649	27	32	Y114C	ProteinMutation	p|SUB|Y|114|C;RS#:121918075
+
+650|t|A Gene IMC with a variant C1021T.
+650|a|
+650	26	32	C1021T	DNAMutation	c|SUB|C|1021|T
+
+651|t|A Gene SSB with a variant R2557A.
+651|a|
+651	26	32	R2557A	ProteinMutation	p|SUB|R|2557|A
+
+652|t|A Gene SGII with a variant I1032S.
+652|a|
+652	27	33	I1032S	ProteinMutation	p|SUB|I|1032|S
+
+653|t|A Gene KIT with a variant D816V.
+653|a|
+653	26	31	D816V	ProteinMutation	p|SUB|D|816|V;RS#:121913507
+
+654|t|A Gene NCT with a variant C14090T.
+654|a|
+654	26	33	C14090T	DNAMutation	g|SUB|C|14090|T
+
+655|t|A Gene DVT with a variant D138Y.
+655|a|
+655	26	31	D138Y	ProteinMutation	p|SUB|D|138|Y
+
+656|t|A Gene SHIVS with a variant F162P.
+656|a|
+656	28	33	F162P	ProteinMutation	p|SUB|F|162|P
+
+657|t|A Gene CSB with a variant E646Q.
+657|a|
+657	26	31	E646Q	ProteinMutation	p|SUB|E|646|Q
+
+658|t|A Gene RIC with a variant S2751A.
+658|a|
+658	26	32	S2751A	ProteinMutation	p|SUB|S|2751|A
+
+659|t|A Gene STI with a variant B366D.
+659|a|
+
+660|t|A Gene CJD with a variant E200K.
+660|a|
+660	26	31	E200K	ProteinMutation	p|SUB|E|200|K;RS#:28933385
+
+661|t|A Gene CAC with a variant T101A.
+661|a|
+661	26	31	T101A	DNAMutation	c|SUB|T|101|A
+
+662|t|A Gene DAPP with a variant V717I.
+662|a|
+662	27	32	V717I	ProteinMutation	p|SUB|V|717|I
+
+663|t|A Gene MATLA with a variant B2007B.
+663|a|
+
+664|t|A Gene EGFR with a variant T790M.
+664|a|
+664	27	32	T790M	ProteinMutation	p|SUB|T|790|M;RS#:121434569
+
+665|t|A Gene HHS with a variant N275200800002I.
+665|a|
+665	26	40	N275200800002I	ProteinMutation	p|SUB|N|275200800002|I
+
+666|t|A Gene GEN with a variant E3555X.
+666|a|
+666	26	32	E3555X	ProteinMutation	p|SUB|E|3555|X
+
+667|t|A Gene CCD with a variant C102A.
+667|a|
+667	26	31	C102A	DNAMutation	c|SUB|C|102|A
+
+668|t|A Gene TME with a variant M150A.
+668|a|
+668	26	31	M150A	ProteinMutation	p|SUB|M|150|A
+
+669|t|A Gene MEX with a variant F276L.
+669|a|
+669	26	31	F276L	ProteinMutation	p|SUB|F|276|L
+
+670|t|A Gene EPH with a variant X1691A.
+670|a|
+670	26	32	X1691A	ProteinMutation	p|SUB|X|1691|A
+
+671|t|A Gene KCC with a variant M11614P.
+671|a|
+671	26	33	M11614P	ProteinMutation	p|SUB|M|11614|P
+
+672|t|A Gene SSR with a variant G60752K.
+672|a|
+
+673|t|A Gene DST with a variant A4637A.
+673|a|
+
+674|t|A Gene HHS with a variant A290201200006I.
+674|a|
+674	26	40	A290201200006I	ProteinMutation	p|SUB|A|290201200006|I
+
+675|t|A Gene FUS with a variant Y526A.
+675|a|
+675	26	31	Y526A	ProteinMutation	p|SUB|Y|526|A
+
+676|t|A Gene OEC with a variant D442E.
+676|a|
+676	26	31	D442E	ProteinMutation	p|SUB|D|442|E
+
+677|t|A Gene HERG with a variant N861I.
+677|a|
+677	27	32	N861I	ProteinMutation	p|SUB|N|861|I;RS#:121912513
+
+678|t|A Gene BRAF with a variant V600K.
+678|a|
+678	27	32	V600K	ProteinMutation	p|SUB|V|600|K;RS#:121913227
+
+679|t|A Gene SUPE with a variant R304H.
+679|a|
+679	27	32	R304H	ProteinMutation	p|SUB|R|304|H
+
+680|t|A Gene CSUR with a variant P2846P.
+680|a|
+680	27	33	P2846P	ProteinMutation	p|SUB|P|2846|P
+
+681|t|A Gene MITF with a variant R255X.
+681|a|
+681	27	32	R255X	ProteinMutation	p|SUB|R|255|X;RS#:1057517966
+
+682|t|A Gene HHS with a variant N268201500003I.
+682|a|
+682	26	40	N268201500003I	ProteinMutation	p|SUB|N|268201500003|I
+
+683|t|A Gene FAK with a variant Y861F.
+683|a|
+683	26	31	Y861F	ProteinMutation	p|SUB|Y|861|F
+
+684|t|A Gene SGK with a variant T256A.
+684|a|
+684	26	31	T256A	DNAMutation	c|SUB|T|256|A
+
+685|t|A Gene EJVE with a variant S8677R.
+685|a|
+
+686|t|A Gene PAM with a variant C80007T.
+686|a|
+686	26	33	C80007T	DNAMutation	g|SUB|C|80007|T
+
+687|t|A Gene BRAF with a variant Q257R.
+687|a|
+687	27	32	Q257R	ProteinMutation	p|SUB|Q|257|R;RS#:180177035
+
+688|t|A Gene WAJ with a variant C404A.
+688|a|
+688	26	31	C404A	DNAMutation	c|SUB|C|404|A
+
+689|t|A Gene GNE with a variant V572L.
+689|a|
+689	26	31	V572L	ProteinMutation	p|SUB|V|572|L;RS#:121908632
+
+690|t|A Gene FGFR with a variant C342Y.
+690|a|
+690	27	32	C342Y	ProteinMutation	p|SUB|C|342|Y
+
+691|t|A Gene OPTN with a variant E478G.
+691|a|
+691	27	32	E478G	ProteinMutation	p|SUB|E|478|G;RS#:267606929(Expired)
+
+692|t|A Gene PDC with a variant W392M.
+692|a|
+692	26	31	W392M	ProteinMutation	p|SUB|W|392|M
+
+693|t|A Gene NBR with a variant I1108T.
+693|a|
+693	26	32	I1108T	ProteinMutation	p|SUB|I|1108|T
+
+694|t|A Gene RET with a variant C634W.
+694|a|
+
+695|t|A Gene BCHE with a variant A539T.
+695|a|
+695	27	32	A539T	DNAMutation	c|SUB|A|539|T
+
+696|t|A Gene KRAS with a variant A146T.
+696|a|
+696	27	32	A146T	DNAMutation	c|SUB|A|146|T;RS#:121913527
+
+697|t|A Gene WASP with a variant H208D.
+697|a|
+697	27	32	H208D	ProteinMutation	p|SUB|H|208|D
+
+698|t|A Gene CAC with a variant T116A.
+698|a|
+698	26	31	T116A	DNAMutation	c|SUB|T|116|A
+
+699|t|A Gene KUD with a variant C6143T.
+699|a|
+699	26	32	C6143T	DNAMutation	g|SUB|C|6143|T
+
+700|t|A Gene CCU with a variant G39713T.
+700|a|
+700	26	33	G39713T	DNAMutation	g|SUB|G|39713|T
+
+701|t|A Gene NCT with a variant C11637T.
+701|a|
+701	26	33	C11637T	DNAMutation	g|SUB|C|11637|T
+
+702|t|A Gene SEACS with a variant L641P.
+702|a|
+702	28	33	L641P	ProteinMutation	p|SUB|L|641|P
+
+703|t|A Gene BIT with a variant S7201A.
+703|a|
+
+704|t|A Gene GPPGVG with a variant K362T.
+704|a|
+704	29	34	K362T	ProteinMutation	p|SUB|K|362|T
+
+705|t|A Gene WJO with a variant G6110B.
+705|a|
+
+706|t|A Gene BDN with a variant F196G.
+706|a|
+706	26	31	F196G	ProteinMutation	p|SUB|F|196|G
+
+707|t|A Gene MTHF with a variant R1298A.
+707|a|
+707	27	33	R1298A	ProteinMutation	p|SUB|R|1298|A
+
+708|t|A Gene EET with a variant A79001A.
+708|a|
+
+709|t|A Gene HHS with a variant O100201500018C.
+709|a|
+
+710|t|A Gene THRB with a variant P453A.
+710|a|
+710	27	32	P453A	ProteinMutation	p|SUB|P|453|A;RS#:28933408
+
+711|t|A Gene HHS with a variant N261201000043C.
+711|a|
+711	26	40	N261201000043C	ProteinMutation	p|SUB|N|261201000043|C
+
+712|t|A Gene FASL with a variant G844T.
+712|a|
+712	27	32	G844T	DNAMutation	c|SUB|G|844|T
+
+713|t|A Gene MAPT with a variant P301S.
+713|a|
+713	27	32	P301S	ProteinMutation	p|SUB|P|301|S;RS#:63751438
+
+714|t|A Gene HERG with a variant S631C.
+714|a|
+714	27	32	S631C	ProteinMutation	p|SUB|S|631|C
+
+715|t|A Gene GSS with a variant A117V.
+715|a|
+715	26	31	A117V	ProteinMutation	p|SUB|A|117|V
+
+716|t|A Gene ATC with a variant C27749T.
+716|a|
+716	26	33	C27749T	DNAMutation	g|SUB|C|27749|T
+
+717|t|A Gene ATC with a variant C638T.
+717|a|
+717	26	31	C638T	DNAMutation	c|SUB|C|638|T
+
+718|t|A Gene ICOSL with a variant N219K.
+718|a|
+718	28	33	N219K	ProteinMutation	p|SUB|N|219|K;RS#:778848090
+
+719|t|A Gene IMC with a variant C3223T.
+719|a|
+719	26	32	C3223T	DNAMutation	g|SUB|C|3223|T
+
+720|t|A Gene EGFR with a variant A289D.
+720|a|
+720	27	32	A289D	ProteinMutation	p|SUB|A|289|D;RS#:149840192
+
+721|t|A Gene PCNA with a variant K164R.
+721|a|
+721	27	32	K164R	ProteinMutation	p|SUB|K|164|R
+
+722|t|A Gene MELA with a variant S3243G.
+722|a|
+722	27	33	S3243G	ProteinMutation	p|SUB|S|3243|G
+
+723|t|A Gene EGFR with a variant C797S.
+723|a|
+723	27	32	C797S	ProteinMutation	p|SUB|C|797|S;RS#:1057519861
+
+724|t|A Gene SARC with a variant C1213T.
+724|a|
+724	27	33	C1213T	DNAMutation	c|SUB|C|1213|T
+
+725|t|A Gene CXA with a variant F200X.
+725|a|
+725	26	31	F200X	ProteinMutation	p|SUB|F|200|X
+
+726|t|A Gene GIS with a variant T430K.
+726|a|
+726	26	31	T430K	ProteinMutation	p|SUB|T|430|K
+
+727|t|A Gene SIVAG with a variant M208K.
+727|a|
+727	28	33	M208K	ProteinMutation	p|SUB|M|208|K
+
+728|t|A Gene COI with a variant V421A.
+728|a|
+728	26	31	V421A	ProteinMutation	p|SUB|V|421|A
+
+729|t|A Gene DAAO with a variant G181R.
+729|a|
+729	27	32	G181R	ProteinMutation	p|SUB|G|181|R
+
+730|t|A Gene IMC with a variant C1728T.
+730|a|
+730	26	32	C1728T	DNAMutation	c|SUB|C|1728|T
+
+731|t|A Gene DERK with a variant E335K.
+731|a|
+731	27	32	E335K	ProteinMutation	p|SUB|E|335|K
+
+732|t|A Gene BCR with a variant C17572T.
+732|a|
+732	26	33	C17572T	DNAMutation	g|SUB|C|17572|T
+
+733|t|A Gene PML with a variant S214L.
+733|a|
+733	26	31	S214L	ProteinMutation	p|SUB|S|214|L;RS#:750722602
+
+734|t|A Gene CCD with a variant C144B.
+734|a|
+
+735|t|A Gene RIT with a variant F741T.
+735|a|
+735	26	31	F741T	ProteinMutation	p|SUB|F|741|T
+
+736|t|A Gene RDL with a variant A302S.
+736|a|
+736	26	31	A302S	ProteinMutation	p|SUB|A|302|S
+
+737|t|A Gene INP with a variant A237B.
+737|a|
+
+738|t|A Gene MIR with a variant N106A.
+738|a|
+738	26	31	N106A	ProteinMutation	p|SUB|N|106|A
+
+739|t|A Gene OPR with a variant M1118G.
+739|a|
+739	26	32	M1118G	ProteinMutation	p|SUB|M|1118|G
+
+740|t|A Gene ATC with a variant C11845T.
+740|a|
+740	26	33	C11845T	DNAMutation	g|SUB|C|11845|T
+
+741|t|A Gene JCO with a variant G1502C.
+741|a|
+741	26	32	G1502C	DNAMutation	c|SUB|G|1502|C
+
+742|t|A Gene SHP with a variant K170R.
+742|a|
+742	26	31	K170R	ProteinMutation	p|SUB|K|170|R
+
+743|t|A Gene PDC with a variant I472A.
+743|a|
+743	26	31	I472A	ProteinMutation	p|SUB|I|472|A
+
+744|t|A Gene PTEN with a variant Y138L.
+744|a|
+744	27	32	Y138L	ProteinMutation	p|SUB|Y|138|L
+
+745|t|A Gene TME with a variant M120B.
+745|a|
+
+746|t|A Gene TME with a variant M132D.
+746|a|
+746	26	31	M132D	ProteinMutation	p|SUB|M|132|D
+
+747|t|A Gene SERCA with a variant A617T.
+747|a|
+747	28	33	A617T	DNAMutation	c|SUB|A|617|T
+
+748|t|A Gene IMC with a variant C26223T.
+748|a|
+748	26	33	C26223T	DNAMutation	g|SUB|C|26223|T
+
+749|t|A Gene INVO with a variant S3100A.
+749|a|
+749	27	33	S3100A	ProteinMutation	p|SUB|S|3100|A
+
+750|t|A Gene ANS with a variant M130282B.
+750|a|
+
+751|t|A Gene BRA with a variant F1799T.
+751|a|
+751	26	32	F1799T	ProteinMutation	p|SUB|F|1799|T
+
+752|t|A Gene STAR with a variant S9301B.
+752|a|
+
+753|t|A Gene LHO with a variant N4917G.
+753|a|
+753	26	32	N4917G	ProteinMutation	p|SUB|N|4917|G
+
+754|t|A Gene FVII with a variant G331D.
+754|a|
+754	27	32	G331D	ProteinMutation	p|SUB|G|331|D
+
+755|t|A Gene KCC with a variant M11349P.
+755|a|
+755	26	33	M11349P	ProteinMutation	p|SUB|M|11349|P
+
+756|t|A Gene FXI with a variant T475I.
+756|a|
+756	26	31	T475I	ProteinMutation	p|SUB|T|475|I
+
+757|t|A Gene UCP with a variant C118A.
+757|a|
+757	26	31	C118A	DNAMutation	c|SUB|C|118|A
+
+758|t|A Gene ATC with a variant C33209T.
+758|a|
+758	26	33	C33209T	DNAMutation	g|SUB|C|33209|T
+
+759|t|A Gene GIS with a variant T882R.
+759|a|
+759	26	31	T882R	ProteinMutation	p|SUB|T|882|R
+
+760|t|A Gene KCT with a variant C33185T.
+760|a|
+760	26	33	C33185T	DNAMutation	g|SUB|C|33185|T
+
+761|t|A Gene HHS with a variant N261201500067C.
+761|a|
+761	26	40	N261201500067C	ProteinMutation	p|SUB|N|261201500067|C
+
+762|t|A Gene MPS with a variant K3169A.
+762|a|
+762	26	32	K3169A	ProteinMutation	p|SUB|K|3169|A
+
+763|t|A Gene OSM with a variant F217A.
+763|a|
+763	26	31	F217A	ProteinMutation	p|SUB|F|217|A
+
+764|t|A Gene CCBA with a variant U85039T.
+764|a|
+
+765|t|A Gene MPL with a variant W515L.
+765|a|
+765	26	31	W515L	ProteinMutation	p|SUB|W|515|L;RS#:121913615
+
+766|t|A Gene AKA with a variant P350C.
+766|a|
+766	26	31	P350C	ProteinMutation	p|SUB|P|350|C
+
+767|t|A Gene BRAF with a variant D594N.
+767|a|
+767	27	32	D594N	ProteinMutation	p|SUB|D|594|N;RS#:397516896(Expired)
+
+768|t|A Gene RARA with a variant R394Q.
+768|a|
+768	27	32	R394Q	ProteinMutation	p|SUB|R|394|Q
+
+769|t|A Gene RET with a variant C634Y.
+769|a|
+769	26	31	C634Y	ProteinMutation	p|SUB|C|634|Y;RS#:75996173
+
+770|t|A Gene GST with a variant A169C.
+770|a|
+770	26	31	A169C	DNAMutation	c|SUB|A|169|C
+
+771|t|A Gene RPM with a variant I8226S.
+771|a|
+
+772|t|A Gene SMN with a variant K119R.
+772|a|
+772	26	31	K119R	ProteinMutation	p|SUB|K|119|R
+
+773|t|A Gene BCR with a variant C15417T.
+773|a|
+773	26	33	C15417T	DNAMutation	g|SUB|C|15417|T
+
+774|t|A Gene VUII with a variant S1018A.
+774|a|
+774	27	33	S1018A	ProteinMutation	p|SUB|S|1018|A
+
+775|t|A Gene APP with a variant D678H.
+775|a|
+775	26	31	D678H	ProteinMutation	p|SUB|D|678|H;RS#:63750064(Expired)
+
+776|t|A Gene FCF with a variant D4514S.
+776|a|
+776	26	32	D4514S	ProteinMutation	p|SUB|D|4514|S
+
+777|t|A Gene WJO with a variant G9616L.
+777|a|
+
+778|t|A Gene ABCA with a variant G2706A.
+778|a|
+778	27	33	G2706A	DNAMutation	c|SUB|G|2706|A
+
+779|t|A Gene AAE with a variant C191A.
+779|a|
+779	26	31	C191A	DNAMutation	c|SUB|C|191|A
+
+780|t|A Gene KIA with a variant A1822L.
+780|a|
+780	26	32	A1822L	ProteinMutation	p|SUB|A|1822|L
+
+781|t|A Gene MET with a variant T1010I.
+781|a|
+781	26	32	T1010I	ProteinMutation	p|SUB|T|1010|I
+
+782|t|A Gene ATC with a variant C35703T.
+782|a|
+782	26	33	C35703T	DNAMutation	g|SUB|C|35703|T
+
+783|t|A Gene JCO with a variant G9304A.
+783|a|
+783	26	32	G9304A	DNAMutation	g|SUB|G|9304|A
+
+784|t|A Gene DED with a variant N6526A.
+784|a|
+
+785|t|A Gene NBR with a variant C14463T.
+785|a|
+785	26	33	C14463T	DNAMutation	g|SUB|C|14463|T
+
+786|t|A Gene MTC with a variant C9019T.
+786|a|
+786	26	32	C9019T	DNAMutation	g|SUB|C|9019|T
+
+787|t|A Gene CBM with a variant Y527G.
+787|a|
+
+788|t|A Gene NCIM with a variant B11974T.
+788|a|
+
+789|t|A Gene NDK with a variant S122P.
+789|a|
+789	26	31	S122P	ProteinMutation	p|SUB|S|122|P
+
+790|t|A Gene PDAPP with a variant V717I.
+790|a|
+790	28	33	V717I	ProteinMutation	p|SUB|V|717|I
+
+791|t|A Gene HEK with a variant T293T.
+791|a|
+
+792|t|A Gene IMC with a variant C5001T.
+792|a|
+792	26	32	C5001T	DNAMutation	g|SUB|C|5001|T
+
+793|t|A Gene NGF with a variant R100W.
+793|a|
+793	26	31	R100W	ProteinMutation	p|SUB|R|100|W
+
+794|t|A Gene MTHFR with a variant A1298T.
+794|a|
+794	28	34	A1298T	DNAMutation	c|SUB|A|1298|T
+
+795|t|A Gene IDE with a variant K898A.
+795|a|
+795	26	31	K898A	ProteinMutation	p|SUB|K|898|A
+
+796|t|A Gene ACC with a variant C19713T.
+796|a|
+796	26	33	C19713T	DNAMutation	g|SUB|C|19713|T
+
+797|t|A Gene VEG with a variant F165A.
+797|a|
+797	26	31	F165A	ProteinMutation	p|SUB|F|165|A
+
+798|t|A Gene ATC with a variant C19606T.
+798|a|
+798	26	33	C19606T	DNAMutation	g|SUB|C|19606|T
+
+799|t|A Gene MOL with a variant A117T.
+799|a|
+799	26	31	A117T	DNAMutation	c|SUB|A|117|T
+
+800|t|A Gene FANCA with a variant I939S.
+800|a|
+800	28	33	I939S	ProteinMutation	p|SUB|I|939|S
+
+801|t|A Gene SAIGF with a variant F213A.
+801|a|
+801	28	33	F213A	ProteinMutation	p|SUB|F|213|A
+
+802|t|A Gene NCM with a variant B1947T.
+802|a|
+
+803|t|A Gene YAP with a variant Y357F.
+803|a|
+803	26	31	Y357F	ProteinMutation	p|SUB|Y|357|F
+
+804|t|A Gene PRI with a variant D450S.
+804|a|
+804	26	31	D450S	ProteinMutation	p|SUB|D|450|S
+
+805|t|A Gene LXF with a variant L529L.
+805|a|
+805	26	31	L529L	ProteinMutation	p|SUB|L|529|L
+
+806|t|A Gene KIT with a variant D814V.
+806|a|
+806	26	31	D814V	ProteinMutation	p|SUB|D|814|V
+
+807|t|A Gene CFTR with a variant A455E.
+807|a|
+807	27	32	A455E	ProteinMutation	p|SUB|A|455|E;RS#:74551128
+
+808|t|A Gene SEA with a variant D227A.
+808|a|
+808	26	31	D227A	ProteinMutation	p|SUB|D|227|A
+
+809|t|A Gene KAC with a variant C19816T.
+809|a|
+809	26	33	C19816T	DNAMutation	g|SUB|C|19816|T
+
+810|t|A Gene MAB with a variant T5102A.
+810|a|
+810	26	32	T5102A	DNAMutation	g|SUB|T|5102|A
+
+811|t|A Gene PPARD with a variant T294C.
+811|a|
+811	28	33	T294C	DNAMutation	c|SUB|T|294|C;RS#:2016520
+
+812|t|A Gene MTC with a variant C7002T.
+812|a|
+812	26	32	C7002T	DNAMutation	g|SUB|C|7002|T
+
+813|t|A Gene MPD with a variant L3280A.
+813|a|
+813	26	32	L3280A	ProteinMutation	p|SUB|L|3280|A
+
+814|t|A Gene RIP with a variant D324A.
+814|a|
+814	26	31	D324A	ProteinMutation	p|SUB|D|324|A
+
+815|t|A Gene SRF with a variant T160A.
+815|a|
+815	26	31	T160A	DNAMutation	c|SUB|T|160|A
+
+816|t|A Gene WJO with a variant G6911L.
+816|a|
+
+817|t|A Gene CAC with a variant T114A.
+817|a|
+817	26	31	T114A	DNAMutation	c|SUB|T|114|A
+
+818|t|A Gene NBR with a variant C1440X.
+818|a|
+818	26	32	C1440X	ProteinMutation	p|SUB|C|1440|X
+
+819|t|A Gene ERC with a variant C119007A.
+819|a|
+819	26	34	C119007A	DNAMutation	g|SUB|C|119007|A
+
+820|t|A Gene LXF with a variant A629L.
+820|a|
+820	26	31	A629L	ProteinMutation	p|SUB|A|629|L
+
+821|t|A Gene IMC with a variant C26218T.
+821|a|
+821	26	33	C26218T	DNAMutation	g|SUB|C|26218|T
+
+822|t|A Gene FIX with a variant R338L.
+822|a|
+822	26	31	R338L	ProteinMutation	p|SUB|R|338|L;RS#:137852283
+
+823|t|A Gene TME with a variant M150C.
+823|a|
+
+824|t|A Gene LMNA with a variant D300N.
+824|a|
+824	27	32	D300N	ProteinMutation	p|SUB|D|300|N;RS#:267607591
+
+825|t|A Gene ACTR with a variant N12618000793213P.
+825|a|
+825	27	43	N12618000793213P	ProteinMutation	p|SUB|N|12618000793213|P
+
+826|t|A Gene MHA with a variant A4549A.
+826|a|
+
+827|t|A Gene IRC with a variant T2012110611382N.
+827|a|
+827	26	41	T2012110611382N	ProteinMutation	p|SUB|T|2012110611382|N
+
+828|t|A Gene ALK with a variant F1174L.
+828|a|
+828	26	32	F1174L	ProteinMutation	p|SUB|F|1174|L;RS#:281864719
+
+829|t|A Gene IYS with a variant V917L.
+829|a|
+829	26	31	V917L	ProteinMutation	p|SUB|V|917|L
+
+830|t|A Gene FSL with a variant G240W.
+830|a|
+830	26	31	G240W	ProteinMutation	p|SUB|G|240|W
+
+831|t|A Gene FXR with a variant W469A.
+831|a|
+
+832|t|A Gene GEN with a variant E3359X.
+832|a|
+832	26	32	E3359X	ProteinMutation	p|SUB|E|3359|X
+
+833|t|A Gene MPL with a variant T487A.
+833|a|
+833	26	31	T487A	DNAMutation	c|SUB|T|487|A;RS#:748782091
+
+834|t|A Gene NBR with a variant C14228T.
+834|a|
+834	26	33	C14228T	DNAMutation	g|SUB|C|14228|T
+
+835|t|A Gene TME with a variant M229B.
+835|a|
+
+836|t|A Gene NTR with a variant L809A.
+836|a|
+836	26	31	L809A	ProteinMutation	p|SUB|L|809|A
+
+837|t|A Gene NITR with a variant O821R.
+837|a|
+
+838|t|A Gene PRO with a variant S100B.
+838|a|
+
+839|t|A Gene CCD with a variant C162P.
+839|a|
+839	26	31	C162P	ProteinMutation	p|SUB|C|162|P
+
+840|t|A Gene DEF with a variant B106A.
+840|a|
+
+841|t|A Gene IMC with a variant C20180T.
+841|a|
+841	26	33	C20180T	DNAMutation	g|SUB|C|20180|T
+
+842|t|A Gene CSL with a variant C115N.
+842|a|
+842	26	31	C115N	ProteinMutation	p|SUB|C|115|N
+
+843|t|A Gene DPM with a variant P315T.
+843|a|
+843	26	31	P315T	ProteinMutation	p|SUB|P|315|T
+
+844|t|A Gene NCIM with a variant B703044T.
+844|a|
+
+845|t|A Gene CHL with a variant T101A.
+845|a|
+845	26	31	T101A	DNAMutation	c|SUB|T|101|A
+
+846|t|A Gene TTR with a variant Y114C.
+846|a|
+846	26	31	Y114C	ProteinMutation	p|SUB|Y|114|C;RS#:121918075
+
+847|t|A Gene SEN with a variant K312A.
+847|a|
+847	26	31	K312A	ProteinMutation	p|SUB|K|312|A
+
+848|t|A Gene NCIM with a variant B2127T.
+848|a|
+
+849|t|A Gene FRB with a variant T2098L.
+849|a|
+849	26	32	T2098L	ProteinMutation	p|SUB|T|2098|L
+
+850|t|A Gene IAT with a variant C103S.
+850|a|
+850	26	31	C103S	ProteinMutation	p|SUB|C|103|S
+
+851|t|A Gene KIT with a variant D737N.
+851|a|
+851	26	31	D737N	ProteinMutation	p|SUB|D|737|N;RS#:751005114
+
+852|t|A Gene KRAS with a variant D154Q.
+852|a|
+852	27	32	D154Q	ProteinMutation	p|SUB|D|154|Q
+
+853|t|A Gene RET with a variant C634R.
+853|a|
+853	26	31	C634R	ProteinMutation	p|SUB|C|634|R;RS#:75076352
+
+854|t|A Gene AGCQS with a variant Q113445C.
+854|a|
+
+855|t|A Gene QWINV with a variant O200A.
+855|a|
+
+856|t|A Gene BTK with a variant C481S.
+856|a|
+856	26	31	C481S	ProteinMutation	p|SUB|C|481|S;RS#:1057519825|1057519826
+
+857|t|A Gene HHS with a variant N261200800001E.
+857|a|
+857	26	40	N261200800001E	ProteinMutation	p|SUB|N|261200800001|E
+
+858|t|A Gene FVI with a variant I244V.
+858|a|
+858	26	31	I244V	ProteinMutation	p|SUB|I|244|V
+
+859|t|A Gene CAC with a variant T138A.
+859|a|
+859	26	31	T138A	DNAMutation	c|SUB|T|138|A
+
+860|t|A Gene SRY with a variant F109S.
+860|a|
+860	26	31	F109S	ProteinMutation	p|SUB|F|109|S;RS#:104894956
+
+861|t|A Gene DCX with a variant G253D.
+861|a|
+861	26	31	G253D	ProteinMutation	p|SUB|G|253|D
+
+862|t|A Gene XRC with a variant C76721G.
+862|a|
+862	26	33	C76721G	DNAMutation	g|SUB|C|76721|G
+
+863|t|A Gene MGMT with a variant P140K.
+863|a|
+863	27	32	P140K	ProteinMutation	p|SUB|P|140|K
+
+864|t|A Gene EDA with a variant R370A.
+864|a|
+864	26	31	R370A	ProteinMutation	p|SUB|R|370|A
+
+865|t|A Gene CASK with a variant L209P.
+865|a|
+865	27	32	L209P	ProteinMutation	p|SUB|L|209|P
+
+866|t|A Gene TUT with a variant M19373A.
+866|a|
+866	26	33	M19373A	ProteinMutation	p|SUB|M|19373|A
+
+867|t|A Gene KCT with a variant C39991T.
+867|a|
+867	26	33	C39991T	DNAMutation	g|SUB|C|39991|T
+
+868|t|A Gene VYEED with a variant M1161V.
+868|a|
+868	28	34	M1161V	ProteinMutation	p|SUB|M|1161|V
+
+869|t|A Gene IRC with a variant T2016110630712N.
+869|a|
+869	26	41	T2016110630712N	ProteinMutation	p|SUB|T|2016110630712|N
+
+870|t|A Gene TME with a variant M132C.
+870|a|
+
+871|t|A Gene FMA with a variant C134B.
+871|a|
+
+872|t|A Gene KOS with a variant M302L.
+872|a|
+872	26	31	M302L	ProteinMutation	p|SUB|M|302|L
+
+873|t|A Gene HTC with a variant C2516T.
+873|a|
+873	26	32	C2516T	DNAMutation	c|SUB|C|2516|T
+
+874|t|A Gene KIO with a variant M2012H.
+874|a|
+874	26	32	M2012H	ProteinMutation	p|SUB|M|2012|H
+
+875|t|A Gene SHIV with a variant C109F.
+875|a|
+875	27	32	C109F	ProteinMutation	p|SUB|C|109|F
+
+876|t|A Gene FVI with a variant I359M.
+876|a|
+876	26	31	I359M	ProteinMutation	p|SUB|I|359|M
+
+877|t|A Gene VSMC with a variant R133C.
+877|a|
+877	27	32	R133C	ProteinMutation	p|SUB|R|133|C
+
+878|t|A Gene HHS with a variant H250200900010C.
+878|a|
+878	26	40	H250200900010C	ProteinMutation	p|SUB|H|250200900010|C
+
+879|t|A Gene CTNS with a variant W138X.
+879|a|
+879	27	32	W138X	ProteinMutation	p|SUB|W|138|X;RS#:113994205|121908125
+
+880|t|A Gene TME with a variant M161B.
+880|a|
+
+881|t|A Gene SPAST with a variant C448Y.
+881|a|
+881	28	33	C448Y	ProteinMutation	p|SUB|C|448|Y;RS#:121908510
+
+882|t|A Gene JAM with a variant I1001A.
+882|a|
+882	26	32	I1001A	ProteinMutation	p|SUB|I|1001|A
+
+883|t|A Gene TNF with a variant R136A.
+883|a|
+883	26	31	R136A	ProteinMutation	p|SUB|R|136|A
+
+884|t|A Gene IMC with a variant C1713T.
+884|a|
+884	26	32	C1713T	DNAMutation	c|SUB|C|1713|T
+
+885|t|A Gene TME with a variant M120A.
+885|a|
+885	26	31	M120A	ProteinMutation	p|SUB|M|120|A
+
+886|t|A Gene IMC with a variant C1704T.
+886|a|
+886	26	32	C1704T	DNAMutation	c|SUB|C|1704|T
+
+887|t|A Gene PRJN with a variant A360851A.
+887|a|
+
+888|t|A Gene MAF with a variant F210191T.
+888|a|
+888	26	34	F210191T	ProteinMutation	p|SUB|F|210191|T
+
+889|t|A Gene HTC with a variant C2601T.
+889|a|
+889	26	32	C2601T	DNAMutation	c|SUB|C|2601|T
+
+890|t|A Gene LOO with a variant C204T.
+890|a|
+890	26	31	C204T	DNAMutation	c|SUB|C|204|T
+
+891|t|A Gene BRA with a variant F600E.
+891|a|
+
+892|t|A Gene HHS with a variant N267200603425C.
+892|a|
+892	26	40	N267200603425C	ProteinMutation	p|SUB|N|267200603425|C
+
+893|t|A Gene DPT with a variant P100A.
+893|a|
+893	26	31	P100A	ProteinMutation	p|SUB|P|100|A
+
+894|t|A Gene YKL with a variant K420A.
+894|a|
+894	26	31	K420A	ProteinMutation	p|SUB|K|420|A
+
+895|t|A Gene CFB with a variant P6051T.
+895|a|
+
+896|t|A Gene TME with a variant M142A.
+896|a|
+896	26	31	M142A	ProteinMutation	p|SUB|M|142|A
+
+897|t|A Gene HPN with a variant S353A.
+897|a|
+897	26	31	S353A	ProteinMutation	p|SUB|S|353|A
+
+898|t|A Gene FAK with a variant Y576F.
+898|a|
+898	26	31	Y576F	ProteinMutation	p|SUB|Y|576|F
+
+899|t|A Gene CCTCCA with a variant A2015018T.
+899|a|
+899	29	38	A2015018T	DNAMutation	g|SUB|A|2015018|T
+
+900|t|A Gene NSCLC with a variant V600E.
+900|a|
+900	28	33	V600E	ProteinMutation	p|SUB|V|600|E
+
+901|t|A Gene FXI with a variant P520L.
+901|a|
+901	26	31	P520L	ProteinMutation	p|SUB|P|520|L
+
+902|t|A Gene CHO with a variant A1018K.
+902|a|
+902	26	32	A1018K	ProteinMutation	p|SUB|A|1018|K
+
+903|t|A Gene MITF with a variant L247S.
+903|a|
+903	27	32	L247S	ProteinMutation	p|SUB|L|247|S
+
+904|t|A Gene VMA with a variant X229C.
+904|a|
+904	26	31	X229C	ProteinMutation	p|SUB|X|229|C
+
+905|t|A Gene HHS with a variant O100201200007C.
+905|a|
+

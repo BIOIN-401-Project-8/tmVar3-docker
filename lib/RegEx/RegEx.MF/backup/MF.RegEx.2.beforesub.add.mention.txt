@@ -1,0 +1,69 @@
+an arginine residue at position 573 by termination codon
+alanine for valine at position 88
+glycine at position 303 by glutamic acid
+deletion of TG at the nucleotide position 608-609
+amino acid (proline) with a polar amino acid (serine) at position 29
+serine by leucine at amino acid position 555
+A to G transition at nucleotide +79
+arginine at amino acid 792 to a codon for glycine
+Met/Met at residue 175
+AVAQ 594-597 deletion
+a valine (GTG) to a methionine (ATG) at amino acid 792
+cytosine (C) for guanine (G) at codon 246
+-491 A to T
+C-to-G transition was identified at nucleotide 857
+2 aspartate (2Asp) to 2 alanine (2Ala)
+phenylalanine (F) to leucine (L) substitution at amino acid position 737
+nine-nucleotide deletion starting at position 1952
+changes asparagine 86 for alanine and eliminates amino acids 87, 88, and 89 (arginine, threonine, and proline)
+asparagine (AAC) for serine (AGC) at residue 45
+insertion mutations aspartate at position 201
+substitution of glycine (Gly) with arginine (Arg) at nucleotide 857
+valine [V] to methionine [M] substitution at position 244
+glutamic acid to a stop codon at position 244
+phenylalanine to the polar hydrophilic cysteine in exon 6 at codon 482
+arginine at amino acid position 229 by glycine
+substitution of an arginine by a tryptophan at position 244
+27 bp duplication was found inserted in the 2B domain at nucleotide position 1222
+T nucleotide deletion, which predicts a frameshift mutation from codon 219
+a missense mutation at codon 227, where the substitution of guanine (CGA) by adenine (CAA) predicts a glutamine replacement of arginine
+substitution of serine by proline at codon 1235
+deletion of G at the nucleotide position 520
+deletion of a G nucleotide at codon 1235
+G to C point mutation in exon 4 (base 308)
+proline residue for arginine residue at position 150
+glutamic acid residue (GAA) to a premature termination codon (TAA) at position 150
+mutation at codon 418 of exon 9 (GAC-->TAT)
+tyrosine codon into a stop codon at codon 612
+del 92 nucleotide -19/+73
+GATT duplication (nucleotides 763-766)
+TGA stop codon at nucleotides 766 to 768
+3-base deletion (TCC, either 350-351 or 351-352 codon)
+asparagine to cysteine radical mutation at the 620 position
+thymidine to cytosine mutation at position 28
+arginine (CGA) by a stop (TGA) at amino-acid 469
+deletion of two successive adenine residues in codon 138
+TTAT tetranucleotide was inserted between nt 2057 and 2058
+guanine insertion/deletion (G/D), the -1607 promoter polymorphism
+Tyrosine (Tyr) instead of a Term in codon 138
+T to A transition at the nucleotide position +387
+nucleotide T insertion at 7916 and 7917
++14 bp C-to-T
+single base pair deletion of a cytosine nucleotide in codon 138
+insertion introduced eight additional amino acids in codon 138
+deletion of thymidine in a polypyrimidine tract located 33 to 46 bps
+deletion of the coding sequence (nt 1314 through nt 1328)
+lacking the five terminal amino acids of exon XI (439-443)
+C deletion at nucleotide position 4548
+13-bp deletion at nucleotide 90 downstream of the termination codon
+T deletion at 5063
+C to T substitution at a polymorphic site 13,910 bp upstream
+arginine residue for the proline residue at position 158
+GAT-->GAG substitution replaces aspartic acid by glutamic acid in codon 416
+adenine (A) to guanine (G) substitution at position -670
+guanine insertion (2G) polymorphism at nucleotide -1607
+single-nucleotide deletion at position 329
+GGCC insertion at exon 8, position 1277
+GGCC insertion at exon 8 (1277)
+G to C substitution at position -174
+cytosine insertion at position 3020

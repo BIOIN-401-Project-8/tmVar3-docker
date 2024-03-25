@@ -46,6 +46,8 @@ public class MentionRecognition
 					Pmid = mat.group(1);
 					ParagraphType.add(mat.group(2));
 					ParagraphContent.add(mat.group(3));
+					tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.put(Pmid,new HashMap<String,Boolean>());
+					tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.put(Pmid,new HashMap<String,Boolean>());
 				}
 				else if (line.contains("\t")) //Annotation
 	        	{
@@ -799,7 +801,22 @@ public class MentionRecognition
 					/*
 					 * Tokenization for .location
 					 */
+					String regex="\\s+|(?=\\p{Punct})|(?<=\\p{Punct})";
+					
 					Document_rev=Document;
+					String TokensInDoc[]=Document_rev.split("[., \\(\\)]");
+					for(String tkn:TokensInDoc)
+					{
+						if(tmVar.tkn_Variant2MostCorrespondingGene_hash.get("gene").containsKey(tkn.toLowerCase()))
+						{
+							tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(Pmid).put(tkn.toLowerCase(),true);
+						}
+						else if(tmVar.tkn_Variant2MostCorrespondingGene_hash.get("species").containsKey(tkn.toLowerCase()))
+						{
+							tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(Pmid).put(tkn.toLowerCase(),true);
+						}
+					}
+					
 					Document_rev = Document_rev.replaceAll("([A-Z][A-Z])([A-Z][0-9][0-9]+[A-Z][\\W\\-\\_])", "$1 $2"); //PTENK289E
 					Document_rev = Document_rev.replaceAll("([0-9])([A-Za-z])", "$1 $2");
 					Document_rev = Document_rev.replaceAll("([A-Za-z])([0-9])", "$1 $2");
@@ -807,8 +824,7 @@ public class MentionRecognition
 					Document_rev = Document_rev.replaceAll("([a-z])([A-Z])", "$1 $2");
 					Document_rev = Document_rev.replaceAll("(.+)fs", "$1 fs");
 					Document_rev = Document_rev.replaceAll("[\t ]+", " ");
-					String regex="\\s+|(?=\\p{Punct})|(?<=\\p{Punct})";
-					String TokensInDoc[]=Document_rev.split(regex);
+					TokensInDoc=Document_rev.split(regex);
 					String DocumentTmp=Document;
 					int Offset=0;
 					
@@ -875,8 +891,7 @@ public class MentionRecognition
 					Document_rev = Document_rev.replaceAll("δ","d");
 					Document_rev = Document_rev.replaceAll("σ","s");
 					Document_rev = Document_rev.replaceAll("Φ","F");
-					//Document_rev = Document_rev.replaceAll("[^0-9A-Za-z\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+\\-\\=\\{\\}\\|\\[\\]\\\\\\:;'\\<\\>\\?\\,\\.\\/\\' ]+"," ");
-					//tmVar.tagger = new MaxentTagger("lib/taggers/english-left3words-distsim.tagger");
+
 					String tagged=tmVar.tagger.tagString(Document_rev).replace("-LRB-", "(").replace("-RRB-", ")").replace("-LSB-", "[").replace("-RSB-", "]");
 					String tag_split[]=tagged.split(" ");
 	        		HashMap<String,String> POS=new HashMap<String,String>();

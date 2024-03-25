@@ -1,0 +1,310 @@
+[1-9][0-9]*[ ]*\\((a|b|c|cd|ce|e|ef|f|fg|g|gh|h|hc)[1-9][0-9]*\\)[ ]*AminoAcid[ ]*(>|-[-]*>|-[-]+|-to-)[ ]*AminoAcid
+[1-9][0-9]*[ ]*\\((a|b|c|cd|ce|e|ef|f|fg|g|gh|h|hc)[ ]*[1-9][0-9]*\\)[ ]*AminoAcid SurroundingWord1 Preposition AminoAcid
+[1-9][0-9]*[ ]*[\\(]*AminoAcid[ ]*(Preposition|>|-[-]*>|-[-]+|-to-|-\\()[ ]*AminoAcid([\\)]*|[ ]*Conjunction AminoAcid)
+[1-9][0-9]*([\\)-]*|\\(i\\))[ ]*AminoAcid ((BeVerb[ ]*|)SurroundingWord1 |SurroundingWord2[ ]*|SurroundingWord2[ ]*BeVerb[ ]*SurroundingWord1 )Preposition AminoAcid
+
+[1-9][0-9]* Article[ ]*AminoAcid-->AminoAcid
+[1-9][0-9]* Article[ ]*from AminoAcid Preposition AminoAcid
+[1-9][0-9]* Article[ ]*SurroundingWord1 AminoAcid AminoAcid\\) Preposition AminoAcid
+[1-9][0-9]* Article[ ]*SurroundingWord1 AminoAcid Preposition AminoAcid
+[1-9][0-9]* Article[ ]*where Article[ ]*AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+[1-9][0-9]* BeVerb[ ]*AminoAcid rather than AminoAcid
+[1-9][0-9]* from AminoAcid Preposition AminoAcid
+[1-9][0-9]* SurroundingWord1 AminoAcid Preposition AminoAcid
+[1-9][0-9]* SurroundingWord2[ ]*\\(AminoAcid Preposition AminoAcid
+[1-9][0-9]* where AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+[1-9][0-9]*: AminoAcid----AminoAcid
+
+AminoAcid \\([1-9][0-9]*\\)[ ]*Conjunction [1-9][0-9]* Preposition AminoAcid
+AminoAcid \\(r\\) Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition Article[ ]*AminoAcid
+AminoAcid --> AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid --> AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[1-9][0-9]*
+AminoAcid BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid m[1-9][0-9]* Preposition AminoAcid
+AminoAcid m[1-9][0-9]*-->AminoAcid
+
+AminoAcid Preposition [1-9][0-9]*oh-AminoAcid
+AminoAcid Preposition AminoAcid [1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(codon [1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(g[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(l[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(m[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(p[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(r[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(s[1-9][0-9]*
+AminoAcid Preposition AminoAcid \\(t[1-9][0-9]*
+AminoAcid Preposition AminoAcid alpha [1-9][0-9]*\\(i\\) [1-9][0-9]*
+AminoAcid Preposition AminoAcid missense SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid polymorphism Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition [1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition -[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition alpha[1-9][0-9]*-[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition Article[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition Article[ ]*beta [1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition Article[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition b[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition beta [1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition p[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*-[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction [1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*a[1-9][0-9]*
+AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 \\(r[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition aa[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction [1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid[ ]*Conjunction Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid[1-9][0-9]*
+AminoAcid Preposition AminoAcid-[1-9][0-9]*
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*
+AminoAcid Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*
+AminoAcid Preposition AminoAcid\\([1-9][0-9]*
+AminoAcid Preposition AminoAcid\\) Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition AminoAcid\\) SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition Article[ ]*normal enzyme Preposition AminoAcid Preposition Article[ ]*variant enzyme Preposition Article[ ]*[1-9][0-9]*
+AminoAcid Preposition SurroundingWord1 AminoAcid[1-9][0-9]*
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition Article[ ]*AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* rather than AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* SurroundingWord1 Preposition AminoAcid
+AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]* SurroundingWord1 Preposition Article[ ]*AminoAcid
+AminoAcid Preposition the[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition the[ ]*AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid Preposition the[ ]*AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+
+AminoAcid rather than AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid rather than Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid rather than Article[ ]*normal AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+
+AminoAcid SurroundingWord1 AminoAcid as SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 AminoAcid-[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*[ ]*Conjunction AminoAcid [1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*[ ]*Conjunction AminoAcid [1-9][0-9]*[ ]*Conjunction AminoAcid [1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid SurroundingWord2[ ]*[1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid-[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid\\([1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition AminoAcid-alpha[1-9][0-9]*-[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid SurroundingWord2[ ]*AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord1 Preposition Article[ ]*AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*
+
+AminoAcid SurroundingWord2[ ]*[1-9][0-9]* Preposition AminoAcid
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid [1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid[1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*Preposition AminoAcid-[1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition AminoAcid
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]* Preposition Article[ ]*AminoAcid
+AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]* rather than AminoAcid
+AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition AminoAcid [1-9][0-9]*
+AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+
+AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid [1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid-[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid Preposition AminoAcid-[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid [1-9][0-9]*
+AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid SurroundingWord1 Preposition AminoAcid[1-9][0-9]*
+
+AminoAcid[- ]*[1-9][0-9]*  --> AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  alpha----AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  AminoAcid
+AminoAcid[- ]*[1-9][0-9]* - AminoAcid
+AminoAcid[- ]*[1-9][0-9]* \\(e[1-9][0-9]*\\)beta----AminoAcid
+AminoAcid[- ]*[1-9][0-9]* > AminoAcid
+AminoAcid[- ]*[1-9][0-9]* -> AminoAcid
+AminoAcid[- ]*[1-9][0-9]* --> AminoAcid
+AminoAcid[- ]*[1-9][0-9]*- > AminoAcid
+AminoAcid[- ]*[1-9][0-9]* -->AminoAcid
+AminoAcid[- ]*[1-9][0-9]* --->AminoAcid
+AminoAcid[- ]*[1-9][0-9]* -->AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* ----AminoAcid
+
+AminoAcid[- ]*[1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition Article[ ]*AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition Article[ ]*SurroundingWord2[ ]*Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition be SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition either AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition either AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  Preposition either AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  SurroundingWord2[ ]*Preposition AminoAcid
+
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction \\([1-9][0-9]*\\) Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid [1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid [1-9][0-9]*[ ]*Conjunction AminoAcid [1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid-[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid-[1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid-[1-9][0-9]* Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid-[1-9][0-9]* SurroundingWord2[ ]*Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction AminoAcid-[1-9][0-9]*[ ]*Conjunction AminoAcid-[1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* [ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]* BeVerb[ ]*both SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]* Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]* Preposition either AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]* Preposition either AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction both BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction AminoAcid[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction both BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction its SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*[ ]*Conjunction Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcidAminoAcid[- ]*[1-9][0-9]* \\(b[1-9][0-9]*\\)-AminoAcid
+
+AminoAcid[- ]*[1-9][0-9]*  BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]*  BeVerb[ ]*SurroundingWord1 Preposition either Article[ ]*AminoAcid[ ]*Conjunction Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*both SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* BeVerb[ ]*SurroundingWord1 Preposition Article[ ]*AminoAcid
+
+AminoAcid[- ]*[1-9][0-9]* can be SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition Article[ ]*AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition either AminoAcid
+AminoAcid[- ]*[1-9][0-9]* Preposition either AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* SurroundingWord1 Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* SurroundingWord2[ ]*Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]* SurroundingWord2[ ]*Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]* -to-AminoAcid
+
+AminoAcid[- ]*[1-9][0-9]*\\(beta\\)-->AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\(e[1-9][0-9]*\\)-->AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\) Preposition AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\) Preposition Article[ ]*AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\)AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\\)-AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\]AminoAcid
+AminoAcid[- ]*[1-9][0-9]*\]-AminoAcid
+AminoAcid[- ]*[1-9][0-9]*--> AminoAcid
+AminoAcid[- ]*[1-9][0-9]*>AminoAcid
+AminoAcid[- ]*[1-9][0-9]*->AminoAcid
+AminoAcid[- ]*[1-9][0-9]*-->AminoAcid
+AminoAcid[- ]*[1-9][0-9]*-->AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid[- ]*[1-9][0-9]*----AminoAcid
+AminoAcid[- ]*[1-9][0-9]*-to-AminoAcid
+
+AminoAcid\\([1-9][0-9]*\\) --> AminoAcid
+AminoAcid\\([1-9][0-9]*\\) BeVerb[ ]*SurroundingWord1 Preposition AminoAcid
+AminoAcid\\([1-9][0-9]*\\) Preposition AminoAcid
+AminoAcid\\([1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid\\([1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid\\([1-9][0-9]*\\) Preposition AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid[ ]*Conjunction AminoAcid
+AminoAcid\\([1-9][0-9]*\\) Preposition Article[ ]*AminoAcid
+AminoAcid\\([1-9][0-9]*\\)[ ]*Conjunction AminoAcid\\([1-9][0-9]*\\) Preposition AminoAcid
+AminoAcid\\([1-9][0-9]*\\)[ ]*Conjunction AminoAcid\\([1-9][0-9]*\\)\\) Preposition AminoAcid
+AminoAcid\\([1-9][0-9]*\\)\\) Preposition AminoAcid
+AminoAcid\\([1-9][0-9]*\\)\]AminoAcid
+AminoAcid\\([1-9][0-9]*\\)\]-AminoAcid
+AminoAcid\\([1-9][0-9]*\\)-->AminoAcid
+AminoAcid\\([1-9][0-9]*\\)----AminoAcid
+AminoAcid\\)[1-9][0-9]* AminoAcid
+AminoAcid\\)[1-9][0-9]*\\(AminoAcid
+AminoAcid\\)[1-9][0-9]*AminoAcid
+AminoAcid\\)[1-9][0-9]*-AminoAcid
+AminoAcid\][1-9][0-9]*-AminoAcid
+AminoAcid-e[1-9][0-9]* Preposition AminoAcid
+AminoAcid-x[1-9][0-9]*-AminoAcid
+
+AminoAcid-->AminoAcid [1-9][0-9]*
+AminoAcid-->AminoAcid Preposition beta[1-9][0-9]*
+AminoAcid-->AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord1 Preposition sites [1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord1 Preposition sites [1-9][0-9]*[ ]*Conjunction [1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-->AminoAcid SurroundingWord2[ ]*SurroundingWord1 Preposition Article[ ]*s[1-9][0-9]*
+AminoAcid-->AminoAcid[1-9][0-9]*
+AminoAcid-->AminoAcid\\([1-9][0-9]*
+AminoAcid-->AminoAcid\\) Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-->AminoAcid\\) SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid----AminoAcid [1-9][0-9]*
+AminoAcid----AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid----AminoAcid SurroundingWord1 Preposition Article[ ]*[1-9][0-9]*
+AminoAcid----AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid----AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*beta [1-9][0-9]*
+AminoAcid----AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*gamma [1-9][0-9]*
+AminoAcid----AminoAcid[1-9][0-9]*
+AminoAcid----AminoAcid-[1-9][0-9]*
+AminoAcid----AminoAcid\\) Preposition SurroundingWord2[ ]*[1-9][0-9]*
+
+AminoAcid-for-AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-for-AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-to-AminoAcid Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-to-AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-to-AminoAcid SurroundingWord1 Preposition SurroundingWord2[ ]*SurroundingWord2[ ]*[1-9][0-9]*
+AminoAcid-to-AminoAcid SurroundingWord2[ ]*Preposition Article[ ]*[1-9][0-9]*
+AminoAcid-to-AminoAcid SurroundingWord2[ ]*Preposition SurroundingWord2[ ]*[1-9][0-9]*
