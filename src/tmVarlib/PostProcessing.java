@@ -160,28 +160,25 @@ public class PostProcessing
 					{
 						String state=mat.group(1);	
 						String locationWhile[]=locationArr.get(i).split("\\t");
-						if(locationWhile.length>1)
+						String tkn=locationWhile[1];
+						pmid=locationWhile[0];
+						int start_tmp=Integer.parseInt(locationWhile[2]);
+						int last_tmp=Integer.parseInt(locationWhile[3]);
+						mention = mention + tkn;
+						if(!component_hash.get(state).equals("") && !state.equals(prestate))
 						{
-							String tkn=locationWhile[1];
-							pmid=locationWhile[0];
-							int start_tmp=Integer.parseInt(locationWhile[2]);
-							int last_tmp=Integer.parseInt(locationWhile[3]);
-							mention = mention + tkn;
-							if(!component_hash.get(state).equals("") && !state.equals(prestate))
-							{
-								component_hash.put(state, component_hash.get(state)+","+tkn);
-							}
-							else
-							{
-								component_hash.put(state, component_hash.get(state)+tkn);
-							}
-							if(start_tmp<start){start=start_tmp;}
-							if(last_tmp>last){last=last_tmp;}
-							prestate=state;
-							i++;
-							outputs=outputArr.get(i).split("\\t");
-							mat = pat.matcher(outputs[outputs.length-1]);
+							component_hash.put(state, component_hash.get(state)+","+tkn);
 						}
+						else
+						{
+							component_hash.put(state, component_hash.get(state)+tkn);
+						}
+						if(start_tmp<start){start=start_tmp;}
+						if(last_tmp>last){last=last_tmp;}
+						prestate=state;
+						i++;
+						outputs=outputArr.get(i).split("\\t");
+						mat = pat.matcher(outputs[outputs.length-1]);
 					}
 					
 					if(mention.length()>200)
@@ -720,83 +717,80 @@ public class PostProcessing
 							}
 						}
 					}
-					if(Temporary_Pattern_Allele.containsKey(pmid))
+					for(String pattern_RegEx:Temporary_Pattern_Allele.get(pmid).keySet())
 					{
-						for(String pattern_RegEx:Temporary_Pattern_Allele.get(pmid).keySet())
+						String pattern_Type = Temporary_Pattern_Allele.get(pmid).get(pattern_RegEx);
+						
+						Pattern PATT_RegEx;
+						if(pattern_Type.matches(".*(Allele|AcidChange)"))
 						{
-							String pattern_Type = Temporary_Pattern_Allele.get(pmid).get(pattern_RegEx);
+							PATT_RegEx = Pattern.compile("^(.*?[ \\(;,\\/\\-])("+pattern_RegEx+")[ \\);,\\/\\.]");
+						}
+						else
+						{
+							PATT_RegEx = Pattern.compile("^(.*?[^A-Za-z0-9])("+pattern_RegEx+")[^A-Za-z0-9]");
+						}
+						Matcher mp = PATT_RegEx.matcher(article_tmp);
+						while (mp.find()) 
+						{
+							String pre = mp.group(1);
+							String mention = mp.group(2);
 							
-							Pattern PATT_RegEx;
-							if(pattern_Type.matches(".*(Allele|AcidChange)"))
-							{
-								PATT_RegEx = Pattern.compile("^(.*?[ \\(;,\\/\\-])("+pattern_RegEx+")[ \\);,\\/\\.]");
-							}
+							if(mention.matches("[0-9]+[\\W\\-\\_]*[a-z]ins")){/*System.out.println(mention);*/}
 							else
 							{
-								PATT_RegEx = Pattern.compile("^(.*?[^A-Za-z0-9])("+pattern_RegEx+")[^A-Za-z0-9]");
-							}
-							Matcher mp = PATT_RegEx.matcher(article_tmp);
-							while (mp.find()) 
-							{
-								String pre = mp.group(1);
-								String mention = mp.group(2);
-								
-								if(mention.matches("[0-9]+[\\W\\-\\_]*[a-z]ins")){/*System.out.println(mention);*/}
-								else
+								boolean ExistLarger = false;
+								int start=pre.length();
+								int last=start+mention.length();
+								//Check if overlap with previous annotation
+								for(int a=0;a<Annotation.size();a++)
 								{
-									boolean ExistLarger = false;
-									int start=pre.length();
-									int last=start+mention.length();
-									//Check if overlap with previous annotation
-									for(int a=0;a<Annotation.size();a++)
+									String Exist[] = Annotation.get(a).split("\t");
+									int Exist_start = Integer.parseInt(Exist[1]);
+									int Exist_last = Integer.parseInt(Exist[2]);
+									if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
 									{
-										String Exist[] = Annotation.get(a).split("\t");
+										removeList.add(Annotation.get(a));
+									}
+									else if (((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start))) //overlap, but not subset
+									{
+										removeList.add(Annotation.get(a));
+									}
+									else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
+									{
+										ExistLarger = true;
+									}
+								}
+								if(ExistLarger == false)
+								{	
+									//Check if overlap with previous annotation
+									for(String added : AddList.keySet())
+									{
+										String Exist[] = added.split("\t");
 										int Exist_start = Integer.parseInt(Exist[1]);
 										int Exist_last = Integer.parseInt(Exist[2]);
 										if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
 										{
-											removeList.add(Annotation.get(a));
+											AddList.put(added,"remove");
 										}
-										else if (((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start))) //overlap, but not subset
+										else if ( ((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start)) ) //overlap, but not subset
 										{
-											removeList.add(Annotation.get(a));
+											AddList.put(added,"remove");
 										}
 										else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
 										{
 											ExistLarger = true;
 										}
 									}
-									if(ExistLarger == false)
-									{	
-										//Check if overlap with previous annotation
-										for(String added : AddList.keySet())
-										{
-											String Exist[] = added.split("\t");
-											int Exist_start = Integer.parseInt(Exist[1]);
-											int Exist_last = Integer.parseInt(Exist[2]);
-											if( (start<Exist_start && last>=Exist_last) || (start<=Exist_start && last>Exist_last) )
-											{
-												AddList.put(added,"remove");
-											}
-											else if ( ((start>Exist_start && start<Exist_last) || (last>Exist_start && last<Exist_last)) && ((last-start)>(Exist_last-Exist_start)) ) //overlap, but not subset
-											{
-												AddList.put(added,"remove");
-											}
-											else if( (Exist_start<start && Exist_last>=last) || (Exist_start<=start && Exist_last>last) )
-											{
-												ExistLarger = true;
-											}
-										}
-										if(ExistLarger == false && !AddList.containsKey(pmid+"\t"+start+"\t"+last+"\t"+mention))
-										{
-											AddList.put(pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
-										}
+									if(ExistLarger == false && !AddList.containsKey(pmid+"\t"+start+"\t"+last+"\t"+mention))
+									{
+										AddList.put(pmid+"\t"+start+"\t"+last+"\t"+mention,pattern_Type);
 									}
-									String tmp="";
-			        				for(int j=0;j<mention.length();j++){tmp=tmp+"@";}
-			        				article_tmp=article_tmp.substring(0,start)+tmp+article_tmp.substring(last);
-									mp = PATT_RegEx.matcher(article_tmp);
 								}
+								String tmp="";
+		        				for(int j=0;j<mention.length();j++){tmp=tmp+"@";}
+		        				article_tmp=article_tmp.substring(0,start)+tmp+article_tmp.substring(last);
+								mp = PATT_RegEx.matcher(article_tmp);
 							}
 						}
 					}
@@ -1954,7 +1948,6 @@ public class PostProcessing
 			
 			while ((line = PostMEfile.readLine()) != null)  
 			{
-				//System.out.println(line);
 				String outputs[]=line.split("\\t",-1);
 					
 				/*
@@ -2197,7 +2190,7 @@ public class PostProcessing
 					Matcher mat = pat.matcher(component_hash.get("P"));
 					if(mat.find()) //Title|Abstract
 		        	{
-						if(mat.group(1).length()<=8 && mat.group(2).length()<=8)
+						if(mat.group(1).length()<=9 && mat.group(2).length()<=9)
 						{
 							if(Integer.parseInt(mat.group(1))<Integer.parseInt(mat.group(2)))
 							{
@@ -2796,17 +2789,44 @@ public class PostProcessing
 			c_gene2humangene = DriverManager.getConnection("jdbc:sqlite:Database/gene2humangene.db");
 			stmt_gene2humangene = c_gene2humangene.createStatement();
 			
-			
+			/**
+			 *  count number of variants, to avoid large gene but no variants
+			*/
+			HashMap<String,Integer> variant_count_hash = new HashMap<String,Integer>(); // number of variant
+			BufferedReader inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
+			String line="";
+			while ((line = inputfile.readLine()) != null)  
+			{
+				Pattern pat = Pattern.compile("^([^\\|\\t]+)\\|([^\\|\\t]+)\\|(.*)$");
+				Matcher mat = pat.matcher(line);
+				if(mat.find()) //Title|Abstract
+				{
+					String pmid=mat.group(1);
+					variant_count_hash.put(pmid,0);
+				}
+	        	if (line.contains("\t")) //Annotation
+		    	{
+	        		String anno[]=line.split("\t");
+	        		String pmid=anno[0];
+	        		String type=anno[4];
+	        		if(type.matches("(DNAMutation|ProteinMutation)"))
+	        		{
+	        			variant_count_hash.put(pmid,variant_count_hash.get(pmid)+1);
+	        		}
+				}
+		    }
+			inputfile.close();
 			
 			/**
 			 * Gene Mention Extraction
 			 */
 			HashMap<String,String> rs2gene = new HashMap<String,String>(); // the corresponding gene of the rs number
-			BufferedReader inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(input), "UTF-8"));
 			HashMap<String,String> pmid_gene2rs = new HashMap<String,String>(); // pmid_gene2rs(pmid,geneid) -> RS#s
+			HashMap<String,String> hgene2rs = new HashMap<String,String>(); // human gene2rs(geneid) -> RS#s
 			HashMap<String,String> annotations_gene = new HashMap<String,String>();
-			String line="";
 			HashMap<String,HashMap<String,Integer>> SingleGene = new HashMap<String,HashMap<String,Integer>>();
+			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(input), "UTF-8"));
+			line="";
 			while ((line = inputfile.readLine()) != null)  
 			{
 				Pattern pat = Pattern.compile("^([^\\|\\t]+)\\|([^\\|\\t]+)\\|(.*)$");
@@ -2820,79 +2840,96 @@ public class PostProcessing
 	        	{
 	        		String anno[]=line.split("\t");
 	        		String pmid=anno[0];
-	        		//System.out.println(line);
-					if(anno.length>=6 && anno[1].matches("^\\d+$"))
+
+	        		if(variant_count_hash.containsKey(pmid) && variant_count_hash.get(pmid)>0) // at lease 1 variant 
 	        		{
-						int start=Integer.parseInt(anno[1]);
-						String gene_mention=anno[3];
-	        			String mentiontype=anno[4];
-	        			anno[5]=anno[5].replaceAll("\\(Homoid:[0-9]+\\)","");
-	        			if(gene_mention.toLowerCase().equals("raf"))
-	        			{
-	        				anno[5]=anno[5]+";673";
-	        			}
-	        			boolean variant_gene_overlap=false;
-	        			if(tmVar.variant_mention_to_filter_overlap_gene.containsKey(pmid))
-	        			{
-	        				if(tmVar.variant_mention_to_filter_overlap_gene.get(pmid).containsKey(start))
-	        				{
-	        					for(int var_mention_start : tmVar.variant_mention_to_filter_overlap_gene.get(pmid).keySet())
-			        			{
-			        				if(var_mention_start == start) // the gene mention is the same to one of the variant mention
-			        				{
-			        					variant_gene_overlap=true;
-			        				}
-			        			}
-	        				}
-	        			}
-	        					
-	        			if(mentiontype.equals("Gene") && variant_gene_overlap==false)
-	        			{
-	        				/*
-	        				 * Search Database - Gene
-	        				 */
-	        				String geneids[]=anno[5].split(";");
-	        				
-	        				for(int gi=0;gi<geneids.length;gi++)
-	        				{
-	        					annotations_gene.put(anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+geneids[gi],"");
-	        					if(SingleGene.get(anno[0]).containsKey(geneids[gi]))
-	        					{
-	        						SingleGene.get(anno[0]).put(geneids[gi],SingleGene.get(anno[0]).get(geneids[gi])+1);
-	        					}
-	        					else
-	        					{
-	        						SingleGene.get(anno[0]).put(geneids[gi],1);
-	        					}
-	        					
-	        					/* pmid_gene2rs(pmid,geneid) -> RS#s */
-	        					/* annotations_gene(pmid,start,last,mention,geneid) -> RS#s */
-	        					if(pmid_gene2rs.containsKey(anno[0]+"\t"+geneids[gi]))
+		        		if(anno.length>=6)
+		        		{
+							int start=Integer.parseInt(anno[1]);
+							String gene_mention=anno[3];
+		        			String mentiontype=anno[4];
+		        			if(gene_mention.toLowerCase().equals("raf"))
+		        			{
+		        				anno[5]=anno[5]+";673";
+		        			}
+		        			boolean variant_gene_overlap=false;
+		        			if(tmVar.variant_mention_to_filter_overlap_gene.containsKey(pmid))
+		        			{
+		        				if(tmVar.variant_mention_to_filter_overlap_gene.get(pmid).containsKey(start))
 		        				{
-		        					annotations_gene.put(anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+geneids[gi],pmid_gene2rs.get(anno[0]+"\t"+geneids[gi]));
+		        					for(int var_mention_start : tmVar.variant_mention_to_filter_overlap_gene.get(pmid).keySet())
+				        			{
+				        				if(var_mention_start == start) // the gene mention is the same to one of the variant mention
+				        				{
+				        					variant_gene_overlap=true;
+				        				}
+				        			}
 		        				}
-		        				else
+		        			}
+		        					
+		        			if(mentiontype.equals("Gene") && variant_gene_overlap==false)
+		        			{
+		        				/*
+		        				 * Search Database - Gene
+		        				 */
+		        				String geneids[]=anno[5].split(";");
+		        				
+		        				for(int gi=0;gi<geneids.length;gi++)
 		        				{
 		        					String gene_id=geneids[gi];
-		        					if(tmVar.Gene2HumanGene_hash.containsKey(gene_id)) //translate to human gene
+		        					annotations_gene.put(pmid+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+gene_id,"");
+		        					if(SingleGene.get(pmid).containsKey(gene_id))
 		        					{
-		        						gene_id=tmVar.Gene2HumanGene_hash.get(gene_id);
+		        						SingleGene.get(pmid).put(gene_id,SingleGene.get(pmid).get(gene_id)+1);
 		        					}
-		        					ResultSet rs = stmt_gene2rs.executeQuery("SELECT rs FROM gene2rs WHERE gene='"+gene_id+"' order by rs asc limit 1;");
-		        					if ( rs.next() ) 
+		        					else
 		        					{
-		        				         String  rsNumber = rs.getString("rs");
-		        				         annotations_gene.put(anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+geneids[gi],rsNumber);
-		        				         pmid_gene2rs.put(anno[0]+"\t"+geneids[gi],rsNumber);
-										String rsNumbers[]=rsNumber.split("\\|");
-										for(int i=0;i<rsNumbers.length;i++)
-										{
-											rs2gene.put(pmid+"\t"+rsNumbers[i],geneids[gi]);
-										}
-		        				    }
-	        					}
-	        				}
-	        			}
+		        						SingleGene.get(pmid).put(gene_id,1);
+		        					}
+		        					
+		        					/* pmid_gene2rs(pmid,geneid) -> RS#s */
+		        					/* annotations_gene(pmid,start,last,mention,geneid) -> RS#s */
+		        					if(pmid_gene2rs.containsKey(pmid+"\t"+gene_id))
+			        				{
+			        					annotations_gene.put(pmid+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+gene_id,pmid_gene2rs.get(pmid+"\t"+gene_id));
+			        				}
+			        				else
+			        				{
+			        					if(tmVar.Gene2HumanGene_hash.containsKey(gene_id)) //translate to human gene
+			        					{
+			        						gene_id=tmVar.Gene2HumanGene_hash.get(gene_id);
+			        					}
+			        					if(hgene2rs.containsKey(gene_id))
+			        					{
+			        						String rsNumber=hgene2rs.get(gene_id);
+			        						annotations_gene.put(pmid+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+gene_id,rsNumber);
+			        				        pmid_gene2rs.put(pmid+"\t"+gene_id,rsNumber);
+											String rsNumbers[]=rsNumber.split("\\|");
+											for(int i=0;i<rsNumbers.length;i++)
+											{
+												rs2gene.put(pmid+"\t"+rsNumbers[i],gene_id);
+											}
+			        					}
+			        					else
+			        					{
+				        					ResultSet rs = stmt_gene2rs.executeQuery("SELECT rs FROM gene2rs WHERE gene='"+gene_id+"' order by rs asc limit 1;");
+				        					if ( rs.next() ) 
+				        					{
+				        				        String  rsNumber = rs.getString("rs");
+				        				        hgene2rs.put(gene_id,rsNumber);
+				        				        annotations_gene.put(pmid+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+gene_id,rsNumber);
+				        				        pmid_gene2rs.put(pmid+"\t"+gene_id,rsNumber);
+												String rsNumbers[]=rsNumber.split("\\|");
+												for(int i=0;i<rsNumbers.length;i++)
+												{
+													rs2gene.put(pmid+"\t"+rsNumbers[i],gene_id);
+												}
+				        				    }
+			        					}
+		        					}
+		        				}
+		        			}
+		        		}
 	        		}
 	        	}
 			}
@@ -2901,7 +2938,6 @@ public class PostProcessing
 			/**
 			 * Chromosome & RefSeq Mention Extraction
 			 */
-			//System.out.println("Chromosome & RefSeq Mention Extraction");
 			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
 			HashMap<String,String> annotations_CNV = new HashMap<String,String>();
 			HashMap<String,String> annotations_chromosome = new HashMap<String,String>();
@@ -2935,7 +2971,6 @@ public class PostProcessing
 			/**
 			 * RS_DNA_Protein Pattern Extraction
 			 */
-			//System.out.println("RS_DNA_Protein Pattern Extraction");
 			String article="";
 			String pmid="";
 			HashMap<String,Integer> Flag_Protein_WPM=new HashMap<String,Integer>();
@@ -3120,7 +3155,6 @@ public class PostProcessing
 			/**
 			 * DNAMutation|ProteinMutation normalization
 			 */
-			//System.out.println("DNAMutation|ProteinMutation normalization");
 			BufferedWriter outputfile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(finalPubTator), "UTF-8")); // .location
 			inputfile = new BufferedReader(new InputStreamReader(new FileInputStream(outputPubTator), "UTF-8"));
 			HashMap<String,String> normalized_mutation = new HashMap<String,String>();
@@ -4137,24 +4171,18 @@ public class PostProcessing
 			        								boolean gn_found=false;
 			        								for(String g:gn)
 			        								{
-			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
 			        									{
-			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
-				        									{
-				        										gn_found=true;
-				        										break;
-				        									}
+			        										gn_found=true;
+			        										break;
 			        									}
 			        								}
 			        								for(String s:sn)
 			        								{
-			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
 			        									{
-			        										if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
-				        									{
-				        										sn_found=true;
-				        										break;
-				        									}
+			        										sn_found=true;
+			        										break;
 			        									}
 			        								}
 			        								
@@ -4168,14 +4196,11 @@ public class PostProcessing
 			        							{
 			        								for(String g:gn)
 			        								{
-			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
 			        									{
-				        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
-				        									{
-				        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
-				        										found=true;
-				        										break;
-				        									}
+			        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+			        										found=true;
+			        										break;
 			        									}
 			        								}	
 			        							}
@@ -4203,25 +4228,18 @@ public class PostProcessing
 			        								boolean gn_found=false;
 			        								for(String g:gn)
 			        								{
-			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
 			        									{
-			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
-				        									{
-				        										gn_found=true;
-				        										break;
-				        									}
+			        										gn_found=true;
+			        										break;
 			        									}
 			        								}
 			        								for(String s:sn)
 			        								{
-			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
 			        									{
-			        										if(tmVar.Species_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(s))
-				        									{
-				        										sn_found=true;
-				        										break;
-				        									}
-			        										
+			        										sn_found=true;
+			        										break;
 			        									}
 			        								}
 			        								if(gn_found==true && sn_found==true)
@@ -4234,14 +4252,11 @@ public class PostProcessing
 			        							{
 			        								for(String g:gn)
 			        								{
-			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.containsKey(pmid))
+			        									if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
 			        									{
-			        										if(tmVar.Gene_tkn_Variant2MostCorrespondingGene_hash.get(pmid).containsKey(g))
-				        									{
-				        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
-				        										found=true;
-				        										break;
-				        									}
+			        										outputSTR=outputSTR+anno[0]+"\t"+anno[1]+"\t"+anno[2]+"\t"+anno[3]+"\t"+mentiontype+"\t"+anno[5]+";CorrespondingGene:"+geneid+";RS#:"+rsid+"\n";
+			        										found=true;
+			        										break;
 			        									}
 			        								}	
 			        							}
@@ -4542,8 +4557,6 @@ public class PostProcessing
 	        	}
 				else if (line.equals(""))
 				{
-					//System.out.println("OnlyOneRSnumbers");
-	        		
 					HashMap <String,String> OnlyOneRSnumbers=new HashMap<String,String>();
 					/*
     				 *  1)	Consistency: C.1799C>A and V600E should be normalized to the same RS#.
@@ -4769,7 +4782,6 @@ public class PostProcessing
 	        		/**
 	        		 * corresponding gene and grouping variants
 	        		 */
-	        		//System.out.println("corresponding gene and grouping variants");
 	        		for(String x:MentionPatternMap.keySet())
 	    			{
 	        			if(x.matches(pmid+"\t.*"))
@@ -4843,99 +4855,94 @@ public class PostProcessing
 	    			}
 	        		*/
 	        		
-	        		//System.out.println("VariantLinking: link the protein and DNA mutations");
 	        		//VariantLinking: link the protein and DNA mutations
 	        		HashMap<String,Boolean> NoPositionVar = new HashMap<String,Boolean>(); // no position var can only group with one variant
 	        		for(String tmp1 : VarID2Mention.keySet())
 	        		{
 	        			String pmid_variantid1[]=tmp1.split("\t");
-	        			if(pmid_variantid1.length>=2)
+	        			String pmid1=pmid_variantid1[0];
+	        			String variantid1=pmid_variantid1[1];
+	        			String component1[]=variantid1.split("\\|",-1);
+	        			if(component1.length>=5)
 	        			{
-		        			String pmid1=pmid_variantid1[0];
-		        			String variantid1=pmid_variantid1[1];
-		        			String component1[]=variantid1.split("\\|",-1);
-		        			if(component1.length>=5)
+	        				String W1=component1[2];
+		        			String P1=component1[3];
+		        			String M1=component1[4];
+		        			if(P1.length()<10 && component1[0].equals("p") && component1[1].equals("SUB")) //1st is ProteinMutation
 		        			{
-		        				String W1=component1[2];
-			        			String P1=component1[3];
-			        			String M1=component1[4];
-			        			if(P1.length()<10 && component1[0].equals("p") && component1[1].equals("SUB")) //1st is ProteinMutation
-			        			{
-			        				for(String tmp2 : VarID2Mention.keySet())
-			    	        		{
-			    	        			String pmid_variantid2[]=tmp2.split("\t");
-			    	        			String pmid2=pmid_variantid2[0];
-			    	        			String variantid2=pmid_variantid2[1];
-			    	        			String component2[]=variantid2.split("\\|",-1);
-			    	        			if(component2.length>=5)
+		        				for(String tmp2 : VarID2Mention.keySet())
+		    	        		{
+		    	        			String pmid_variantid2[]=tmp2.split("\t");
+		    	        			String pmid2=pmid_variantid2[0];
+		    	        			String variantid2=pmid_variantid2[1];
+		    	        			String component2[]=variantid2.split("\\|",-1);
+		    	        			if(component2.length>=5)
+		    	        			{
+		    	        				String W2=component2[2];
+			    	        			String P2=component2[3];
+			    	        			String M2=component2[4];
+			    	        			if(pmid1.equals(pmid2)) // the same pmid
 			    	        			{
-			    	        				String W2=component2[2];
-				    	        			String P2=component2[3];
-				    	        			String M2=component2[4];
-				    	        			if(pmid1.equals(pmid2)) // the same pmid
+				    	        			if(P2.length()<10 && component2[0].equals("c") && component2[1].equals("SUB"))//2nd is DNAMutation
 				    	        			{
-					    	        			if(P2.length()<10 && component2[0].equals("c") && component2[1].equals("SUB"))//2nd is DNAMutation
-					    	        			{
-					    	        				if(tmVar.nu2aa_hash.containsKey(W1+"\t"+M1+"\t"+W2+"\t"+M2)) // nu2aa_hash
-					    	        				{
-					    	        					if(P1.equals("") && (!P2.equals("")) && NoPositionVar.containsKey(tmp1))
-			    	        							{
-					    	        						if(!VariantLinking.containsKey(tmp1))
+				    	        				if(tmVar.nu2aa_hash.containsKey(W1+"\t"+M1+"\t"+W2+"\t"+M2)) // nu2aa_hash
+				    	        				{
+				    	        					if(P1.equals("") && (!P2.equals("")) && NoPositionVar.containsKey(tmp1))
+		    	        							{
+				    	        						if(!VariantLinking.containsKey(tmp1))
+			    	        		        			{
+				    	        							VariantLinking.put(tmp1,new HashMap<String,String>());
+			    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
+			    	        		        				if(!VariantLinking.containsKey(tmp2))
 				    	        		        			{
-					    	        							VariantLinking.put(tmp1,new HashMap<String,String>());
-				    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
-				    	        		        				if(!VariantLinking.containsKey(tmp2))
-					    	        		        			{
-					    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
-					    	        		        			}
-				    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
-				    	        		        				NoPositionVar.put(P1,true);
-					    	        		        		}
-				    	        		        			
-			    	        							}
-					    	        					else if(P2.equals("") && (!P1.equals("")) && NoPositionVar.containsKey(tmp2))
+				    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
+				    	        		        			}
+			    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
+			    	        		        				NoPositionVar.put(P1,true);
+				    	        		        		}
+			    	        		        			
+		    	        							}
+				    	        					else if(P2.equals("") && (!P1.equals("")) && NoPositionVar.containsKey(tmp2))
+				    	        					{
+				    	        						if(!VariantLinking.containsKey(tmp2))
+			    	        		        			{
+				    	        							VariantLinking.put(tmp2,new HashMap<String,String>());
+			    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
+			    	        		        				if(!VariantLinking.containsKey(tmp1))
+				    	        		        			{
+				    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
+				    	        		        			}
+			    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
+			    	        		        				NoPositionVar.put(P1,true);
+					    	        		        	}
+				    	        					}
+				    	        					else
+				    	        					{
+				    	        						if(P1.matches("^[0-9]+$") && P2.matches("^[0-9]+$"))
 					    	        					{
-					    	        						if(!VariantLinking.containsKey(tmp2))
-				    	        		        			{
-					    	        							VariantLinking.put(tmp2,new HashMap<String,String>());
-				    	        		        				VariantLinking.get(tmp2).put(tmp1,""); // if the G>G was linked with others, don't link it.
-				    	        		        				if(!VariantLinking.containsKey(tmp1))
+				    	        							if((Integer.parseInt(P1)-1)*3<Integer.parseInt(P2) && Integer.parseInt(P1)*3>Integer.parseInt(P2))
+					    	        						{
+					    	        							if(!VariantLinking.containsKey(tmp1))
 					    	        		        			{
 					    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
 					    	        		        			}
-				    	        		        				VariantLinking.get(tmp1).put(tmp2,""); // if the G>G was linked with others, don't link it.
-				    	        		        				NoPositionVar.put(P1,true);
-						    	        		        	}
+					    	        		        			VariantLinking.get(tmp1).put(tmp2,"");
+					    	        		        			if(!VariantLinking.containsKey(tmp2))
+					    	        		        			{
+					    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
+					    	        		        			}
+					    	        		        			VariantLinking.get(tmp2).put(tmp1,"");
+					    	        						}
 					    	        					}
-					    	        					else
-					    	        					{
-					    	        						if(P1.matches("^[0-9]+$") && P2.matches("^[0-9]+$"))
-						    	        					{
-					    	        							if((Integer.parseInt(P1)-1)*3<Integer.parseInt(P2) && Integer.parseInt(P1)*3>Integer.parseInt(P2))
-						    	        						{
-						    	        							if(!VariantLinking.containsKey(tmp1))
-						    	        		        			{
-						    	        		        				VariantLinking.put(tmp1,new HashMap<String,String>());
-						    	        		        			}
-						    	        		        			VariantLinking.get(tmp1).put(tmp2,"");
-						    	        		        			if(!VariantLinking.containsKey(tmp2))
-						    	        		        			{
-						    	        		        				VariantLinking.put(tmp2,new HashMap<String,String>());
-						    	        		        			}
-						    	        		        			VariantLinking.get(tmp2).put(tmp1,"");
-						    	        						}
-						    	        					}
-					    	        					}
-					    	        				}
-					    	        			}
+				    	        					}
+				    	        				}
 				    	        			}
 			    	        			}
-			    	        		}
-			        			}
+		    	        			}
+		    	        		}
 		        			}
 	        			}
 	        		}
-	        		//System.out.println("implicit relation to direct relation");
 	        		
 	        		//implicit relation to direct relation
 	        		for(String x:VariantLinking.keySet())
@@ -5036,7 +5043,6 @@ public class PostProcessing
 	        		/*
 	        		 *  VariantGroup to GeneID
 	        		 */
-	        		//System.out.println("VariantGroup to GeneID");
 	        		HashMap<Integer,HashMap<String,String>> sentencelocation_gene2_hash= new HashMap<Integer,HashMap<String,String>>(); // sentence--> gene start --> geneid
 					ArrayList<Integer> SentenceOffsets = pmid2SentenceOffsets.get(pmid);
 					//Gene in sentence
@@ -5063,7 +5069,6 @@ public class PostProcessing
     					}
         			}
 	        		
-	        		//System.out.println("group to variant ids");
 	        		HashMap<Integer,String> gid2gene_hash= new HashMap<Integer,String>();
 					for(int gid=0;gid<group_id;gid++) //group to variant ids
 	        		{
@@ -5213,7 +5218,6 @@ public class PostProcessing
 	        		 * Extending the RS# to other group members
 	        		 */
 					
-					//System.out.println("Extending the RS# to other group members");
 					outputSTR_tmp="";
 	        		outputSTR_line=outputSTR.split("\n");
 	        		for(int l=0;l<outputSTR_line.length;l++)
@@ -5820,7 +5824,6 @@ public class PostProcessing
 			}
 			inputfile.close();
 			outputfile.close();
-			
 		}
 		catch(IOException e1){ System.out.println("[normalization]: "+e1+" Input file is not exist.");}
 	}

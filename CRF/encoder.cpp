@@ -5,6 +5,16 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#if defined(_WIN32) && !defined(__CYGWIN__)
+#define NOMINMAX
+#include <windows.h>
+#endif
+
+#include <algorithm>
 #include <fstream>
 #include "param.h"
 #include "encoder.h"
@@ -16,7 +26,34 @@
 #include "scoped_ptr.h"
 #include "thread.h"
 
+namespace CRFPP {
 namespace {
+
+inline size_t getCpuCount() {
+  size_t result = 1;
+#if defined(_WIN32) && !defined(__CYGWIN__)
+  SYSTEM_INFO si;
+  ::GetSystemInfo(&si);
+  result = si.dwNumberOfProcessors;
+#else
+#ifdef HAVE_SYS_CONF_SC_NPROCESSORS_CONF
+  const long n = sysconf(_SC_NPROCESSORS_CONF);
+  if (n == -1) {
+    return 1;
+  }
+  result = static_cast<size_t>(n);
+#endif
+#endif
+  return result;
+}
+
+unsigned short getThreadSize(unsigned short size) {
+  if (size == 0) {
+    return static_cast<unsigned short>(getCpuCount());
+  }
+  return size;
+}
+
 bool toLower(std::string *s) {
   for (size_t i = 0; i < s->size(); ++i) {
     char c = (*s)[i];
@@ -28,8 +65,6 @@ bool toLower(std::string *s) {
   return true;
 }
 }
-
-namespace CRFPP {
 
 class CRFEncoderThread: public thread {
  public:
@@ -50,7 +85,9 @@ class CRFEncoderThread: public thread {
       obj += x[i]->gradient(&expected[0]);
       int error_num = x[i]->eval();
       err += error_num;
-      if (error_num) ++zeroone;
+      if (error_num) {
+        ++zeroone;
+      }
     }
   }
 };
@@ -72,7 +109,9 @@ bool runMIRA(const std::vector<TaggerImpl* > &x,
 
   int converge = 0;
   int all = 0;
-  for (size_t i = 0; i < x.size(); ++i)  all += x[i]->size();
+  for (size_t i = 0; i < x.size(); ++i) {
+    all += x[i]->size();
+  }
 
   for (size_t itr = 0; itr < maxitr; ++itr) {
     int zeroone = 0;
@@ -81,48 +120,53 @@ bool runMIRA(const std::vector<TaggerImpl* > &x,
     int upper_active_set = 0;
     double max_kkt_violation = 0.0;
 
-    feature_index->clear();
-
     for (size_t i = 0; i < x.size(); ++i) {
-      if (shrink[i] >= shrinking_size) continue;
+      if (shrink[i] >= shrinking_size) {
+        continue;
+      }
 
       ++active_set;
       std::fill(expected.begin(), expected.end(), 0.0);
       double cost_diff = x[i]->collins(&expected[0]);
       int error_num = x[i]->eval();
       err += error_num;
-      if (error_num) ++zeroone;
+      if (error_num) {
+        ++zeroone;
+      }
 
       if (error_num == 0) {
         ++shrink[i];
       } else {
         shrink[i] = 0;
         double s = 0.0;
-        for (size_t k = 0; k < expected.size(); ++k)
+        for (size_t k = 0; k < expected.size(); ++k) {
           s += expected[k] * expected[k];
+        }
 
-        double mu = _max(0.0, (error_num - cost_diff) / s);
+        double mu = std::max(0.0, (error_num - cost_diff) / s);
 
         if (upper_bound[i] + mu > C) {
           mu = C - upper_bound[i];
           ++upper_active_set;
         } else {
-          max_kkt_violation = _max(error_num - cost_diff,
+          max_kkt_violation = std::max(error_num - cost_diff,
                                    max_kkt_violation);
         }
 
         if (mu > 1e-10) {
           upper_bound[i] += mu;
-          upper_bound[i] = _min(C, upper_bound[i]);
-          for (size_t k = 0; k < expected.size(); ++k)
+          upper_bound[i] = std::min(C, upper_bound[i]);
+          for (size_t k = 0; k < expected.size(); ++k) {
             alpha[k] += mu * expected[k];
+          }
         }
       }
     }
 
     double obj = 0.0;
-    for (size_t i = 0; i < feature_index->size(); ++i)
+    for (size_t i = 0; i < feature_index->size(); ++i) {
       obj += alpha[i] * alpha[i];
+    }
 
     std::cout << "iter="  << itr
               << " terr=" << 1.0 * err / all
@@ -139,7 +183,9 @@ bool runMIRA(const std::vector<TaggerImpl* > &x,
       converge = 0;
     }
 
-    if (itr > maxitr || converge == 2)  break;  // 2 is ad-hoc
+    if (itr > maxitr || converge == 2) {
+      break;  // 2 is ad-hoc
+    }
   }
 
   return true;
@@ -168,13 +214,18 @@ bool runCRF(const std::vector<TaggerImpl* > &x,
   }
 
   size_t all = 0;
-  for (size_t i = 0; i < x.size(); ++i)  all += x[i]->size();
+  for (size_t i = 0; i < x.size(); ++i) {
+    all += x[i]->size();
+  }
 
   for (size_t itr = 0; itr < maxitr; ++itr) {
-    feature_index->clear();
+    for (size_t i = 0; i < thread_num; ++i) {
+      thread[i].start();
+    }
 
-    for (size_t i = 0; i < thread_num; ++i) thread[i].start();
-    for (size_t i = 0; i < thread_num; ++i) thread[i].join();
+    for (size_t i = 0; i < thread_num; ++i) {
+      thread[i].join();
+    }
 
     for (size_t i = 1; i < thread_num; ++i) {
       thread[0].obj += thread[i].obj;
@@ -183,15 +234,18 @@ bool runCRF(const std::vector<TaggerImpl* > &x,
     }
 
     for (size_t i = 1; i < thread_num; ++i) {
-      for (size_t k = 0; k < feature_index->size(); ++k)
+      for (size_t k = 0; k < feature_index->size(); ++k) {
         thread[0].expected[k] += thread[i].expected[k];
+      }
     }
 
     size_t num_nonzero = 0;
     if (orthant) {   // L1
       for (size_t k = 0; k < feature_index->size(); ++k) {
         thread[0].obj += std::abs(alpha[k] / C);
-        if (alpha[k] != 0.0) ++num_nonzero;
+        if (alpha[k] != 0.0) {
+          ++num_nonzero;
+        }
       }
     } else {
       num_nonzero = feature_index->size();
@@ -211,18 +265,22 @@ bool runCRF(const std::vector<TaggerImpl* > &x,
               << " diff="  << diff << std::endl;
     old_obj = thread[0].obj;
 
-    if (diff < eta)
+    if (diff < eta) {
       converge++;
-    else
+    } else {
       converge = 0;
+    }
 
-    if (itr > maxitr || converge == 3)  break;  // 3 is ad-hoc
+    if (itr > maxitr || converge == 3) {
+      break;  // 3 is ad-hoc
+    }
 
     if (lbfgs.optimize(feature_index->size(),
                        &alpha[0],
                        thread[0].obj,
-                       &thread[0].expected[0], orthant, C) <= 0)
+                       &thread[0].expected[0], orthant, C) <= 0) {
       return false;
+    }
   }
 
   return true;
@@ -230,7 +288,7 @@ bool runCRF(const std::vector<TaggerImpl* > &x,
 
 bool Encoder::convert(const char* textfilename,
                       const char *binaryfilename) {
-  EncoderFeatureIndex feature_index(1);
+  EncoderFeatureIndex feature_index;
   CHECK_FALSE(feature_index.convert(textfilename, binaryfilename))
       << feature_index.what();
 
@@ -260,11 +318,13 @@ bool Encoder::learn(const char *templfile,
       << "This architecture doesn't support multi-thrading";
 #endif
 
-  CHECK_FALSE(algorithm == CRF_L2 || algorithm == CRF_L1 ||
-              (algorithm == MIRA && thread_num == 1))
-      <<  "MIRA doesn't support multi-thrading";
+  if (algorithm == MIRA && thread_num > 1) {
+    std::cerr <<  "MIRA doesn't support multi-thrading. use thread_num=1"
+              << std::endl;
+  }
 
-  EncoderFeatureIndex feature_index(thread_num);
+  EncoderFeatureIndex feature_index;
+  Allocator allocator(thread_num);
   std::vector<TaggerImpl* > x;
 
   std::cout.setf(std::ios::fixed, std::ios::floatfield);
@@ -283,32 +343,37 @@ bool Encoder::learn(const char *templfile,
   {
     progress_timer pg;
 
-    std::ifstream ifs(trainfile);
+    std::ifstream ifs(WPATH(trainfile));
     CHECK_FALSE(ifs) << "cannot open: " << trainfile;
 
     std::cout << "reading training data: " << std::flush;
     size_t line = 0;
     while (ifs) {
       TaggerImpl *_x = new TaggerImpl();
-      _x->open(&feature_index);
-      if (!_x->read(&ifs) || !_x->shrink())
+      _x->open(&feature_index, &allocator);
+      if (!_x->read(&ifs) || !_x->shrink()) {
         WHAT_ERROR(_x->what());
+      }
 
-      if (!_x->empty())
+      if (!_x->empty()) {
         x.push_back(_x);
-      else
+      } else {
         delete _x;
+        continue;
+      }
 
       _x->set_thread_id(line % thread_num);
 
-      if (++line % 100 == 0) std::cout << line << ".. " << std::flush;
+      if (++line % 100 == 0) {
+        std::cout << line << ".. " << std::flush;
+      }
     }
 
     ifs.close();
     std::cout << "\nDone!";
   }
 
-  feature_index.shrink(freq);
+  feature_index.shrink(freq, &allocator);
 
   std::vector <double> alpha(feature_index.size());           // parameter
   std::fill(alpha.begin(), alpha.end(), 0.0);
@@ -328,63 +393,67 @@ bool Encoder::learn(const char *templfile,
   switch (algorithm) {
     case MIRA:
       if (!runMIRA(x, &feature_index, &alpha[0],
-                   maxitr, C, eta, shrinking_size, thread_num))
+                   maxitr, C, eta, shrinking_size, thread_num)) {
         WHAT_ERROR("MIRA execute error");
+      }
       break;
     case CRF_L2:
       if (!runCRF(x, &feature_index, &alpha[0],
-                  maxitr, C, eta, shrinking_size, thread_num, false))
+                  maxitr, C, eta, shrinking_size, thread_num, false)) {
         WHAT_ERROR("CRF_L2 execute error");
+      }
       break;
     case CRF_L1:
       if (!runCRF(x, &feature_index, &alpha[0],
-                  maxitr, C, eta, shrinking_size, thread_num, true))
+                  maxitr, C, eta, shrinking_size, thread_num, true)) {
         WHAT_ERROR("CRF_L1 execute error");
+      }
       break;
   }
 
   for (std::vector<TaggerImpl *>::iterator it = x.begin();
-       it != x.end(); ++it)
+       it != x.end(); ++it) {
     delete *it;
+  }
 
-  if (!feature_index.save(modelfile, textmodelfile))
+  if (!feature_index.save(modelfile, textmodelfile)) {
     WHAT_ERROR(feature_index.what());
+  }
 
   std::cout << "\nDone!";
 
   return true;
 }
-}
 
-int crfpp_learn(int argc, char **argv) {
-  static const CRFPP::Option long_options[] = {
-    {"freq",     'f', "1",      "INT",
-     "use features that occuer no less than INT(default 1)" },
-    {"maxiter" , 'm', "100000", "INT",
-     "set INT for max iterations in LBFGS routine(default 10k)" },
-    {"cost",     'c', "1.0",    "FLOAT",
-     "set FLOAT for cost parameter(default 1.0)" },
-    {"eta",      'e', "0.0001", "FLOAT",
-     "set FLOAT for termination criterion(default 0.0001)" },
-    {"convert",  'C',  0,       0,
-     "convert text model to binary model" },
-    {"textmodel", 't', 0,       0,
-     "build also text model file for debugging" },
-    {"algorithm",  'a', "CRF",   "(CRF|MIRA)", "select training algorithm" },
-    {"thread", 'p',   "1",       "INT",   "number of threads(default 1)" },
-    {"shrinking-size", 'H', "20", "INT",
-     "set INT for number of iterations variable needs to "
-     " be optimal before considered for shrinking. (default 20)" },
-    {"version",  'v', 0,        0,       "show the version and exit" },
-    {"help",     'h', 0,        0,       "show this help and exit" },
-    {0, 0, 0, 0, 0}
-  };
+namespace {
+const CRFPP::Option long_options[] = {
+  {"freq",     'f', "1",      "INT",
+   "use features that occuer no less than INT(default 1)" },
+  {"maxiter" , 'm', "100000", "INT",
+   "set INT for max iterations in LBFGS routine(default 10k)" },
+  {"cost",     'c', "1.0",    "FLOAT",
+   "set FLOAT for cost parameter(default 1.0)" },
+  {"eta",      'e', "0.0001", "FLOAT",
+   "set FLOAT for termination criterion(default 0.0001)" },
+  {"convert",  'C',  0,       0,
+   "convert text model to binary model" },
+  {"textmodel", 't', 0,       0,
+   "build also text model file for debugging" },
+  {"algorithm",  'a', "CRF",   "(CRF|MIRA)", "select training algorithm" },
+  {"thread", 'p',   "0",       "INT",
+   "number of threads (default auto-detect)" },
+  {"shrinking-size", 'H', "20", "INT",
+   "set INT for number of iterations variable needs to "
+   " be optimal before considered for shrinking. (default 20)" },
+  {"version",  'v', 0,        0,       "show the version and exit" },
+  {"help",     'h', 0,        0,       "show this help and exit" },
+  {0, 0, 0, 0, 0}
+};
 
-  CRFPP::Param param;
-
-  param.open(argc, argv, long_options);
-
-  if (!param.help_version()) return 0;
+int crfpp_learn(const Param &param) {
+  if (!param.help_version()) {
+    return 0;
+  }
 
   const bool convert = param.get<bool>("convert");
 
@@ -400,11 +469,13 @@ int crfpp_learn(int argc, char **argv) {
   const double         C              = param.get<float>("cost");
   const double         eta            = param.get<float>("eta");
   const bool           textmodel      = param.get<bool>("textmodel");
-  const unsigned short thread         = param.get<unsigned short>("thread");
-  const unsigned short shrinking_size = param.get<unsigned short>("shrinking-size");
+  const unsigned short thread         =
+      CRFPP::getThreadSize(param.get<unsigned short>("thread"));
+  const unsigned short shrinking_size
+      = param.get<unsigned short>("shrinking-size");
   std::string salgo = param.get<std::string>("algorithm");
 
-  toLower(&salgo);
+  CRFPP::toLower(&salgo);
 
   int algorithm = CRFPP::Encoder::MIRA;
   if (salgo == "crf" || salgo == "crf-l2") {
@@ -438,3 +509,18 @@ int crfpp_learn(int argc, char **argv) {
 
   return 0;
 }
+}  // namespace
+}  // CRFPP
+
+int crfpp_learn2(const char *argv) {
+  CRFPP::Param param;
+  param.open(argv, CRFPP::long_options);
+  return CRFPP::crfpp_learn(param);
+}
+
+int crfpp_learn(int argc, char **argv) {
+  CRFPP::Param param;
+  param.open(argc, argv, CRFPP::long_options);
+  return CRFPP::crfpp_learn(param);
+}
+

@@ -5,8 +5,8 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
-#ifndef CRFPP_NODE_H__
-#define CRFPP_NODE_H__
+#ifndef CRFPP_NODE_H_
+#define CRFPP_NODE_H_
 
 #include <vector>
 #include <cmath>
@@ -23,8 +23,8 @@ namespace CRFPP {
 // log(exp (x) + exp(y) + exp(z))
 inline double logsumexp(double x, double y, bool flg) {
   if (flg) return y;  // init mode
-  const double vmin = _min(x, y);
-  const double vmax = _max(x, y);
+  const double vmin = std::min(x, y);
+  const double vmax = std::max(x, y);
   if (vmax > vmin + MINUS_LOG_EPSILON) {
     return vmax;
   } else {
@@ -42,7 +42,7 @@ struct Node {
   double               cost;
   double               bestCost;
   Node                *prev;
-  int                 *fvector;
+  const int           *fvector;
   std::vector<Path *>  lpath;
   std::vector<Path *>  rpath;
 
@@ -64,9 +64,8 @@ struct Node {
     std::vector<Path *>(rpath).swap(rpath);
   }
 
-  Node(): x(0), y(0), alpha(0.0), beta(0.0),
-          cost(0.0), bestCost(0.0), prev(0), fvector(0) {}
+  Node() : x(0), y(0), alpha(0.0), beta(0.0),
+           cost(0.0), bestCost(0.0), prev(0), fvector(0) {}
 };
 }
-
 #endif

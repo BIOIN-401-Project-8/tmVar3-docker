@@ -22,11 +22,11 @@
 //   - D.C. Liu and J. Nocedal. On the Limited Memory Method for
 //   Large Scale Optimization(1989),
 //   Mathematical Programming B, 45, 3, pp. 503-528.
-#include "lbfgs.h"
-#include "common.h"
 #include <cmath>
 #include <iostream>
 #include <numeric>
+#include "lbfgs.h"
+#include "common.h"
 
 #define min(a, b) ((a) <= (b) ? (a) : (b))
 #define max(a, b) ((a) >= (b) ? (a) : (b))
@@ -41,9 +41,9 @@ static const double lb3_1_stpmax = 1e20;
 static const int lb3_1_mp = 6;
 static const int lb3_1_lp = 6;
 
-inline double pi(double x, double y) {
-  return CRFPP::sigma(x) == CRFPP::sigma(y) ?x : 0.0;
-}
+// inline double pi(double x, double y) {
+//   return CRFPP::sigma(x) == CRFPP::sigma(y) ?x : 0.0;
+// }
 
 inline void daxpy_(int n, double da, const double *dx, double *dy) {
   for (int i = 0; i < n; ++i)
@@ -301,7 +301,7 @@ class LBFGS::Mcsrch {
       }
 
       for (int j = 1; j <= size; ++j) {
-	x[j] = wa[j] + *stp * s[j];
+        x[j] = wa[j] + *stp * s[j];
       }
       *info = -1;
       return;
@@ -382,18 +382,18 @@ void LBFGS::clear() {
 }
 
 void LBFGS::pseudo_gradient(int size,
-			    double *v,
-			    double *x,
-			    const double *g,
-			    double C) {
-  for (int i = 1; i <= size; ++ i) {
+                            double *v,
+                            double *x,
+                            const double *g,
+                            double C) {
+  for (int i = 1; i <= size; ++i) {
     if (x[i] == 0) {
       if (g[i] + C < 0) {
-	v[i] = g[i] + C; 
+        v[i] = g[i] + C;
       } else if (g[i] - C > 0) {
-	v[i] = g[i] - C;
+        v[i] = g[i] - C;
       } else {
-	v[i] = 0;
+        v[i] = 0;
       }
     }  else {
       v[i] = g[i] + C * sigma(x[i]);
@@ -411,8 +411,8 @@ void LBFGS::lbfgs_optimize(int size,
                            double *w,
                            bool orthant,
                            double C,
-			   double *v,
-			   double *xi,
+                           double *v,
+                           double *xi,
                            int *iflag) {
   double yy = 0.0;
   double ys = 0.0;
@@ -455,7 +455,7 @@ void LBFGS::lbfgs_optimize(int size,
     info = 0;
     if (orthant) {
       for (int i = 1; i <= size; ++i) {
-	xi[i] = (x[i] != 0 ? sigma(x[i]) : sigma(-v[i]));
+        xi[i] = (x[i] != 0 ? sigma(x[i]) : sigma(-v[i]));
       }
     }
     if (iter == 1) goto L165;
@@ -509,8 +509,8 @@ void LBFGS::lbfgs_optimize(int size,
     }
 
     if (orthant) {
-      for (int i = 1; i <= size; ++ i) {
-	w[i] = (sigma(w[i]) == sigma(-v[i]) ? w[i] : 0);
+      for (int i = 1; i <= size; ++i) {
+        w[i] = (sigma(w[i]) == sigma(-v[i]) ? w[i] : 0);
       }
     }
     // STORE THE NEW SEARCH DIRECTION
@@ -535,9 +535,9 @@ void LBFGS::lbfgs_optimize(int size,
                     &stp, &info, &nfev, &diag[1]);
     if (info == -1) {
       if (orthant) {
-	for (int i = 1; i <= size; ++ i) {
-	  x[i] = (sigma(x[i]) == sigma(xi[i]) ? x[i] : 0);
-	}
+        for (int i = 1; i <= size; ++i) {
+          x[i] = (sigma(x[i]) == sigma(xi[i]) ? x[i] : 0);
+        }
       }
       *iflag = 1;  // next value
       return;

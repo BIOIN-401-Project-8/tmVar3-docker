@@ -140,21 +140,21 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -O3 -Wall
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS =
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -O3 -Wall
+CXXFLAGS = -O3 -Wall 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DSYMUTIL = 
-DUMPBIN = 
-ECHO_C = 
+DSYMUTIL =
+DUMPBIN =
+ECHO_C =
 ECHO_N = -n
-ECHO_T = 
+ECHO_T =
 EGREP = /bin/grep -E
-EXEEXT = 
+EXEEXT =
 FGREP = /bin/grep -F
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
@@ -163,32 +163,32 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = 
-LIBOBJS = 
-LIBS = -lpthread -lpthread -lm -lm -lm 
+LDFLAGS =
+LIBOBJS =
+LIBS = -lpthread -lpthread -lm -lm -lm
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIPO = 
+LIPO =
 LN_S = ln -s
-LTLIBOBJS = 
+LTLIBOBJS =
 MAKEINFO = ${SHELL} $(includedir)/CRF++/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
-NMEDIT = 
+NMEDIT =
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = 
-OTOOL64 = 
+OTOOL =
+OTOOL64 =
 PACKAGE = CRF++
-PACKAGE_BUGREPORT = 
-PACKAGE_NAME = 
-PACKAGE_STRING = 
-PACKAGE_TARNAME = 
-PACKAGE_URL = 
-PACKAGE_VERSION = 
+PACKAGE_BUGREPORT =
+PACKAGE_NAME =
+PACKAGE_STRING =
+PACKAGE_TARNAME =
+PACKAGE_URL =
+PACKAGE_VERSION =
 PATH_SEPARATOR = :
 RANLIB = ranlib
 SED = /bin/sed
-SET_MAKE = 
+SET_MAKE =
 SHELL = /bin/sh
 STRIP = strip
 VERSION = 0.54
@@ -198,15 +198,15 @@ abs_top_builddir = $(includedir)/CRF++
 abs_top_srcdir = $(includedir)/CRF++
 ac_ct_CC = gcc
 ac_ct_CXX = g++
-ac_ct_DUMPBIN = 
+ac_ct_DUMPBIN =
 am__include = include
 am__leading_dot = .
-am__quote = 
+am__quote =
 am__tar = ${AMTAR} chof - "$$tardir"
 am__untar = ${AMTAR} xf -
 bindir = ${exec_prefix}/bin
 build = x86_64-unknown-linux-gnu
-build_alias = 
+build_alias =
 build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = unknown
@@ -217,7 +217,7 @@ docdir = ${datarootdir}/doc/${PACKAGE}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
 host = x86_64-unknown-linux-gnu
-host_alias = 
+host_alias =
 host_cpu = x86_64
 host_os = linux-gnu
 host_vendor = unknown
@@ -241,8 +241,8 @@ sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
 sysconfdir = ${prefix}/etc
-target_alias = 
-top_build_prefix = 
+target_alias =
+top_build_prefix =
 top_builddir = .
 top_srcdir = .
 EXTRA_DIST = README Makefile.msvc.in merge-models.pl
@@ -255,10 +255,10 @@ libcrfpp_la_SOURCES = crfpp.h thread.h libcrfpp.cpp lbfgs.cpp scoped_ptr.h param
                       freelist.h lbfgs.h mmap.h node.h path.h tagger.h timer.h
 
 include_HEADERS = crfpp.h
-crf_learn_SOURCES = crf_learn.cpp 
+crf_learn_SOURCES = crf_learn.cpp
 crf_learn_LDADD = libcrfpp.la
-crf_test_SOURCES = crf_test.cpp 
-crf_test_LDADD = libcrfpp.la 
+crf_test_SOURCES = crf_test.cpp
+crf_test_LDADD = libcrfpp.la
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -308,7 +308,7 @@ config.h: stamp-h1
 stamp-h1: $(srcdir)/config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
 	cd $(top_builddir) && $(SHELL) ./config.status config.h
-$(srcdir)/config.h.in:  $(am__configure_deps) 
+$(srcdir)/config.h.in:  $(am__configure_deps)
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
@@ -350,7 +350,7 @@ clean-libLTLIBRARIES:
 	  echo "rm -f \"$${dir}/so_locations\""; \
 	  rm -f "$${dir}/so_locations"; \
 	done
-libcrfpp.la: $(libcrfpp_la_OBJECTS) $(libcrfpp_la_DEPENDENCIES) 
+libcrfpp.la: $(libcrfpp_la_OBJECTS) $(libcrfpp_la_DEPENDENCIES)
 	$(CXXLINK) -rpath $(libdir) $(libcrfpp_la_OBJECTS) $(libcrfpp_la_LIBADD) $(LIBS)
 install-binPROGRAMS: $(bin_PROGRAMS)
 	@$(NORMAL_INSTALL)
@@ -395,10 +395,10 @@ clean-binPROGRAMS:
 	list=`for p in $$list; do echo "$$p"; done | sed 's/$(EXEEXT)$$//'`; \
 	echo " rm -f" $$list; \
 	rm -f $$list
-crf_learn$(EXEEXT): $(crf_learn_OBJECTS) $(crf_learn_DEPENDENCIES) 
+crf_learn$(EXEEXT): $(crf_learn_OBJECTS) $(crf_learn_DEPENDENCIES)
 	@rm -f crf_learn$(EXEEXT)
 	$(CXXLINK) $(crf_learn_OBJECTS) $(crf_learn_LDADD) $(LIBS)
-crf_test$(EXEEXT): $(crf_test_OBJECTS) $(crf_test_DEPENDENCIES) 
+crf_test$(EXEEXT): $(crf_test_OBJECTS) $(crf_test_DEPENDENCIES)
 	@rm -f crf_test$(EXEEXT)
 	$(CXXLINK) $(crf_test_OBJECTS) $(crf_test_LDADD) $(LIBS)
 
@@ -807,12 +807,12 @@ win-dist:
 	cp -f libcrfpp.lib CRF++-0.54/sdk
 	cp -f crfpp.h CRF++-0.54/sdk
 #	cp -f sdk/model CRF++-0.54/sdk
-	cp -f sdk/example.cpp CRF++-0.54/sdk	
+	cp -f sdk/example.cpp CRF++-0.54/sdk
 	cp -fr doc/*.html doc/*.css doc/doxygen CRF++-0.54/doc
 	cp -f README COPYING AUTHORS LGPL BSD CRF++-0.54
 	cp -fr example/* CRF++-0.54/example
 	find CRF++-0.54 -name CVS | xargs rm -rf
-	find CRF++-0.54 -name .svn | xargs rm -rf	
+	find CRF++-0.54 -name .svn | xargs rm -rf
 	zip -r CRF++-0.54.zip CRF++-0.54
 	rm -fr CRF++-0.54
 

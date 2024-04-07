@@ -5,10 +5,9 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
-#ifndef CRFPP_COMMON_H__
-#define CRFPP_COMMON_H__
+#ifndef CRFPP_COMMON_H_
+#define CRFPP_COMMON_H_
 
-#include <setjmp.h>
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -18,12 +17,17 @@
 #include <algorithm>
 #include <cmath>
 
+#if defined(_WIN32) && !defined(__CYGWIN__)
+#define NOMINMAX
+#include <windows.h>
+#endif
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
 
 #define COPYRIGHT  "CRF++: Yet Another CRF Tool Kit\nCopyright (C) "    \
-  "2005-2009 Taku Kudo, All rights reserved.\n"
+  "2005-2013 Taku Kudo, All rights reserved.\n"
 #define MODEL_VERSION 100
 
 #if defined(_WIN32) && !defined(__CYGWIN__)
@@ -35,9 +39,6 @@
 #define BUF_SIZE 8192
 
 namespace CRFPP {
-template <class T> inline T _min(T x, T y) { return(x < y) ? x : y; }
-template <class T> inline T _max(T x, T y) { return(x > y) ? x : y; }
-
 // helper functions defined in the paper
 inline double sigma(double x) {
   if (x > 0) return 1.0;
@@ -174,6 +175,17 @@ inline void uitoa(T val, char *s) {
   return;
 }
 
+#if defined(_WIN32) && !defined(__CYGWIN__)
+std::wstring Utf8ToWide(const std::string &input);
+std::string WideToUtf8(const std::wstring &input);
+#endif
+
+#if defined(_WIN32) && !defined(__CYGWIN__)
+#define WPATH(path) (CRFPP::Utf8ToWide(path).c_str())
+#else
+#define WPATH(path) (path)
+#endif
+
 #define _ITOA(_n) do {                          \
     char buf[64];                               \
     itoa(_n, buf);                              \
@@ -218,66 +230,44 @@ class string_buffer: public std::string {
 class die {
  public:
   die() {}
-  virtual ~die() {
+  ~die() {
     std::cerr << std::endl;
     exit(-1);
   }
   int operator&(std::ostream&) { return 0; }
 };
 
-class warn {
- public:
-  warn() {}
-  virtual ~warn() { std::cerr << std::endl; }
-  int operator&(std::ostream&) { return 0; }
-};
-
 struct whatlog {
   std::ostringstream stream_;
   std::string str_;
-  const char* str() {
+  const char *str() {
     str_ = stream_.str();
     return str_.c_str();
   }
-  jmp_buf cond_;
 };
 
 class wlog {
  public:
-  whatlog *l_;
-  explicit wlog(whatlog *l): l_(l) { l_->stream_.clear(); }
-  ~wlog() { longjmp(l_->cond_, 1); }
-  int operator&(std::ostream &) { return 0; }
+  wlog(whatlog *what) : what_(what) {
+    what_->stream_.clear();
+  }
+  bool operator&(std::ostream &) {
+    return false;
+  }
+ private:
+  whatlog *what_;
 };
-}
+}  // CRFPP
 
 #define WHAT what_.stream_
 
-#define CHECK_RETURN(condition, value)                                  \
-  if (condition) {} else                                                \
-    if (setjmp(what_.cond_) == 1) {                                     \
-      return value;                                                     \
-    } else                                                              \
-      wlog(&what_) & what_.stream_ <<                                   \
-          __FILE__ << "(" << __LINE__ << ") [" << #condition << "] "
+#define CHECK_FALSE(condition) \
+ if (condition) {} else return \
+   wlog(&what_) & what_.stream_ <<              \
+      __FILE__ << "(" << __LINE__ << ") [" << #condition << "] "
 
-#define CHECK_0(condition)      CHECK_RETURN(condition, 0)
-#define CHECK_FALSE(condition)  CHECK_RETURN(condition, false)
+#define CHECK_DIE(condition) \
+(condition) ? 0 : die() & std::cerr << __FILE__ << \
+"(" << __LINE__ << ") [" << #condition << "] "
 
-#define CHECK_CLOSE_FALSE(condition)                                    \
-  if (condition) {} else                                                \
-    if (setjmp(what_.cond_) == 1) {                                     \
-      close();                                                          \
-      return false;                                                     \
-    } else                                                              \
-      wlog(&what_) & what_.stream_ <<                                   \
-          __FILE__ << "(" << __LINE__ << ") [" << #condition << "] "
-
-#define CHECK_DIE(condition)                                            \
-  (condition) ? 0 : die() & std::cerr << __FILE__ <<                    \
-                                                     "(" << __LINE__ << ") [" << #condition << "] "
-
-#define CHECK_WARN(condition)                                           \
-  (condition) ? 0 : warn() & std::cerr << __FILE__ <<                   \
-                                                      "(" << __LINE__ << ") [" << #condition << "] "
 #endif

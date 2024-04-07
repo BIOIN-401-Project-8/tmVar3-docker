@@ -5,9 +5,10 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
-#ifndef CRFPP_LBFGS_H__
-#define CRFPP_LBFGS_H__
+#ifndef CRFPP_LBFGS_H_
+#define CRFPP_LBFGS_H_
 
+#include <cmath>
 #include <vector>
 #include <iostream>
 
@@ -16,7 +17,8 @@ namespace CRFPP {
 class LBFGS {
  private:
   class Mcsrch;
-  int iflag_, iscn, nfev, iycn, point, npt, iter, info, ispt, isyt, iypt, maxfev;
+  int iflag_, iscn, nfev, iycn, point, npt;
+  int iter, info, ispt, isyt, iypt, maxfev;
   double stp, stp1;
   std::vector <double> diag_;
   std::vector <double> w_;
@@ -25,10 +27,10 @@ class LBFGS {
   Mcsrch *mcsrch_;
 
   void pseudo_gradient(int size,
-		       double *v,
-		       double *x,
-		       const double *g,
-		       double C);
+                       double *v,
+                       double *x,
+                       const double *g,
+                       double C);
 
   void lbfgs_optimize(int size,
                       int msize,
@@ -36,7 +38,8 @@ class LBFGS {
                       double f,
                       const double *g,
                       double *diag,
-                      double *w, bool orthant, double C, double *v, double *xi, int *iflag);
+                      double *w, bool orthant,
+                      double C, double *v, double *xi, int *iflag);
 
  public:
   explicit LBFGS(): iflag_(0), iscn(0), nfev(0), iycn(0),
@@ -47,7 +50,26 @@ class LBFGS {
 
   void clear();
 
-  int optimize(size_t size, double *x, double f, double *g, bool orthant, double C) {
+  // This is old interface for backward compatibility
+  // ignore msize |m|
+  int init(int n, int m) {
+    static const int msize = 5;
+    const size_t size = n;
+    iflag_ = 0;
+    w_.resize(size * (2 * msize + 1) + 2 * msize);
+    diag_.resize(size);
+    v_.resize(size);
+    return 0;
+  }
+
+  // old interface
+  int optimize(double *x, double *f, double *g) {
+    return optimize(diag_.size(), x, *f, g, false, 1.0);
+  }
+
+  // Use this interface
+  int optimize(size_t size, double *x, double f,
+               double *g, bool orthant, double C) {
     static const int msize = 5;
     if (w_.empty()) {
       iflag_ = 0;
@@ -55,7 +77,7 @@ class LBFGS {
       diag_.resize(size);
       v_.resize(size);
       if (orthant) {
-	xi_.resize(size);
+        xi_.resize(size);
       }
     } else if (diag_.size() != size || v_.size() != size) {
       std::cerr << "size of array is different" << std::endl;
@@ -66,11 +88,13 @@ class LBFGS {
     }
 
     if (orthant) {
-	    lbfgs_optimize(static_cast<int>(size),
-			   msize, x, f, g, &diag_[0], &w_[0], orthant, C, &v_[0], &xi_[0], &iflag_);
+      lbfgs_optimize(static_cast<int>(size),
+                     msize, x, f, g, &diag_[0], &w_[0], orthant,
+                     C, &v_[0], &xi_[0], &iflag_);
     } else {
-	    lbfgs_optimize(static_cast<int>(size),
-			   msize, x, f, g, &diag_[0], &w_[0], orthant, C, g, &xi_[0], &iflag_);
+      lbfgs_optimize(static_cast<int>(size),
+                     msize, x, f, g, &diag_[0], &w_[0], orthant,
+                     C, g, &xi_[0], &iflag_);
     }
 
     if (iflag_ < 0) {
@@ -87,5 +111,4 @@ class LBFGS {
   }
 };
 }
-
 #endif

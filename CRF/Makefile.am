@@ -1,13 +1,14 @@
 EXTRA_DIST = README Makefile.msvc.in merge-models.pl
 EXTRA_DIRS = doc example sdk perl python ruby java swig
 bin_PROGRAMS = crf_learn crf_test
+ACLOCAL_AMFLAGS = -I m4
 
 AUTOMAKE_OPTIONS = no-dependencies
 lib_LTLIBRARIES = libcrfpp.la
 libcrfpp_la_SOURCES = crfpp.h thread.h libcrfpp.cpp lbfgs.cpp scoped_ptr.h param.cpp param.h encoder.cpp feature.cpp stream_wrapper.h \
                       feature_cache.cpp feature_index.cpp node.cpp path.cpp tagger.cpp \
 		      common.h darts.h encoder.h feature_cache.h feature_index.h \
-                      freelist.h lbfgs.h mmap.h node.h path.h tagger.h timer.h
+                      freelist.h lbfgs.h mmap.h node.h path.h tagger.h timer.h winmain.h
 include_HEADERS = crfpp.h
 
 dist-hook:
@@ -24,10 +25,6 @@ dist-hook:
 	  rm -rf $(distdir)/$$subdir/*/.svn; \
 	  find $(distdir) -name .svn  | xargs rm -fr; \
 	done
-
-win:
-	(cd src; rm -f *.exe *.obj *.dll)
-#	(cd src; wcmd /c make.bat)
 
 win-dist:
 	rm -f @PACKAGE@-@VERSION@.zip
@@ -62,7 +59,6 @@ dist-all-package:
 	$(MAKE) clean
 	$(MAKE) script-clean
 	$(MAKE) script-dist
-	$(MAKE) win
 	$(MAKE) win-dist
 
 script-dist:
@@ -84,7 +80,5 @@ script-clean:
 	(cd java; $(MAKE) clean;)
 
 export-package:
-	./upload.pl -p crfpp -n crfpp        -r @VERSION@ -f CRF++-@VERSION@.tar.gz
-	./upload.pl -p crfpp -n crfpp-win32  -r @VERSION@ -f CRF++-@VERSION@.zip
-	scp doc/*.html sf:public_html/crfpp/
-	scp doc/*.css sf:public_html/crfpp/
+	python googlecode_upload.py -p crfpp -s crfpp      -u taku@chasen.org -w `cat ~/.googlecode_upload_password` CRF++-@VERSION@.tar.gz
+	python googlecode_upload.py -p crfpp -s crfpp-win  -u taku@chasen.org -w `cat ~/.googlecode_upload_password` CRF++-@VERSION@.zip

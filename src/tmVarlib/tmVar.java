@@ -74,8 +74,8 @@ public class tmVar
 		String InputFolder="input";
 		String OutputFolder="output";
 		String TrainTest="Test"; //Train|Train_Mention|Test|Test_FullText
-		String DeleteTmp="True";
-		String DisplayRSnumOnly="True"; // hide the types of the normalization methods 
+		String DeleteTmp="False";
+		String DisplayRSnumOnly="True"; // hide the types of the  methods 
 		String DisplayChromosome="True"; // hide the chromosome mentions
 		String DisplayRefSeq="True"; // hide the RefSeq mentions
 		String DisplayGenomicRegion="True";
@@ -122,7 +122,7 @@ public class tmVar
 		 */
 		{
 			/*
-			 * POSTagging : loading model
+			 * POSTagging: loading model
 			 */
 			tagger = new MaxentTagger("lib/taggers/english-left3words-distsim.tagger");
 			

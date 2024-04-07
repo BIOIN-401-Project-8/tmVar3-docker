@@ -5,15 +5,13 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
-#ifndef CRFPP_TIMER_H__
-#define CRFPP_TIMER_H__
+#ifndef CRFPP_TIMER_H_
+#define CRFPP_TIMER_H_
 
 #include <ctime>
 #include <iostream>
 #include <string>
 #include <limits>
-
-/* COPY FROM Boost::timer */
 
 namespace CRFPP {
 
@@ -26,9 +24,10 @@ class timer {
   }
 
   double elapsed_max() const {
-    return(static_cast<double>(std::numeric_limits<std::clock_t>::max())
-           - static_cast<double>(start_time_)) /
-        static_cast<double>(CLOCKS_PER_SEC);
+    //    return (static_cast<double>(std::numeric_limits<std::clock_t>::max())
+    //           - static_cast<double>(start_time_)) /
+    //        static_cast<double>(CLOCKS_PER_SEC);
+    return 0.0;
   }
 
   double elapsed_min() const {

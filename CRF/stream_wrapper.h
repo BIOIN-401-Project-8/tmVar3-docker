@@ -5,12 +5,13 @@
 //
 //  Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 //
-#ifndef CRFPP_STREAM_WRAPPER_H__
-#define CRFPP_STREAM_WRAPPER_H__
+#ifndef CRFPP_STREAM_WRAPPER_H_
+#define CRFPP_STREAM_WRAPPER_H_
 
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include "common.h"
 
 namespace CRFPP {
 
@@ -25,7 +26,7 @@ class istream_wrapper {
     if (std::strcmp(filename, "-") == 0)
       is = &std::cin;
     else
-      is = new std::ifstream(filename);
+      is = new std::ifstream(WPATH(filename));
   }
 
   ~istream_wrapper() {
@@ -44,7 +45,7 @@ class ostream_wrapper {
     if (std::strcmp(filename, "-") == 0)
       os = &std::cout;
     else
-      os = new std::ofstream(filename);
+      os = new std::ofstream(WPATH(filename));
   }
 
   ~ostream_wrapper() {

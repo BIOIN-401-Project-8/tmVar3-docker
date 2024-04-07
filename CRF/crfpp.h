@@ -5,8 +5,8 @@
 
   Copyright(C) 2005-2007 Taku Kudo <taku@chasen.org>
 */
-#ifndef CRFPP_CRFPP_H__
-#define CRFPP_CRFPP_H__
+#ifndef CRFPP_CRFPP_H_
+#define CRFPP_CRFPP_H_
 
 /* C interface  */
 #ifdef __cplusplus
@@ -23,6 +23,7 @@ extern "C" {
 #include <windows.h>
 #  ifdef DLL_EXPORT
 #    define CRFPP_DLL_EXTERN  __declspec(dllexport)
+#    define CRFPP_DLL_CLASS_EXTERN  __declspec(dllexport)
 #  else
 #    define CRFPP_DLL_EXTERN  __declspec(dllimport)
 #  endif
@@ -32,15 +33,30 @@ extern "C" {
 #  define CRFPP_DLL_EXTERN extern
 #endif
 
+#ifndef CRFPP_DLL_CLASS_EXTERN
+#  define CRFPP_DLL_CLASS_EXTERN
+#endif
+
 #ifndef SWIG
   typedef struct crfpp_t crfpp_t;
+  typedef struct crfpp_model_t crfpp_model_t;
 
   /* C interface */
+  CRFPP_DLL_EXTERN crfpp_model_t* crfpp_model_new(int,  char**);
+  CRFPP_DLL_EXTERN crfpp_model_t* crfpp_model_new2(const char*);
+  CRFPP_DLL_EXTERN crfpp_model_t* crfpp_model_from_array_new(int,  char**, const char *, size_t);
+  CRFPP_DLL_EXTERN crfpp_model_t* crfpp_model_from_array_new2(const char*, const char *, size_t);
+  CRFPP_DLL_EXTERN const char *   crfpp_model_get_template(crfpp_model_t*);
+  CRFPP_DLL_EXTERN void           crfpp_model_destroy(crfpp_model_t*);
+  CRFPP_DLL_EXTERN const char *   crfpp_model_strerror(crfpp_model_t *);
+  CRFPP_DLL_EXTERN crfpp_t*       crfpp_model_new_tagger(crfpp_model_t *);
+
   CRFPP_DLL_EXTERN crfpp_t* crfpp_new(int,  char**);
   CRFPP_DLL_EXTERN crfpp_t* crfpp_new2(const char*);
   CRFPP_DLL_EXTERN void     crfpp_destroy(crfpp_t*);
-  CRFPP_DLL_EXTERN bool     crfpp_add2(crfpp_t*, size_t, const char **);
-  CRFPP_DLL_EXTERN bool     crfpp_add(crfpp_t*, const char*);
+  CRFPP_DLL_EXTERN int      crfpp_set_model(crfpp_t *, crfpp_model_t *);
+  CRFPP_DLL_EXTERN int      crfpp_add2(crfpp_t*, size_t, const char **);
+  CRFPP_DLL_EXTERN int      crfpp_add(crfpp_t*, const char*);
   CRFPP_DLL_EXTERN size_t   crfpp_size(crfpp_t*);
   CRFPP_DLL_EXTERN size_t   crfpp_xsize(crfpp_t*);
   CRFPP_DLL_EXTERN size_t   crfpp_dsize(crfpp_t*);
@@ -52,6 +68,8 @@ extern "C" {
   CRFPP_DLL_EXTERN double   crfpp_prob(crfpp_t*, size_t, size_t);
   CRFPP_DLL_EXTERN double   crfpp_prob2(crfpp_t*, size_t);
   CRFPP_DLL_EXTERN double   crfpp_prob3(crfpp_t*);
+  CRFPP_DLL_EXTERN void     crfpp_set_penalty(crfpp_t *, size_t i, size_t j, double penalty);
+  CRFPP_DLL_EXTERN double   crfpp_penalty(crfpp_t *, size_t i, size_t j);
   CRFPP_DLL_EXTERN double   crfpp_alpha(crfpp_t*, size_t, size_t);
   CRFPP_DLL_EXTERN double   crfpp_beta(crfpp_t*, size_t, size_t);
   CRFPP_DLL_EXTERN double   crfpp_emisstion_cost(crfpp_t*, size_t, size_t);
@@ -66,12 +84,14 @@ extern "C" {
   CRFPP_DLL_EXTERN const int* crfpp_prev_transition_vector(crfpp_t*, size_t,
                                                            size_t, size_t);
   CRFPP_DLL_EXTERN double   crfpp_Z(crfpp_t*);
-  CRFPP_DLL_EXTERN bool     crfpp_parse(crfpp_t*);
-  CRFPP_DLL_EXTERN bool     crfpp_empty(crfpp_t*);
-  CRFPP_DLL_EXTERN bool     crfpp_clear(crfpp_t*);
-  CRFPP_DLL_EXTERN bool     crfpp_next(crfpp_t*);
+  CRFPP_DLL_EXTERN int      crfpp_parse(crfpp_t*);
+  CRFPP_DLL_EXTERN int      crfpp_empty(crfpp_t*);
+  CRFPP_DLL_EXTERN int      crfpp_clear(crfpp_t*);
+  CRFPP_DLL_EXTERN int      crfpp_next(crfpp_t*);
   CRFPP_DLL_EXTERN int      crfpp_test(int, char **);
+  CRFPP_DLL_EXTERN int      crfpp_test2(const char *);
   CRFPP_DLL_EXTERN int      crfpp_learn(int, char **);
+  CRFPP_DLL_EXTERN int      crfpp_learn2(const char *);
   CRFPP_DLL_EXTERN const char*  crfpp_strerror(crfpp_t*);
   CRFPP_DLL_EXTERN const char*  crfpp_yname(crfpp_t*, size_t);
   CRFPP_DLL_EXTERN const char*  crfpp_y2(crfpp_t*, size_t);
@@ -101,7 +121,42 @@ extern "C" {
 
 namespace CRFPP {
 
-class Tagger {
+class Tagger;
+
+class CRFPP_DLL_CLASS_EXTERN Model {
+ public:
+#ifndef SWIG
+  // open model with parameters in argv[]
+  // e.g, argv[] = {"CRF++", "-m", "model", "-v3"};
+  virtual bool open(int argc,  char** argv) = 0;
+
+  // open model with parameter arg, e.g. arg = "-m model -v3";
+  virtual bool open(const char* arg) = 0;
+
+  // open model with parameters in argv[].
+  // e.g, argv[] = {"CRF++", "-v3"};
+  virtual bool openFromArray(int argc,  char** argv,
+                             const char *model_buf,
+                             size_t model_size) = 0;
+
+  // open model with parameter arg, e.g. arg = "-m model -v3";
+  virtual bool openFromArray(const char* arg,
+                             const char *model_buf,
+                             size_t model_size) = 0;
+#endif
+  // return template string embedded in this model file.
+  virtual const char *getTemplate() const = 0;
+
+  // create Tagger object. Returned object shared the same
+  // model object
+  virtual Tagger *createTagger() const = 0;
+
+  virtual const char* what() = 0;
+
+  virtual ~Model() {}
+};
+
+class CRFPP_DLL_CLASS_EXTERN Tagger {
  public:
 #ifndef SWIG
   // open model with parameters in argv[]
@@ -120,6 +175,9 @@ class Tagger {
   // return parameter vector. the size should be dsize();
   virtual const float *weight_vector() const = 0;
 #endif
+
+  // set Model
+  virtual bool set_model(const Model &model) = 0;
 
   // set vlevel
   virtual void set_vlevel(unsigned int vlevel) = 0;
@@ -186,6 +244,14 @@ class Tagger {
 
   // return conditional probability of enter output
   virtual double prob() const = 0;
+
+  // set token-level penalty. It would be useful for implementing
+  // Dual decompositon decoding.
+  // e.g.
+  // "Dual Decomposition for Parsing with Non-Projective Head Automata"
+  // Terry Koo Alexander M. Rush Michael Collins Tommi Jaakkola David Sontag
+  virtual void set_penalty(size_t i, size_t j, double penalty) = 0;
+  virtual double penalty(size_t i, size_t j) const = 0;
 
   // return forward log-prob of the j-th tag at i-th token
   virtual double alpha(size_t i, size_t j) const = 0;
@@ -278,15 +344,35 @@ class Tagger {
 
 // create CRFPP::Tagger instance with parameters in argv[]
 // e.g, argv[] = {"CRF++", "-m", "model", "-v3"};
-
 CRFPP_DLL_EXTERN Tagger *createTagger(int argc, char **argv);
 
 // create CRFPP::Tagger instance with parameter in arg
 // e.g. arg = "-m model -v3";
 CRFPP_DLL_EXTERN Tagger *createTagger(const char *arg);
 
+// create CRFPP::Model instance with parameters in argv[]
+// e.g, argv[] = {"CRF++", "-m", "model", "-v3"};
+CRFPP_DLL_EXTERN Model *createModel(int argc, char **argv);
+
+// load model from [buf, buf+size].
+CRFPP_DLL_EXTERN Model *createModelFromArray(int argc, char **argv,
+                                             const char *model_buf,
+                                             size_t model_size);
+
+// create CRFPP::Model instance with parameter in arg
+// e.g. arg = "-m model -v3";
+CRFPP_DLL_EXTERN Model *createModel(const char *arg);
+
+// load model from [buf, buf+size].
+CRFPP_DLL_EXTERN Model *createModelFromArray(const char *arg,
+                                             const char *model_buf,
+                                             size_t model_size);
+
 // return error code of createTagger();
-CRFPP_DLL_EXTERN const char* getTaggerError();
+CRFPP_DLL_EXTERN const char *getTaggerError();
+
+// alias of getTaggerError();
+CRFPP_DLL_EXTERN const char *getLastError();
 }
 
 #endif
