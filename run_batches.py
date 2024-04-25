@@ -30,13 +30,12 @@ def main():
     input_files = set(file.name for file in input_files)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(exist_ok=True)
-    output_files = output_dir.rglob("*")
-    output_files = set(file.name for file in output_files)
-
+    output_files = list(output_dir.rglob("*"))
+    output_dotless = set(file.name.split('.')[0] for file in output_files)
     logging.info(f"Found {len(input_files)} input files")
-    logging.info(f"Found {len(output_files)} output files")
+    logging.info(f"Found {len(output_dotless)} output files")
 
-    input_files = input_files - output_files
+    input_files = [file for file in input_files if file.split('.')[0] not in output_dotless]
 
     logging.info(f"Processing {len(input_files)} files")
 
